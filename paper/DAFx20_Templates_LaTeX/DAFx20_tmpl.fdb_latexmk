@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex DAFx20_tmpl"] 1581097923 "DAFx20_tmpl.aux" "DAFx20_tmpl.bbl" "DAFx20_tmpl" 1581097924
+["bibtex DAFx20_tmpl"] 1581101710 "DAFx20_tmpl.aux" "DAFx20_tmpl.bbl" "DAFx20_tmpl" 1581105690
   "./IEEEbib.bst" 1441786704 18924 f1278aa2fdef151030810b1996aa3609 ""
-  "DAFx20_tmpl.aux" 1581097924 4351 dc7e4484caea10e55e1dd59e5009b428 "pdflatex"
+  "DAFx20_tmpl.aux" 1581105689 4351 dc7e4484caea10e55e1dd59e5009b428 "pdflatex"
   "DAFx20_tmpl.bib" 1442035532 3060 eb0357983504d4dd708f46c810f21f1f ""
   (generated)
-  "DAFx20_tmpl.bbl"
   "DAFx20_tmpl.blg"
-["pdflatex"] 1581097923 "DAFx20_tmpl.tex" "DAFx20_tmpl.pdf" "DAFx20_tmpl" 1581097924
+  "DAFx20_tmpl.bbl"
+["pdflatex"] 1581105689 "DAFx20_tmpl.tex" "DAFx20_tmpl.pdf" "DAFx20_tmpl" 1581105690
   "/usr/local/share/texmf/tex/generic/pgf/basiclayer/pgfcore.code.tex" 1581095990 992 fb3cda354707a54fda62787a411c7c22 ""
   "/usr/local/share/texmf/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex" 1581095990 43820 bc6cf5aa959817914ace33f5c6232161 ""
   "/usr/local/share/texmf/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex" 1581095990 19324 c9a64402f22bd8d81821141a357af653 ""
@@ -232,14 +232,14 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1572595918 33301 a3134070eacafb10b1f371612ce2650d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1579573432 334148 1b9d30ff8c861d6082e3e9bfccd8d7eb ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1579573383 8044939 6435dfac299d8888500d36bb36ff989f ""
-  "DAFx20_tmpl.aux" 1581097924 4351 dc7e4484caea10e55e1dd59e5009b428 "pdflatex"
-  "DAFx20_tmpl.bbl" 1581097923 2301 6a7465317c6f7af872ea64df7dd06146 "bibtex DAFx20_tmpl"
-  "DAFx20_tmpl.out" 1581097924 691 c4c1ea73b311f7c7835718f3b2b21917 "pdflatex"
-  "DAFx20_tmpl.tex" 1581097922 24220 e7ab8ea9d613a19299e9614f3b424c2e ""
+  "DAFx20_tmpl.aux" 1581105689 4351 dc7e4484caea10e55e1dd59e5009b428 "pdflatex"
+  "DAFx20_tmpl.bbl" 1581101710 2301 6a7465317c6f7af872ea64df7dd06146 "bibtex DAFx20_tmpl"
+  "DAFx20_tmpl.out" 1581105689 691 c4c1ea73b311f7c7835718f3b2b21917 "pdflatex"
+  "DAFx20_tmpl.tex" 1581105687 24304 73f3c238982b2d2d236153e91f056834 ""
   "TwoColumnSine2.pdf" 1441786704 46275 55978bc458d6e81eb00273a844e84f35 ""
   "dafx_20.sty" 1575516869 15869 17daccdb5fbc4aa2819be23780b72f74 ""
   "fft_plot2.pdf" 1441786704 8869 c40d95a1439aa46cba94f28fba36a8da ""
-  "img/mytikz.tex" 1581097631 685 059ff2179905cbd6055f0ca4ffe092ec ""
+  "img/ir_sc3_rigid_0.tex" 1581101769 1940 ab5f06c7694ff4a7d2eb7395f042d729 ""
   (generated)
   "DAFx20_tmpl.pdf"
   "DAFx20_tmpl.out"

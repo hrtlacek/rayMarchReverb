@@ -344,8 +344,8 @@ INPUT ./fft_plot2.pdf
 INPUT TwoColumnSine2.pdf
 INPUT ./TwoColumnSine2.pdf
 INPUT ./TwoColumnSine2.pdf
-INPUT img/mytikz.tex
-INPUT img/mytikz.tex
+INPUT img/ir_sc3_rigid_0.tex
+INPUT img/ir_sc3_rigid_0.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmri8t.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmri8t.tfm

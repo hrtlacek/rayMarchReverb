@@ -229,6 +229,9 @@
 \pgfplotsset{compat=newest}
 \usepgfplotslibrary{groupplots}
 \usepgfplotslibrary{dateplot}
+
+% \usepgfplotslibrary{external} 
+% \tikzexternalize
 % ------------------------------------
 
 % ====================================
@@ -254,6 +257,7 @@
 \maketitle
 
 \begin{abstract}
+
 This is the template file for the proceedings of the 23$^{\text{rd}}$ International Conference on Digital Audio Effects (DAFx-20).
 This template has been derived from WASPAA'99 templates and aims at producing conference proceedings in electronic form.
 The format is essentially the one used for ICASSP conferences.
@@ -299,7 +303,8 @@ example of a figure spanning two columns.
 
 \begin{figure}
     \begin{center}
-        \input{img/mytikz.tex}
+      \input{img/ir_sc3_rigid_0}
+        % \input{img/mytikz.tex}
     \end{center}
     \caption{A PGF histogram from \texttt{matplotlib}.}
 \end{figure}
