@@ -1,11 +1,18 @@
 \BOOKMARK [1][-]{section.1}{1 \040Introduction}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{1.1 \040Figures}{section.1}% 2
-\BOOKMARK [2][-]{subsection.1.2}{1.2 \040Tables}{section.1}% 3
-\BOOKMARK [2][-]{subsection.1.3}{1.3 \040Equations}{section.1}% 4
-\BOOKMARK [2][-]{subsection.1.4}{1.4 \040Page Numbers}{section.1}% 5
-\BOOKMARK [2][-]{subsection.1.5}{1.5 \040References}{section.1}% 6
-\BOOKMARK [3][-]{subsubsection.1.5.1}{1.5.1 \040Reference Format}{subsection.1.5}% 7
-\BOOKMARK [1][-]{section.2}{2 \040Conclusions}{}% 8
-\BOOKMARK [1][-]{section.3}{3 \040Acknowledgments}{}% 9
-\BOOKMARK [1][-]{section.4}{4 \040References}{}% 10
-\BOOKMARK [1][-]{section.5}{5 \040Appendix: Margin Check}{}% 11
+\BOOKMARK [2][-]{subsection.1.1}{1.1 \040Previous Work}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{1.2 \040Motivation}{section.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.2.1}{1.2.1 \040Sphere tracing}{subsection.1.2}% 4
+\BOOKMARK [3][-]{subsubsection.1.2.2}{1.2.2 \040Implementation}{subsection.1.2}% 5
+\BOOKMARK [1][-]{section.2}{2 \040Generation of SDFs}{}% 6
+\BOOKMARK [1][-]{section.3}{3 \040Sphere Tracing}{}% 7
+\BOOKMARK [1][-]{section.4}{4 \040Generation of impulse response}{}% 8
+\BOOKMARK [1][-]{section.5}{5 \040Results}{}% 9
+\BOOKMARK [2][-]{subsection.5.1}{5.1 \040Tables}{section.5}% 10
+\BOOKMARK [2][-]{subsection.5.2}{5.2 \040Equations}{section.5}% 11
+\BOOKMARK [2][-]{subsection.5.3}{5.3 \040Page Numbers}{section.5}% 12
+\BOOKMARK [2][-]{subsection.5.4}{5.4 \040References}{section.5}% 13
+\BOOKMARK [3][-]{subsubsection.5.4.1}{5.4.1 \040Reference Format}{subsection.5.4}% 14
+\BOOKMARK [1][-]{section.6}{6 \040Conclusions}{}% 15
+\BOOKMARK [1][-]{section.7}{7 \040Acknowledgments}{}% 16
+\BOOKMARK [1][-]{section.8}{8 \040References}{}% 17
+\BOOKMARK [1][-]{section.9}{9 \040Appendix: Margin Check}{}% 18
