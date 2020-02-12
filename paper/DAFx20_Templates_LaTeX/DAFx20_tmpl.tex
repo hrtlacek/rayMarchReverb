@@ -234,6 +234,8 @@
 % \tikzexternalize
 % ------------------------------------
 
+
+\usepackage{listings}
 % ====================================
 
 
@@ -288,15 +290,17 @@ Since the distance to the nearest surface is always known, the step size of a ra
 
 \subsection{Previous Work}
 \label{ssec:prev}
-
-As shown in \cite{brinkmann_round_2019} there exist multiple approaches for estimating RIRs.  
+A lot of previous work exists both in the field of Ray/sphere tracing and RIR estimation.
+As shown in \cite{brinkmann_round_2019} there exist multiple approaches for estimating RIRs. 
 NVIDIA is working in the field of real time ray traced audio simulation
 NVIDIA VRWorks™ Audio (introduced with the Pascal GPU architecture) 
 
-\cite{cao_interactive_2016} bidirectional raytracing.
+\cite{cao_interactive_2016} bidirectional ray tracing.
 
 \subsubsection*{RIR Estimation}
-image sourcce method, wave based, raytracing.
+\cite{alpkocak_computing_2010} gives an overview of methods in use for RIR estimation.
+
+image sourcce method, wave based, ray tracing.
 
 
 \subsubsection*{Sphere Tracing}
@@ -308,7 +312,7 @@ Defining SDFs is an active field of research and there are several projects that
 \subsection{Motivation}
 The reasons why sphere tracing in a compute shader for RIR estimation has not been documented until now probably lie in the relatively new introduction of compute shaders as well as in the difficulty of creating SDFs(in comparison to using existing 3D /CAD models and import them to polygon based ray tracers).
 \subsubsection{Sphere tracing}
-As described above, ray tracing in general is in use.
+As described above, ray tracing in general is in use. Sphere tracing has a number of advantages over ray tracing polygonal surfaces. It is "procedural" by default, since all geometry is defined by implicit surface equations. More over sphere tracing approximates cone tracing for reducing aliasing artifacts in the pixel domain\cite{hart_sphere_1996}, which in the audio domain, is considered to have advantages but is very time confusing in a non-SDF setup\cite{alpkocak_computing_2010}. The deformation and rounding of geometry is possible in a very efficient way, which might offer an opportunity to approximate low-frequency response due to diffraction artifacts. Since geometry is not defined via vertizes and edges, there is no such thing as increasing the complexity of a shape in this way. Rounding a geometrical shape is a mere subtraction as shown in FIGURE.
 procedural by default
 deforming geometry
 \subsubsection{Implementation}
@@ -317,8 +321,43 @@ It is possible to implement the chosen algorithm on the CPU and the GPU. A numbe
 
 \section{Generation of SDFs}
 
+Only rather simplistic shapes where needed for this proof-of-concept. Mostly boxes are used and combined in various ways to achieve reflection areas, shoe-box scenes and the little more complex diffusor shape of scene 1 in \cite{brinkmann_round_2019}. A simple 3D box SDF with a size of $R_x$x$R_y$x$R_z$ can be described by:
+
+\begin{equation}
+  f(p_x, p_y, p_z) = \sqrt{c_0(p_x - R_x)^2 + c_0(p_y - R_y)^2 + c_0(p_z - R_z)^2}
+\end{equation}
+
+where $c_0$ is just clipping at 0:
+
+\begin{equation}
+c_0(x) = max(x,0) 
+\end{equation}
+
+which translates to GLSL conveniently:
+
+\begin{lstlisting}[language=C]
+float box(vec3 pos, vec3 R){
+    return length(max(abs(pos) - R,0));
+}
+\end{lstlisting}
+
+\cite{hart_sphere_1996} gives a list mathematical definitions of many shapes and for example \href{http://mercury.sexy/hg_sdf/}{http://mercury.sexy/hg\_sdf/} provides a rich and advanced library of shapes and operators that are ready to use for creation of more complex scenery.
+
+
 \section{Sphere Tracing}
-For simplicity, deterministic equal-angle Ray Tracing is used in contrast to Monte Carlo or Equal Area Ray tracing (EART) \cite{gu_room_2014}.
+For simplicity, deterministic equal-angle Ray Tracing is used in contrast to Monte Carlo or Equal Area Ray tracing (EART) \cite{gu_room_2014}. Unidirectional ray tracing has been used, also for simplicity reasons, although \cite{cao_interactive_2016} has shown that bidirectional ray tracing offers advantages. Since the classical sphere tracing algorithm was adapted, it was found to be simplest to consider the "camera" to be the receiver/microphone as it would receive light. It sends out rays that might hit the sound source, which acts as a receiver of rays. The sound source is chosen to be a sphere. Choosing a correct volume for the receiver is critical and using a constant size can introduce systematic errors \cite{xiangyang_accuracy_2003}, \cite{alpkocak_computing_2010}. A number of models are available to compute the receiver Volume, $V_r$. Typically factors such as room volume, number of rays and the distance from source are used for this computation. 
+As in \cite{brandao_ray_nodate}, \cite{alpkocak_computing_2010}, and \cite{dalenback_room_1996} the receiver was allowed to grow in volume. While \cite{brandao_ray_nodate} and \cite{dalenback_room_1996} use time to as a factor to let the receiver grow, in this attempt the reflection count, $k$ is used. Initially when a ray is sent, $k=1$ and when it hits a surface, this counter is increased by one so the source grows by this factor. Instead of using time, the model provided in \cite{alpkocak_computing_2010} is used and augmented with the $k$ term:
+\begin{equation}
+V_r = k \omega d_{SR}\sqrt{\frac{4}{N}}
+\end{equation}
+with 
+\begin{equation}
+\omega = log_{10}{V_{room}}
+\end{equation}
+where $d_{SR}$ is the source-receiver distance, $N$ is the number of initial rays and $V_{room}$ is the volume of the room.
+
+
+
 
 low frequency pass
 

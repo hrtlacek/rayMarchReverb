@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{brinkmann_round_2019}
 Fabian Brinkmann, Lukas Asp{\"o}ck, David Ackermann, Steffen Lepa, Michael
@@ -13,6 +13,18 @@ John~C. Hart,
   of implicit surfaces,''
 \newblock {\em The Visual Computer}, vol. 12, no. 10, pp. 527--545, Dec. 1996.
 
+\bibitem{cao_interactive_2016}
+Chunxiao Cao, Zhong Ren, Carl Schissler, Dinesh Manocha, and Kun Zhou,
+\newblock ``Interactive sound propagation with bidirectional path tracing,''
+\newblock {\em ACM Transactions on Graphics}, vol. 35, no. 6, pp. 1--11, Nov.
+  2016.
+
+\bibitem{alpkocak_computing_2010}
+Adil Alpkocak and Malik Sis,
+\newblock ``Computing {Impulse} {Response} of {Room} {Acoustics} {Using} the
+  {Ray}-{Tracing} {Method} in {Time} {Domain},''
+\newblock {\em Archives of Acoustics}, vol. 35, no. 4, pp. 505--519, Dec. 2010.
+
 \bibitem{lechner_hrtlacektdraymarchtoolkit_2020}
 Patrik Lechner,
 \newblock ``hrtlacek/{TDraymarchToolkit} v1.1,'' Feb. 2020.
@@ -22,6 +34,27 @@ C.~Gu, M.~Zhu, H.~Lu, and B.~Beckers,
 \newblock ``Room impulse response simulation based on equal-area ray tracing,''
 \newblock in {\em 2014 {International} {Conference} on {Audio}, {Language} and
   {Image} {Processing}}, July 2014, pp. 832--836.
+
+\bibitem{xiangyang_accuracy_2003}
+Zeng Xiangyang, Chen Ke'an, and Sun Jincai,
+\newblock ``On the accuracy of the ray-tracing algorithms based on various
+  sound receiver models,''
+\newblock {\em Applied Acoustics}, vol. 64, no. 4, pp. 433--441, Apr. 2003.
+
+\bibitem{brandao_ray_nodate}
+Eric Brand{\~a}o, Rodrigo~DAL Fiume, Gon{\c c}alo Morgado,
+  William~D{\textquoteright}A Fonseca, and Paulo Mareze,
+\newblock ``A {Ray} {Tracing} {Algorithm} {Developed} at {Acoustical}
+  {Engineering} {Department} of the {Federal} {University} of {Santa} {Maria}
+  ({UFSM}) in {Brazil},''
+\newblock p.~8.
+
+\bibitem{dalenback_room_1996}
+Bengt-Inge~L. Dalenb{\"a}ck,
+\newblock ``Room acoustic prediction based on a unified treatment of diffuse
+  and specular reflection,''
+\newblock {\em The Journal of the Acoustical Society of America}, vol. 100, no.
+  2, pp. 899--909, Aug. 1996.
 
 \bibitem{campbell_roomsim_nodate}
 Douglas~R Campbell, Kalle~J Palom{\"a}ki, and Guy~J Brown,
@@ -46,5 +79,13 @@ Dirk Schr{\"o}der,
 \newblock ``Physically {Based} {Real}-{Time} {Auralization} of {Interactive}
   {Virtual} {Environments},''
 \newblock p. 231.
+
+\bibitem{noauthor_vrworks_nodate}
+``{VRWorks} {Audio} {SDK} {Overview}.pdf,'' .
+
+\bibitem{kulowski_algorithmic_1985}
+Andrzej Kulowski,
+\newblock ``Algorithmic representation of the ray tracing technique,''
+\newblock {\em Applied Acoustics}, vol. 18, no. 6, pp. 449--469, 1985.
 
 \end{thebibliography}
