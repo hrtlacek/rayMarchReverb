@@ -66,7 +66,7 @@
 \usepackage{ifpdf}
 \usepackage[english]{babel}
 \usepackage{caption}
-\usepackage{subfig} % or can use subcaption package
+% \usepackage{subfig} % or can use subcaption package
 \usepackage{color}
 
 \input glyphtounicode
@@ -234,10 +234,15 @@
 % \tikzexternalize
 % ------------------------------------
 
-
+% code
 \usepackage{listings}
-% ====================================
 
+% subfigures (side by side)
+\usepackage{subcaption}
+% \usepackage{subfig}
+
+
+% ====================================
 
 
 
@@ -328,12 +333,47 @@ Defining SDFs is an active field of research and there are several projects that
 \subsection{Motivation}
 The reasons why sphere tracing in a compute shader for RIR estimation has not been documented until now probably lie in the relatively new introduction of compute shaders as well as in the difficulty of creating SDFs(in comparison to using existing 3D /CAD models and import them to polygon based ray tracers).
 \subsubsection{Sphere tracing}
-As described above, ray tracing in general is in use. Sphere tracing has a number of advantages over ray tracing polygonal surfaces. It is "procedural" by default, since all geometry is defined by implicit surface equations. More over sphere tracing approximates cone tracing for reducing aliasing artifacts in the pixel domain\cite{hart_sphere_1996}, which in the audio domain, is considered to have advantages but is very time confusing in a non-SDF setup\cite{alpkocak_computing_2010}. The deformation and rounding of geometry is possible in a very efficient way, which might offer an opportunity to approximate low-frequency response due to diffraction artifacts. Since geometry is not defined via vertizes and edges, there is no such thing as increasing the complexity of a shape in this way. Rounding a geometrical shape is a mere subtraction since it just shifts the rendering to another iso-surface, which is getting increasingly smooth as shown in \ref{sdf_2d_box}. Depending on the construction of the geometry, this way, holes and cavities (such as in a diffusor) can also be made disappear for a low-frequency pass as shown in figure .
+As described above, ray tracing in general is in use. Sphere tracing has a number of advantages over ray tracing polygonal surfaces. It is "procedural" by default, since all geometry is defined by implicit surface equations. More over sphere tracing approximates cone tracing for reducing aliasing artifacts in the pixel domain\cite{hart_sphere_1996}, which in the audio domain, is considered to have advantages but is very time confusing in a non-SDF setup\cite{alpkocak_computing_2010}. The deformation and rounding of geometry is possible in a very efficient way, which might offer an opportunity to approximate low-frequency response due to diffraction artifacts. Since geometry is not defined via vertizes and edges, there is no such thing as increasing the complexity of a shape in this way. Rounding a geometrical shape is a mere subtraction since it just shifts the rendering to another iso-surface, which is getting increasingly smooth as shown in \ref{sdf_2d_box}. Depending on the construction of the geometry, this way, holes and cavities (such as in a diffusor) can also be made disappear for a low-frequency pass as shown in figure \ref{fig:diffSmooth}.
 
 \begin{figure}[ht]
 \centerline{\includegraphics[scale=0.6]{img/sdf2dbox.png}}
 \caption{\label{sdf_2d_box}{\it rounding the box given in Equation \ref{eq1} by subtraction of $0.7$.}}
 \end{figure}  
+
+
+
+\begin{figure}[ht]
+\centering
+\begin{subfigure}{0.2\textwidth}
+  \centering
+  \includegraphics[width=0.9\linewidth]{img/diffusorNorm.png}
+  \caption{\it Normal Shape}
+  \label{fig:diffNorm}
+\end{subfigure}%
+\begin{subfigure}{0.2\textwidth}
+  \centering
+  \includegraphics[width=0.9\linewidth]{img/diffusorSmooth.png}
+  \caption{\it After subtraction}
+  \label{fig:sub2}
+\end{subfigure}
+\caption{\it The diffusor from scene 1 in \cite{brinkmann_round_2019} was reconstructed exactly(a). A subtraction of $0.01$ from the distance function causes the holes to close(b).}
+\label{fig:diffSmooth}
+\end{figure}
+
+
+
+% \begin{figure}[ht]
+% \begin{subfigure}
+% \centerline{\includegraphics[scale=0.2]{img/diffusorNorm.png}}
+% \caption{\label{diffusorSmoothing}{\it The diffusor from scene 1 in \cite{brinkmann_round_2019} was reconstructed exactly. A subtraction of $0.01$ from the distance function causes the holes to close.}}
+% \end{subfigure}%
+% \begin{subfigure}
+% \centerline{\includegraphics[scale=0.2]{img/diffusorSmooth.png}}
+% \caption{\label{diffusorSmoothing}{\it The diffusor from scene 1 in \cite{brinkmann_round_2019} was reconstructed exactly. A subtraction of $0.01$ from the distance function causes the holes to close.}}
+% \end{subfigure}
+
+% \end{figure}  
+
 
 
 

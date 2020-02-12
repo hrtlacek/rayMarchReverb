@@ -68,8 +68,6 @@ INPUT /usr/share/texmf-dist/tex/latex/caption/caption.sty
 INPUT /usr/share/texmf-dist/tex/latex/caption/caption.sty
 INPUT /usr/share/texmf-dist/tex/latex/caption/caption3.sty
 INPUT /usr/share/texmf-dist/tex/latex/caption/caption3.sty
-INPUT /usr/share/texmf-dist/tex/latex/subfig/subfig.sty
-INPUT /usr/share/texmf-dist/tex/latex/subfig/subfig.sty
 INPUT /usr/share/texmf-dist/tex/latex/graphics/color.sty
 INPUT /usr/share/texmf-dist/tex/latex/graphics/color.sty
 INPUT /usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
@@ -276,6 +274,8 @@ INPUT /usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT /usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT /usr/share/texmf-dist/tex/latex/listings/listings.cfg
 INPUT /usr/share/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/share/texmf-dist/tex/latex/caption/subcaption.sty
+INPUT /usr/share/texmf-dist/tex/latex/caption/subcaption.sty
 INPUT DAFx20_tmpl.aux
 INPUT DAFx20_tmpl.aux
 OUTPUT DAFx20_tmpl.aux
@@ -372,10 +372,19 @@ INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/ptmri8c.vf
 INPUT img/sdf2dbox.png
 INPUT ./img/sdf2dbox.png
 INPUT ./img/sdf2dbox.png
+INPUT img/diffusorNorm.png
+INPUT ./img/diffusorNorm.png
+INPUT ./img/diffusorNorm.png
+INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmri8t.tfm
+INPUT img/diffusorSmooth.png
+INPUT ./img/diffusorSmooth.png
+INPUT ./img/diffusorSmooth.png
 INPUT /usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT /usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/ptmri8t.vf
+INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
 INPUT fft_plot2.pdf
 INPUT ./fft_plot2.pdf
 INPUT ./fft_plot2.pdf
