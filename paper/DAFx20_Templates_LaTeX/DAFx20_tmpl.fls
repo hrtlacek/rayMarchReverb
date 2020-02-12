@@ -342,9 +342,9 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm
-INPUT img/sdf2d.tex
-INPUT img/sdf2d.tex
-INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
+INPUT img/sphereTracingViz.png
+INPUT ./img/sphereTracingViz.png
+INPUT ./img/sphereTracingViz.png
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmr8c.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmri8t.tfm
@@ -369,8 +369,9 @@ INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/ptmri8t.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/ptmri8c.vf
-INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/ptmr8t.vf
-INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT img/sdf2dbox.png
+INPUT ./img/sdf2dbox.png
+INPUT ./img/sdf2dbox.png
 INPUT /usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/share/texmf-dist/tex/latex/listings/lstmisc.sty

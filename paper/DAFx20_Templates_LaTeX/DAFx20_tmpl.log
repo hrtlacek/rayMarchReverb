@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.1.21)  11 FEB 2020 23:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.1.21)  12 FEB 2020 02:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1070,29 +1070,29 @@ Overfull \hbox (3.99236pt too wide) in paragraph at lines 263--265
 e
  []
 
-
-Overfull \hbox (107.42316pt too wide) in paragraph at lines 263--265
-\T1/ptm/m/n/9 data and \T1/pcr/m/n/9 Jupyter Notebooks \T1/ptm/m/n/9 can be fou
-nd on []https://github.com/hrtlacek/rayMarchReverb[]. 
- []
-
-(./img/sdf2d.tex
-
-Package pgf Warning: File "sdf2d-001.png" not found when defining image "pgflas
-timage". Tried all extensions in ".pdf:.jpg:.jpeg:.png:" on input line 20.
-
-) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+<img/sphereTracingViz.png, id=86, 433.62pt x 289.08pt>
+File: img/sphereTracingViz.png Graphic file (type png)
+<use img/sphereTracingViz.png>
+Package pdftex.def Info: img/sphereTracingViz.png  used on input line 285.
+(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
-]
-Overfull \hbox (8.28796pt too wide) in paragraph at lines 324--325
+ <./img/sphereTracingViz.png>]
+<img/sdf2dbox.png, id=123, 433.62pt x 289.08pt>
+File: img/sdf2dbox.png Graphic file (type png)
+<use img/sdf2dbox.png>
+Package pdftex.def Info: img/sdf2dbox.png  used on input line 334.
+(pdftex.def)             Requested size: 260.17401pt x 173.44933pt.
+
+Overfull \hbox (8.28796pt too wide) in paragraph at lines 348--349
 \T1/ptm/m/n/9 Only rather sim-plis-tic shapes where needed for this proof-of-co
 ncept.
  []
 
 
-Overfull \hbox (9.40942pt too wide) detected at line 328
+Overfull \hbox (9.40942pt too wide) detected at line 352
 []\OML/cmm/m/it/9 f\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 p[]; p[]; p[]\OT1/cmr/m/n/9 
 ) = []
  []
@@ -1103,45 +1103,45 @@ File: lstlang1.sty 2019/09/10 1.8c listings language file
 (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
 )
-Overfull \hbox (8.12555pt too wide) in paragraph at lines 348--350
+Overfull \hbox (8.12555pt too wide) in paragraph at lines 372--374
 \T1/ptm/m/n/9 ad-van-tages. Since the clas-si-cal sphere trac-ing al-go-rithm w
 as adapted,
  []
 
-<fft_plot2.pdf, id=135, 229.85875pt x 170.6375pt>
+<fft_plot2.pdf, id=143, 229.85875pt x 170.6375pt>
 File: fft_plot2.pdf Graphic file (type pdf)
 <use fft_plot2.pdf>
-Package pdftex.def Info: fft_plot2.pdf  used on input line 391.
+Package pdftex.def Info: fft_plot2.pdf  used on input line 415.
 (pdftex.def)             Requested size: 183.88722pt x 136.51016pt.
-<TwoColumnSine2.pdf, id=136, 606.265pt x 278.03876pt>
+<TwoColumnSine2.pdf, id=144, 606.265pt x 278.03876pt>
 File: TwoColumnSine2.pdf Graphic file (type pdf)
 <use TwoColumnSine2.pdf>
-Package pdftex.def Info: TwoColumnSine2.pdf  used on input line 397.
+Package pdftex.def Info: TwoColumnSine2.pdf  used on input line 421.
 (pdftex.def)             Requested size: 361.34999pt x 165.72148pt.
-(./img/ir_sc3_rigid_0.tex) [2 <./fft_plot2.pdf>] [3 <./TwoColumnSine2.pdf>]
-(./DAFx20_tmpl.bbl)
-Underfull \hbox (badness 10000) in paragraph at lines 498--499
+(./img/ir_sc3_rigid_0.tex) [2 <./img/sdf2dbox.png>] (./DAFx20_tmpl.bbl [3 <./ff
+t_plot2.pdf>])
+Underfull \hbox (badness 10000) in paragraph at lines 522--523
 
  []
 
-[4] [5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 535.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 535.
+[4 <./TwoColumnSine2.pdf>] [5]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 559.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 559.
  (./DAFx20_tmpl.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 535.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 535.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 559.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 559.
 Package rerunfilecheck Info: File `DAFx20_tmpl.out' has not changed.
 (rerunfilecheck)             Checksum: 69BC74C0270E590C90A395780D1B17CF;1170.
  )
 (\end occurred when \ifx on line 124 was incomplete) 
 Here is how much of TeX's memory you used:
- 32167 strings out of 492167
- 733138 string characters out of 6131558
- 1089182 words of memory out of 5000000
- 35910 multiletter control sequences out of 15000+600000
- 42398 words of font info for 62 fonts, out of 8000000 for 9000
+ 32158 strings out of 492167
+ 732978 string characters out of 6131558
+ 1088453 words of memory out of 5000000
+ 35905 multiletter control sequences out of 15000+600000
+ 39676 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 78i,16n,136p,1013b,2525s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 78i,17n,136p,1019b,2122s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/font
 s/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cmex
 tra/cmex9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><
@@ -1153,10 +1153,10 @@ ts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb
 are/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/
 type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.
 pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on DAFx20_tmpl.pdf (5 pages, 217924 bytes).
+Output written on DAFx20_tmpl.pdf (5 pages, 267831 bytes).
 PDF statistics:
- 259 PDF objects out of 1000 (max. 8388607)
- 223 compressed objects within 3 object streams
- 58 named destinations out of 1000 (max. 500000)
- 167 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 270 PDF objects out of 1000 (max. 8388607)
+ 229 compressed objects within 3 object streams
+ 59 named destinations out of 1000 (max. 500000)
+ 177 words of extra memory for PDF output out of 10000 (max. 10000000)
 
