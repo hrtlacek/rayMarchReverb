@@ -160,8 +160,8 @@
 % -------------SINGLE-AFFILIATION SINGLE-AUTHOR HEADER STARTS (uncomment below if your paper has a single author)----------------------------------------
 \affiliation{
 \paperauthorA\,\sthanks{Thanks to the predecessors for the templates}}
-{\href{https://www.mdw.ac.at/ike/}{Institute 1} \\ University of Music and Performing Arts\\ Vienna, Austria\\
-{\tt \href{mailto:dafx2020@gmail.com}{dafx2020@gmail.com}}
+{\href{https://www.mdw.ac.at/ike/}{Institute 1} \\ University of Applied Sciences St.Poelten\\ St.Poelten, Austria\\
+{\tt \href{mailto:dafx2020@gmail.com}{ptrk.lechner@gmail.com}}
 }
 %-------------SINGLE-AFFILIATION SINGLE-AUTHOR HEADER ENDS-------------------------------------------------------------------------------------------------------------------
 
@@ -229,8 +229,13 @@
 \pgfplotsset{compat=newest}
 \usepgfplotslibrary{groupplots}
 \usepgfplotslibrary{dateplot}
+
+% \usepgfplotslibrary{external} 
+% \tikzexternalize
 % ------------------------------------
 
+
+\usepackage{listings}
 % ====================================
 
 
@@ -254,20 +259,115 @@
 \maketitle
 
 \begin{abstract}
-This is the template file for the proceedings of the 23$^{\text{rd}}$ International Conference on Digital Audio Effects (DAFx-20).
-This template has been derived from WASPAA'99 templates and aims at producing conference proceedings in electronic form.
-The format is essentially the one used for ICASSP conferences.
-Please use either this \LaTeX{} or the accompanying Word formats when preparing your submission.
-The templates are available in electronic form on
-\href{https://dafx2020.mdw.ac.at/}{https://dafx2020.mdw.ac.at/}.
+
+Several algorithms and approaches for Room Impulse Response (RIR) estimation exist. To the best of the authors knowledge, there is no documentation of accuracy, speed or even the feasibility of using signed distance functions (SDFs) in combination with sphere tracing for this task. Here a proof of concept with a focus or real time performance is presented, that lacks many features such as frequency dependent absorption and scattering coefficients, arbitrary source and receiver directives etc. The results are shown and compared to real room impulse responses recorded by \cite{brinkmann_round_2019}. The implementation happens mostly inside a compute shader, an example application is provided in the framework \texttt{TouchDesigner}. 
+The application as well as all generated data and \texttt{Jupyter Notebooks} can be found on \href{https://github.com/hrtlacek/rayMarchReverb}{https://github.com/hrtlacek/rayMarchReverb}.
 \end{abstract}
 
 \section{Introduction}
 \label{sec:intro}
-This template can be found on the conference website.
+Sphere tracing \cite{hart_sphere_1996} is extensively in the so called "demo scene" to render impressive 3D video demos via shaders in real time for decades. 
+As a version of ray tracing that relies on the geometry being defined as so called signed distance functions (SDFs), it does not directly support the import of standard 3D Polygonal geometry. One of the advantages lies in the algorithm's potential improved speed in comparison to fixed-step ray tracing. SDFs describe implicit surfaces, via a function $f : \mathbb{R}^3 \rightarrow \mathbb{R}$. A function returns a negative value if the locus of the point is inside the geometry, a positive value if outside and 0 if on the surface. If defined carefully, the distance to the nearest surface is always known as the full geometry of the scene describes an ideally lipschitz continuous distance field in $\mathbb{R}^3$. 
+%
+\begin{figure}
+    \begin{center}
+      \input{img/sdf2d}
+        % \input{img/mytikz.tex}
+    \end{center}
+    \caption{a two dimensional SDF. $F(x,y) = \sqrt{x^2+y^2} - 1$} describes the unit circle.
+\end{figure}
 
-\subsection{Figures}
-\label{ssec:figures}
+Since the distance to the nearest surface is always known, the step size of a ray tracing algorithm can be dynamically adjusted, resulting in fewer iterations along a ray, see figure
+
+% This enables the technique of sphere tracing, which has been used extensively in the so called demo scene to render impressive 3D video demos in real time for decades. 
+
+
+% \begin{figure}[ht]
+% \centerline{\includegraphics[scale=0.8]{fft_plot2}}
+% \caption{\label{fft_plot}{\it Sinusoid in time and frequency domain. Short captions are centred, long captions (more than 1 line) are justified.}}
+% \end{figure}
+
+
+\subsection{Previous Work}
+\label{ssec:prev}
+A lot of previous work exists both in the field of Ray/sphere tracing and RIR estimation.
+As shown in \cite{brinkmann_round_2019} there exist multiple approaches for estimating RIRs. 
+NVIDIA is working in the field of real time ray traced audio simulation
+NVIDIA VRWorks™ Audio (introduced with the Pascal GPU architecture) 
+
+\cite{cao_interactive_2016} bidirectional ray tracing.
+
+\subsubsection*{RIR Estimation}
+\cite{alpkocak_computing_2010} gives an overview of methods in use for RIR estimation.
+
+image sourcce method, wave based, ray tracing.
+
+
+\subsubsection*{Sphere Tracing}
+
+Defining SDFs is an active field of research and there are several projects that aim at easier construction of SDFs and integration in 3D frameworks such as \href{https://github.com/Flafla2/Generic-Raymarch-Unity}{https://github.com/Flafla2/Generic-Raymarch-Unity} and \cite{lechner_hrtlacektdraymarchtoolkit_2020}.
+
+
+
+\subsection{Motivation}
+The reasons why sphere tracing in a compute shader for RIR estimation has not been documented until now probably lie in the relatively new introduction of compute shaders as well as in the difficulty of creating SDFs(in comparison to using existing 3D /CAD models and import them to polygon based ray tracers).
+\subsubsection{Sphere tracing}
+As described above, ray tracing in general is in use. Sphere tracing has a number of advantages over ray tracing polygonal surfaces. It is "procedural" by default, since all geometry is defined by implicit surface equations. More over sphere tracing approximates cone tracing for reducing aliasing artifacts in the pixel domain\cite{hart_sphere_1996}, which in the audio domain, is considered to have advantages but is very time confusing in a non-SDF setup\cite{alpkocak_computing_2010}. The deformation and rounding of geometry is possible in a very efficient way, which might offer an opportunity to approximate low-frequency response due to diffraction artifacts. Since geometry is not defined via vertizes and edges, there is no such thing as increasing the complexity of a shape in this way. Rounding a geometrical shape is a mere subtraction as shown in FIGURE.
+procedural by default
+deforming geometry
+\subsubsection{Implementation}
+It is possible to implement the chosen algorithm on the CPU and the GPU. A number of frameworks could be chosen for GPU accelerated computation such as OpenCL or NVIDIA CUDA. The choice of a shader has the advantage of being more operating system independent and hardware independent. Compute shaders (in contrast to fragment shaders) make it possible to write to arbitrary output locations which is necessary for generating the actual impulse response from the measurement of timings. Since they are available since OpenGL 4.3 (August 2012) / OpenGL ES 3.1 they are both old enough have received broad support in other frameworks and relatively new in respect to first publications about sphere tracing. Another reason for the choice of compute shaders is their simplicity. In comparison to CUDA and OpenCL, shaders are easier to write and the GLSL(Graphics Library Shading Language) is more widespread. 
+
+
+\section{Generation of SDFs}
+
+Only rather simplistic shapes where needed for this proof-of-concept. Mostly boxes are used and combined in various ways to achieve reflection areas, shoe-box scenes and the little more complex diffusor shape of scene 1 in \cite{brinkmann_round_2019}. A simple 3D box SDF with a size of $R_x$x$R_y$x$R_z$ can be described by:
+
+\begin{equation}
+  f(p_x, p_y, p_z) = \sqrt{c_0(p_x - R_x)^2 + c_0(p_y - R_y)^2 + c_0(p_z - R_z)^2}
+\end{equation}
+
+where $c_0$ is just clipping at 0:
+
+\begin{equation}
+c_0(x) = max(x,0) 
+\end{equation}
+
+which translates to GLSL conveniently:
+
+\begin{lstlisting}[language=C]
+float box(vec3 pos, vec3 R){
+    return length(max(abs(pos) - R,0));
+}
+\end{lstlisting}
+
+\cite{hart_sphere_1996} gives a list mathematical definitions of many shapes and for example \href{http://mercury.sexy/hg_sdf/}{http://mercury.sexy/hg\_sdf/} provides a rich and advanced library of shapes and operators that are ready to use for creation of more complex scenery.
+
+
+\section{Sphere Tracing}
+For simplicity, deterministic equal-angle Ray Tracing is used in contrast to Monte Carlo or Equal Area Ray tracing (EART) \cite{gu_room_2014}. Unidirectional ray tracing has been used, also for simplicity reasons, although \cite{cao_interactive_2016} has shown that bidirectional ray tracing offers advantages. Since the classical sphere tracing algorithm was adapted, it was found to be simplest to consider the "camera" to be the receiver/microphone as it would receive light. It sends out rays that might hit the sound source, which acts as a receiver of rays. The sound source is chosen to be a sphere. Choosing a correct volume for the receiver is critical and using a constant size can introduce systematic errors \cite{xiangyang_accuracy_2003}, \cite{alpkocak_computing_2010}. A number of models are available to compute the receiver Volume, $V_r$. Typically factors such as room volume, number of rays and the distance from source are used for this computation. 
+As in \cite{brandao_ray_nodate}, \cite{alpkocak_computing_2010}, and \cite{dalenback_room_1996} the receiver was allowed to grow in volume. While \cite{brandao_ray_nodate} and \cite{dalenback_room_1996} use time to as a factor to let the receiver grow, in this attempt the reflection count, $k$ is used. Initially when a ray is sent, $k=1$ and when it hits a surface, this counter is increased by one so the source grows by this factor. Instead of using time, the model provided in \cite{alpkocak_computing_2010} is used and augmented with the $k$ term:
+\begin{equation}
+V_r = k \omega d_{SR}\sqrt{\frac{4}{N}}
+\end{equation}
+with 
+\begin{equation}
+\omega = log_{10}{V_{room}}
+\end{equation}
+where $d_{SR}$ is the source-receiver distance, $N$ is the number of initial rays and $V_{room}$ is the volume of the room.
+
+
+
+
+low frequency pass
+
+\section{Generation of impulse response}
+
+Advantage of compute shader.
+Maybe introduce cascaded Lowpass.
+
+
+
 All figures should be centred on the column (or page, if the figure spans both columns).
 Figure captions (in italic) should follow each figure and have the format given in Figure \ref{fft_plot}.
 %
@@ -280,6 +380,13 @@ If bitmap figures are used, please make sure that the resolution is
 enough for print quality. Fig. \ref{ftt_plot2} illustrates an
 example of a figure spanning two columns.
 %
+
+\section{Results}
+
+compare to \cite{brinkmann_round_2019}
+compare to \cite{campbell_roomsim_nodate}
+
+
 \begin{figure}[ht]
 \centerline{\includegraphics[scale=0.8]{fft_plot2}}
 \caption{\label{fft_plot}{\it Sinusoid in time and frequency domain. Short captions are centred, long captions (more than 1 line) are justified.}}
@@ -288,7 +395,7 @@ example of a figure spanning two columns.
 \begin{figure*}[ht]
 \center
 \includegraphics[width=5in]{TwoColumnSine2}
-\caption{\label{ftt_plot2}{\it A figure spanning two columns, as mentioned in Sec. \ref{ssec:figures}. }}
+\caption{\label{ftt_plot2}{\it A figure spanning two columns, as mentioned in Sec. . }}
 \end{figure*}
 
 
@@ -299,7 +406,8 @@ example of a figure spanning two columns.
 
 \begin{figure}
     \begin{center}
-        \input{img/mytikz.tex}
+      \input{img/ir_sc3_rigid_0}
+        % \input{img/mytikz.tex}
     \end{center}
     \caption{A PGF histogram from \texttt{matplotlib}.}
 \end{figure}
@@ -362,7 +470,7 @@ that is, the first page will start at page DAFX-1 and the last page, at most, wi
 
 
 \subsection{References}
-The references will be numbered in order of appearance \cite{Mitra:Kaiser:1993:DSP:handbook}, \cite{Haykin:1991:adaptive:filter}, \cite{Moorer:2000:AES:audio:millenium} and \cite{Nackaerts:2001:ICMC}. Please avoid listing references that do not appear in the text (we did the opposite in this template).
+% The references will be numbered in order of appearance \cite{Mitra:Kaiser:1993:DSP:handbook}, \cite{Haykin:1991:adaptive:filter}, \cite{Moorer:2000:AES:audio:millenium} and \cite{Nackaerts:2001:ICMC}. Please avoid listing references that do not appear in the text (we did the opposite in this template).
 
 
 \subsubsection{Reference Format}
@@ -382,7 +490,9 @@ Many thanks to the great number of anonymous reviewers!
 %\newpage
 \nocite{*}
 \bibliographystyle{IEEEbib}
-\bibliography{DAFx20_tmpl} % requires file DAFx20_tmpl.bib
+% \bibliography{DAFx20_tmpl} % requires file DAFx20_tmpl.bib
+\bibliography{RaymarchReverb2}
+
 
 \section{Appendix: Margin Check}
 This section shows the column margins for the text. \bigskip\newline

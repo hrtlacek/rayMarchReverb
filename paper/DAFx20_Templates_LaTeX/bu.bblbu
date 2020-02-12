@@ -1,0 +1,1046 @@
+\begin{thebibliography}{100}
+
+\bibitem{brinkmann_round_2019}
+Fabian Brinkmann, Lukas Aspöck, David Ackermann, Steffen Lepa, Michael
+  Vorländer, and Stefan Weinzierl,
+\newblock ``A round robin on room acoustical simulation and auralization,''
+\newblock {\em The Journal of the Acoustical Society of America}, vol. 145, no.
+  4, pp. 2746--2760, Apr. 2019.
+
+\bibitem{hart_sphere_1996}
+John~C. Hart,
+\newblock ``Sphere tracing: a geometric method for the antialiased ray tracing
+  of implicit surfaces,''
+\newblock {\em The Visual Computer}, vol. 12, no. 10, pp. 527--545, Dec. 1996.
+
+\bibitem{patrik_lechner_hrtlacektdraymarchtoolkit_2020}
+{patrik lechner},
+\newblock ``hrtlacek/{TDraymarchToolkit} v1.1,'' Feb. 2020.
+
+\bibitem{noauthor_marquardt_nodate}
+``Marquardt {Kippschalter} 250 {V}/{AC} 6 {A} {Serie} 1820 1821.1101 1 x
+  {Aus}/{Ein} rastend/rastend im {Conrad} {Online} {Shop} {\textbar} 703072,''
+  .
+
+\bibitem{noauthor_datasheet_nodate}
+``Datasheet for {REKN} {BK} {AU} - {ITT} / {Cannon},'' .
+
+\bibitem{noauthor_messerleiste_nodate}
+``Messerleiste {SEK} {Pole}: 26 09 18 526 6324 {Harting} {Inhalt}: 1 {St}. im
+  {Conrad} {Online} {Shop} {\textbar} 742565,'' .
+
+\bibitem{noauthor_marquardt_nodate-1}
+``Marquardt {Miniatur}-{Kippschalter} 30 {V}/{DC} 4 {A} {Serie} 9040 9040.0101
+  1 x {Ein}/{Ein} rastend/rastend im {Conrad} {Online} {Shop} {\textbar}
+  703167,'' .
+
+\bibitem{noauthor_rotary_nodate}
+``Rotary {Encoder} + {Extras} {ID}: 377 - \$4.50 : {Adafruit} {Industries},
+  {Unique} \& fun {DIY} electronics and kits,'' .
+
+\bibitem{noauthor_bestellen_nodate}
+``Bestellen {Sie} {Klinken} {Steckverbinder} {Chassis}-{Klinkenbuchse}
+  {Lumberg} {KLB} 1 online bei {RS} für {Lieferung} am nächsten {Tag}.,'' .
+
+\bibitem{noauthor_bestellen_nodate-1}
+``Bestellen {Sie} {Potenziometer} {Potenziometer} linear {50K} vertikal 15mm
+  {Alps} {RK09L1140A5P} online bei {RS} für {Lieferung} am nächsten {Tag}.,''
+  .
+
+\bibitem{noauthor_tt_nodate}
+``{TT} {Electronics} {AB} {Leitplastik}-{Potentiometer} 9 mm {P0915N}-{FC20}
+  {B}-1 {KR} oben einstellbar lin 1 {kΩ} ± 20 \% im {Conrad} {Online} {Shop}
+  {\textbar} 451885,'' .
+
+\bibitem{noauthor_bestellen_nodate-2}
+``Bestellen {Sie} {Potenziometer} {Potenziometer} linear {50K} vertikal 15mm
+  {Alps} {RK09L1140A5P} online bei {RS} für {Lieferung} am nächsten {Tag}.,''
+  .
+
+\bibitem{noauthor_installation_nodate}
+``Installation {EAGLE} 3d sketchup,'' .
+
+\bibitem{noauthor_eagle_nodate}
+``{EAGLE} {Library} - {New} and improved {EAGLE} part libraries - {CadSoft},''
+  .
+
+\bibitem{noauthor_search_nodate}
+``Search : {Adafruit} {Industries}, {Unique} \& fun {DIY} electronics and
+  kits,'' .
+
+\bibitem{jeremy_blum_tutorial_2012}
+``Tutorial 1 for {Eagle}: {Schematic} {Design},'' June 2012.
+
+\bibitem{smackandy_creating_2008}
+``Creating your own parts for a library in {EAGLE},'' Aug. 2008.
+
+\bibitem{foulds_bandlimited_2013}
+Steve Foulds,
+\newblock ``Bandlimited {Oscillators} in {Reaktor},'' 2013.
+
+\bibitem{timoney_virtual_2012}
+Joseph Timoney, Victor Lazzarini, Matthieu Hodgkinson, Jari Kleimola, Jussi
+  Pekonen, and Vesa Välimäki,
+\newblock ``Virtual {Analog} {Oscillator} {Hard} {Synchronisation}: {Fourier}
+  {Series} and an {Efficient} {Implementation},''
+\newblock in {\em Proceedings of the 15th {Int}. {Conference} on {Digital}
+  {Audio} {Effects} ({DAFx}-12), {York}, {UK}, {September} 17-21, 2012}, 2012.
+
+\bibitem{noauthor_bandlimited_nodate}
+``Bandlimited {Oscillators} in {Reaktor},'' .
+
+\bibitem{brandt_hard_2001}
+Eli Brandt,
+\newblock ``Hard sync without aliasing,''
+\newblock {\em School of Computer Science, Carnegie Mellon University}, 2001.
+
+\bibitem{noauthor_advanced_nodate}
+``Advanced {Programming} {Techniques} for {Modular} {Synthesizers},'' .
+
+\bibitem{brandt_hard_2001-1}
+Eli Brandt,
+\newblock ``Hard sync without aliasing,''
+\newblock {\em power (dB)}, vol. 60, pp. 40, 2001.
+
+\bibitem{frei_digital_2009}
+Beat Frei,
+\newblock ``Digital sound generation,''
+\newblock {\em Institute for Computer Music and Sound Technology (ICST) Zurich
+  University of the Arts}, 2009.
+
+\bibitem{nam_alias-free_2009}
+Juhan Nam, Vesa Välimäki, J.~Abel, and Julius~O. Smith,
+\newblock ``Alias-free virtual analog oscillators using a feedback delay
+  loop,''
+\newblock in {\em Proceedings of the 12th {International} {Conference} on
+  {Digital} {Audio} {Effects} ({DAFx09}), {Como}, {Italy}, {September} 1–4},
+  2009.
+
+\bibitem{lu_theory_2008}
+Y.M. Lu and M.N. Do,
+\newblock ``A {Theory} for {Sampling} {Signals} {From} a {Union} of
+  {Subspaces},''
+\newblock {\em IEEE Transactions on Signal Processing}, vol. 56, no. 6, pp.
+  2334--2345, June 2008.
+
+\bibitem{gardner_mathematical_1990}
+Martin Gardner,
+\newblock {\em Mathematical {Carnival}},
+\newblock Penguin Books, Nov. 1990.
+
+\bibitem{flusser_kommunikologie_2009}
+Vilém Flusser,
+\newblock {\em Kommunikologie weiter denken: {Die} {Bochumer} {Vorlesungen}},
+\newblock Fischer Taschenbuch Verlag, Jan. 2009.
+
+\bibitem{farnell_designing_2010}
+Andy Farnell,
+\newblock {\em Designing sound},
+\newblock MIT Press, Cambridge, Mass, 2010.
+
+\bibitem{lai_practical_2004}
+Edmund Lai,
+\newblock {\em Practical digital signal processing for engineers and
+  technicians},
+\newblock Newnes, London ; Burlington, MA, 2004.
+
+\bibitem{knuth_art_1997}
+Donald~Ervin Knuth,
+\newblock {\em The art of computer programming},
+\newblock Addison-Wesley, Reading, Mass, 3rd ed edition, 1997.
+
+\bibitem{hamming_digital_1998}
+R.~W. Hamming,
+\newblock {\em Digital filters},
+\newblock Dover Publications, Mineola, N.Y, 1998.
+
+\bibitem{faure_monte-carlo_2001}
+Henri Faure,
+\newblock ``Monte-{Carlo} and quasi-{Monte}-{Carlo} methods for numerical
+  integration,''
+\newblock {\em Combinatorial \& computational mathematics (Pohang, 2000)}, pp.
+  1--12, 2001.
+
+\bibitem{yates_dc_nodate}
+Randy Yates and Richard Lyons,
+\newblock ``{DC} {Block} {Algorithm},'' .
+
+\bibitem{pomberger_algorithmen_2008}
+Gustav Pomberger and Heinz Dobler,
+\newblock {\em Algorithmen und {Datenstrukturen}},
+\newblock Pearson Deutschland GmbH, 2008.
+
+\bibitem{noauthor_pseudozufallszahlen_nodate}
+``Pseudozufallszahlen und {Monte}-{Carlo} {Metho} den,'' .
+
+\bibitem{noauthor_musikalisches_nodate}
+``Musikalisches {Würfelspiel} – {Wikipedia},'' .
+
+\bibitem{michels_dtv-atlas_2008}
+Ulrich Michels,
+\newblock {\em Dtv-{Atlas} {Musik}: systematischer {Teil} ; {Musikgeschichte}
+  von den {Anfängen} bis zur {Gegenwart}},
+\newblock dtv, München, 2008.
+
+\bibitem{bronner_quantenoptische_2010}
+Patrick Bronner,
+\newblock {\em Quantenoptische {Experimente} als {Grundlage} eines
+  {Curriculums} zur {Quantenphysik} des {Photons} - {Studien} zum {Physik}- und
+  {Chemielernen}, {Band} 103},
+\newblock Logos Verlag Berlin GmbH, 2010.
+
+\bibitem{lehmer_mathematical_1951}
+Derrick Lehmer,
+\newblock ``Mathematical methods in large-scale digital computing units,''
+\newblock 1951.
+
+\bibitem{pomberger_algorithmen_2008-1}
+Gustav Pomberger and Heinz Dobler,
+\newblock {\em Algorithmen und {Datenstrukturen}},
+\newblock Pearson Deutschland GmbH, 2008.
+
+\bibitem{noauthor_notes_nodate}
+``Notes about {FFT} normalization..,'' .
+
+\bibitem{pain_physics_nodate}
+Pain,
+\newblock ``The {Physics} of {Vibrations} and {Waves} - {HJ} {Pain}.pdf,'' .
+
+\bibitem{benson_math_nodate}
+Dave Benson,
+\newblock ``Math {Music}.pdf,'' .
+
+\bibitem{noauthor_2590.pdf_nodate}
+``2590.pdf,'' .
+
+\bibitem{gentle_random_2003}
+James~E. Gentle,
+\newblock {\em Random {Number} {Generation} and {Monte} {Carlo} {Methods}},
+\newblock Springer, June 2003.
+
+\bibitem{noauthor_discrete_nodate}
+``Discrete {Fourier} {Transform} (numpy.fft) — {NumPy} v1.7 {Manual}
+  ({DRAFT}),'' .
+
+\bibitem{noauthor_waveshaper_nodate}
+``Waveshaper - {Wikipedia}, the free encyclopedia,'' .
+
+\bibitem{ma_intelligent_2015}
+Zheng Ma, Brecht De~Man, Pedro Pestana, Dawn Black, and Joshua Reisss,
+\newblock ``Intelligent {Multitrack} {Dynamic} {Range} {Compression},''
+\newblock {\em Journal of the Audio Engineering Society}, pp. 412--426, June
+  2015.
+
+\bibitem{ma_partial_2014}
+Zheng Ma, Joshua~D. Reiss, and Dawn~AA Black,
+\newblock ``Partial {Loudness} in {Multitrack} {Mixing},''
+\newblock in {\em Audio {Engineering} {Society} {Conference}: 53rd
+  {International} {Conference}: {Semantic} {Audio}}. 2014, Audio Engineering
+  Society.
+
+\bibitem{vickers_automatic_2001}
+Earl Vickers,
+\newblock ``Automatic long-term loudness and dynamics matching,''
+\newblock in {\em Audio {Engineering} {Society} {Convention} 111}. 2001, Audio
+  Engineering Society.
+
+\bibitem{giannoulis_digital_2012}
+Dimitrios Giannoulis, Michael Massberg, and Joshua~D. Reiss,
+\newblock ``Digital dynamic range compressor design—a tutorial and
+  analysis,''
+\newblock {\em Journal of the Audio Engineering Society}, vol. 60, no. 6, pp.
+  399--408, 2012.
+
+\bibitem{noauthor_jaes-1125-11_hr_nodate}
+``{JAES}-1125-11\_hr -
+  {GiannoulisMassbergReiss}-dynamicrangecompression-{JAES2012}.pdf,'' .
+
+\bibitem{noauthor_sublimerepl_nodate}
+``{SublimeREPL} — {SublimeREPL} 1.0.30 documentation,'' .
+
+\bibitem{bilbao_numerical_2009}
+Stefan Bilbao,
+\newblock {\em Numerical {Sound} {Synthesis}: {Finite} {Difference} {Schemes}
+  and {Simulation} in {Musical} {Acoustics}},
+\newblock John Wiley \& Sons, Sept. 2009.
+
+\bibitem{karjalainen_compilation_2003}
+M.~Karjalainen, C.~Erkut, and L.~Savioja,
+\newblock ``Compilation of unified physical models for efficient sound
+  synthesis,''
+\newblock in {\em 2003 {IEEE} {International} {Conference} on {Acoustics},
+  {Speech}, and {Signal} {Processing}, 2003. {Proceedings}. ({ICASSP} '03)},
+  Apr. 2003, vol.~5, pp. V--433--6 vol.5.
+
+\bibitem{noauthor_asen5022.slide17.tex_nodate}
+``{ASEN5022}.slide17.tex - {ASEN5022}.slide.17.pdf,'' .
+
+\bibitem{noauthor_vibration_2015}
+``Vibration of plates,'' Oct. 2015,
+\newblock Page Version ID: 683707777.
+
+\bibitem{noauthor_physical_nodate}
+``Physical modeling of percussion instruments - 5768.pdf,'' .
+
+\bibitem{smith_mathematics_2007}
+Julius~O. Smith,
+\newblock ``Mathematics of the {Discrete} {Fourier} {Transform} ({DFT}),''
+  2007.
+
+\bibitem{frey_signal-_2009}
+Martin~Thomas Frey, Bossert,
+\newblock {\em Signal- und {Systemtheorie}: mit 26 {Tabellen}, 64 {Aufgaben}
+  mit {Lösungen} und 84 {Beispielen}},
+\newblock Vieweg+Teubner Verlag / GWV Fachverlage GmbH, Wiesbaden, Wiesbaden,
+  2009.
+
+\bibitem{schroeder_natural_1961}
+Manfred~R. Schroeder,
+\newblock ``Natural {Sounding} {Artificial} {Reverberation},''
+\newblock in {\em Audio {Engineering} {Society} {Convention} 13}, 1961.
+
+\bibitem{khoury_3d_nodate}
+Amar Chaudhary Adrian Freed~Sami Khoury and David Wessel,
+\newblock ``A {3D} {Graphical} {User} {Interface} for {Resonance} {Modeling},''
+\newblock .
+
+\bibitem{noauthor_physically_2009}
+``Physically {Based} {Sound} {Synthesis} for {Interactive} {Applications} -
+  {Cahill}.pdf,'' 2009.
+
+\bibitem{noauthor_flohberger_report.pdf_nodate}
+``flohberger\_report.pdf,'' .
+
+\bibitem{scholkmann_efficient_2012}
+Felix Scholkmann, Jens Boss, and Martin Wolf,
+\newblock ``An {Efficient} {Algorithm} for {Automatic} {Peak} {Detection} in
+  {Noisy} {Periodic} and {Quasi}-{Periodic} {Signals},''
+\newblock {\em Algorithms}, vol. 5, no. 4, pp. 588--603, Nov. 2012.
+
+\bibitem{noauthor_notitle_nodate}
+,'' .
+
+\bibitem{farnell_designing_2010-1}
+Andy Farnell,
+\newblock {\em Designing sound},
+\newblock MIT Press, Cambridge, Mass, 2010.
+
+\bibitem{cook_real_2002}
+Perry~R. Cook,
+\newblock {\em Real sound synthesis for interactive applications},
+\newblock A K Peters, Natick, Mass, 2002.
+
+\bibitem{noauthor_notitle_nodate-1}
+
+
+\bibitem{smith_physical_2010}
+Julius~O. Smith,
+\newblock ``{PHYSICAL} {AUDIO} {SIGNAL} {PROCESSING} {FOR} {VIRTUAL} {MUSICAL}
+  {INSTRUMENTS} {AND} {AUDIO} {EFFECTS},'' 2010.
+
+\bibitem{van_den_doel_sounds_1996}
+van~den Doel, K.~Pai Dinesh, and Kees,
+\newblock ``The {Sounds} of {Physical} {Shapes},'' 1996.
+
+\bibitem{noauthor_pdflatex_nodate}
+``pdflatex - {How} to insert code into a latex doc - {Stack} {Overflow},'' .
+
+\bibitem{noauthor_how_nodate}
+``How to insert code into a latex doc,'' .
+
+\bibitem{chaudhary_3-d_1998}
+Amar Chaudhary, Adrian Freed, Sami Khoury, and David Wessel,
+\newblock ``A 3-{D} graphical user interface for resonance modeling,''
+\newblock in {\em Proceedings of the {International} {Computer} {Music}
+  {Conference}, {Ann} {Arbor}}, 1998.
+
+\bibitem{noauthor_nature_nodate}
+``The {Nature} of {Code},'' .
+
+\bibitem{noauthor_topic:_nodate}
+``Topic: tips on structuring/laying out patches? « {Cycling} 74,'' .
+
+\bibitem{noauthor_max_nodate}
+``Max for {Live} {Tutorial} « {Cycling} 74,'' .
+
+\bibitem{noauthor_making_nodate}
+``Making {A} {Slick} {Max} {Standalone} presentation from {Expo} ’74 workshop
+  « {Cycling} 74,'' .
+
+\bibitem{noauthor_basic_nodate}
+``A {Basic} {Introduction} to {Digital} {Waveguide} {Synthesis} (for the
+  {Technically} {Inclined}),'' .
+
+\bibitem{ahgren_simple_2003}
+Per Ahgren and Petre Stoica,
+\newblock ``A simple method for estimating the impulse responses of
+  loudspeakers,''
+\newblock {\em Consumer Electronics, IEEE Transactions on}, vol. 49, no. 4, pp.
+  889--893, 2003.
+
+\bibitem{karjalainen_plucked_nodate}
+Matti Karjalainen, Vesa Välimäki, and Tero Tolonen,
+\newblock ``Plucked {String} {Models}: {From} the {Karplus}-{Strong}
+  {Algorithm} to {Digital} {Waveguides} and {Beyond},'' .
+
+\bibitem{cycling_74_msp:_nodate}
+Cycling '74,
+\newblock ``{MSP}: {Audio} {Input} and {Output},'' .
+
+\bibitem{noauthor_algorithmic_nodate}
+``Algorithmic {Composer} {\textbar} {Algorithmic} {Composition} tutorials,
+  thoughts and tools,'' .
+
+\bibitem{smith_scientist_nodate}
+Steven~w. Smith,
+\newblock ``The {Scientist} and {Engineer}'s {Guide} to {Digital} {Signal}
+  {Processing},'' .
+
+\bibitem{puckette_theory_nodate}
+Miller Puckette,
+\newblock ``The {Theory} and {Technique} of {Electronic} {Music},'' .
+
+\bibitem{roads_computer_1996}
+Curtis Roads,
+\newblock {\em The computer music tutorial},
+\newblock MIT Press, Cambridge, Mass, 1996.
+
+\bibitem{farnell_designing_2010-2}
+Andy Farnell,
+\newblock {\em Designing sound},
+\newblock MIT Press, Cambridge, Mass, 2010.
+
+\bibitem{noauthor_nord_nodate}
+``Nord modular synthesis {Techniques},'' .
+
+\bibitem{cipriani_electronic_2010}
+Alessandro Cipriani and Maurizio Giri,
+\newblock {\em Electronic music and sound design: theory and practice with
+  {Max}/{MSP} - vol. 1.},
+\newblock ConTempoNet, Rome, 2010.
+
+\bibitem{rosand_opera_2007}
+Ellen Rosand,
+\newblock {\em Opera in {Seventeenth}-{Century} {Venice}: {The} {Creation} of a
+  {Genre}},
+\newblock University of California Press, 2007.
+
+\bibitem{noauthor_shortcuts_nodate}
+``shortcuts,'' .
+
+\bibitem{noauthor_digital_nodate}
+``The digital state variable filter {\textbar} {EarLevel} {Engineering},'' .
+
+\bibitem{noauthor_biquad_nodate}
+``Biquad calculator v2 {\textbar} {EarLevel} {Engineering},'' .
+
+\bibitem{noauthor__nodate}
+``» {Topic}: cpu display in max over 100\% but everything ok in task manager
+  (win),'' .
+
+\bibitem{noauthor_tutorial_nodate}
+``Tutorial 42: {Slab}: {Data} {Processing} on the {GPU},'' .
+
+\bibitem{noauthor__nodate-1}
+``» {Topic}: cpu display in max over 100\% but everything ok in task manager
+  (win),'' .
+
+\bibitem{noauthor__nodate-2}
+``» {Topic}: {Poly}{\textasciitilde}: differencese between threadcount and
+  parallel?,'' .
+
+\bibitem{noauthor__nodate-3}
+``» {Topic}: {Multithreading} suggestions,'' .
+
+\bibitem{noauthor__nodate-4}
+``» {Topic}: {GEN} and parallel computing,'' .
+
+\bibitem{noauthor_comparison_2013}
+``Comparison of audio synthesis environments,'' Dec. 2013,
+\newblock Page Version ID: 584029236.
+
+\bibitem{noauthor_k-dio_nodate}
+``K-{DIO} 13 - {Monitor}-{Kupplung}, 13-polig bei reichelt elektronik,'' .
+
+\bibitem{noauthor_eb-dio_nodate}
+``{EB}-{DIO} 13 - {MINI}-{DIN}-{Printbuchse}, 13-polig {Atari} bei reichelt
+  elektronik,'' .
+
+\bibitem{noauthor_miyama_nodate}
+``Miyama {Miniatur}-{Kippschalter} 250 {V}/{AC} 3 {A} mit {Flachhebel} {MS} 500
+  {A}-{MF} {RED} 1 x {Ein}/{Ein} rastend/rastend im {Conrad} {Online} {Shop}
+  {\textbar} 700924,'' .
+
+\bibitem{noauthor_miniatur-kippschalter_nodate}
+``Miniatur-{Kippschalter} 250 {V}/{AC} 3 {A} {LB}-601-2 1 x {Ein}/{Ein}
+  rastend/rastend im {Conrad} {Online} {Shop} {\textbar} 700380,'' .
+
+\bibitem{noauthor_piher_nodate}
+``Piher {Potentiometer} {PC}-16 {PC16SH}-{10IP06222A2020MTA} {M10} x 9 mm {Lin}
+  2.2 {kΩ} 0,2 {W} ± 20 \% im {Conrad} {Online} {Shop} {\textbar} 445389,'' .
+
+\bibitem{noauthor_zotero_nodate}
+``Zotero {\textbar} {Login},'' .
+
+\bibitem{noauthor_pfostenverbinder_nodate}
+``Pfostenverbinder {RM} 2,54 {Rastermaß}: 2.54 mm {Pole}: 2 x 13 141-26-10-60
+  {W} \& {P} {Products} {Inhalt}: 1 {St}. im {Conrad} {Online} {Shop}
+  {\textbar} 734604,'' .
+
+\bibitem{noauthor_led-abstandshalter_nodate}
+``{LED}-{Abstandshalter} {KSS} {LD3}-12 {Natur} {Passend} für {LED} 3 mm im
+  {Conrad} {Online} {Shop} {\textbar} 181909,'' .
+
+\bibitem{noauthor_pfostenverbinder_nodate-1}
+``Pfostenverbinder {RM} 2,54 {Rastermaß}: 2.54 mm {Pole}: 2 x 13 141-26-10-60
+  {W} \& {P} {Products} {Inhalt}: 1 {St}. im {Conrad} {Online} {Shop}
+  {\textbar} 734604,'' .
+
+\bibitem{noauthor_klinkeneinbaubuchse_nodate}
+``Klinkeneinbaubuchse 6,35 mm {Buchse} {Einbau} {Pole}=3/{Stereo} {NYS232}
+  {Rean} {AV} {Inhalt}: 1 {St}. im {Conrad} {Online} {Shop} {\textbar}
+  715583,'' .
+
+\bibitem{noauthor_apem_nodate}
+``{APEM} {Hebelschalter} 250 {V}/{AC} 3 {A} {5237A} 1 x ({Ein})/{Aus}/({Ein})
+  tastend/0/tastend im {Conrad} {Online} {Shop} {\textbar} 700165,'' .
+
+\bibitem{noauthor_apem_nodate-1}
+``{APEM} {Hebelschalter} 250 {V}/{AC} 3 {A} {5236A} 1 x {Ein}/{Ein}
+  rastend/rastend im {Conrad} {Online} {Shop} {\textbar} 700153,'' .
+
+\bibitem{noauthor_apem_nodate-2}
+``{APEM} {Hebelschalter} 250 {V}/{AC} 3 {A} {5537A} 1 x ({Ein})/{Aus}/({Ein})
+  tastend/0/tastend im {Conrad} {Online} {Shop} {\textbar} 700351,'' .
+
+\bibitem{noauthor_tt_nodate-1}
+``{TT} {Electronics} {AB} {Leitplastik}-{Potentiometer} 9 mm {P090S}-{04F20}
+  {B}-50 {KR} oben einstellbar, single {Unit} lin 50 {kΩ} ± 20 \% im {Conrad}
+  {Online} {Shop} {\textbar} 451853,'' .
+
+\bibitem{noauthor_klinkeneinbaukupplung_nodate}
+``Klinkeneinbaukupplung 3,5 mm {Stehend} {Pole}=3 / {Stereo} 1502 01 {Lumberg}
+  {Inhalt}: 1 {St}. im {Conrad} {Online} {Shop} {\textbar} 738672,'' .
+
+\bibitem{noauthor_klinkeneinbaukupplung_nodate-1}
+``Klinkeneinbaukupplung 6,35 mm {Mono} (isoliert) {Pole}=2 / {Mono} (isolé)
+  1109030 {BKL} {Electronic} {Inhalt}: 1 {St}. im {Conrad} {Online} {Shop}
+  {\textbar} 732761,'' .
+
+\bibitem{noauthor_87555_nodate}
+``87555 {Adam} {Hall} 19" {Parts} 87555 - 19" {Rackwanne} 2 {HE} mit
+  {Auszugsschienen},'' .
+
+\bibitem{noauthor_pb_nodate}
+``{PB} {Fastener} {Soft}-{Touch}-{Knopf} 3030407 {Schwarz} {Achs}-{Durchmesser}
+  ({Achssitz} verzahnt) 6 mm {Rot} {Knopf}-Ø 16 mm {Rot} im {Conrad} {Online}
+  {Shop} {\textbar} 715859,'' .
+
+\bibitem{noauthor_knobs_nodate}
+``Knobs :: {Electromechanical} :: {Electronic} {Parts} :: {Banzai} {Music}
+  {GmbH},'' .
+
+\bibitem{noauthor_introduction_nodate}
+``An {Introduction} to {Variable} and {Feature} {Selection},'' .
+
+\bibitem{noauthor_vibration_nodate}
+``Vibration {Signature} {Analysis} as a {Diagnostic} {Tool} for {Condition}
+  {Assessment} of {Rotating} {Equipments},'' .
+
+\bibitem{yen_wavelet_1999}
+G.Y. Yen and {Kuo-Chung Lin},
+\newblock ``Wavelet packet feature extraction for vibration monitoring,''
+\newblock in {\em {IJCNN}'99. {International} {Joint} {Conference} on {Neural}
+  {Networks}. {Proceedings} ({Cat}. {No}.{99CH36339})}, Washington, DC, USA,
+  1999, vol.~5, pp. 3365--3370, IEEE.
+
+\bibitem{yan_complexity_2004}
+R.~Yan and R.X. Gao,
+\newblock ``Complexity as a {Measure} for {Machine} {Health} {Evaluation},''
+\newblock {\em IEEE Transactions on Instrumentation and Measurement}, vol. 53,
+  no. 4, pp. 1327--1334, Aug. 2004.
+
+\bibitem{yan_efficient_2005}
+Ruqiang Yan and Robert~X. Gao,
+\newblock ``An efficient approach to machine health diagnosis based on harmonic
+  wavelet packet transform,''
+\newblock {\em Robotics and Computer-Integrated Manufacturing}, vol. 21, no.
+  4-5, pp. 291--301, Aug. 2005.
+
+\bibitem{yan_hilberthuang_2006}
+Ruqiang Yan and Robert~X. Gao,
+\newblock ``Hilbert–{Huang} {Transform}-{Based} {Vibration} {Signal}
+  {Analysis} for {Machine} {Health} {Monitoring},''
+\newblock {\em IEEE Transactions on Instrumentation and Measurement}, vol. 55,
+  no. 6, pp. 2320--2329, Dec. 2006.
+
+\bibitem{goel_methodical_nodate}
+Sudhanshu Goel, Ripul Ghosh, Satish Kumar, and Aparna Akula,
+\newblock ``A {Methodical} {Review} of {Condition} {Monitoring} {Techniques}
+  for {Electrical} {Equipment},''
+\newblock p.~8.
+
+\bibitem{bucher_computational_2009}
+Christian Bucher,
+\newblock {\em Computational analysis of randomness in structural mechanics},
+\newblock Number v. 3 in Structures and infrastructures series. CRC Press, Boca
+  Raton [Fla.] ; London, 2009,
+\newblock OCLC: ocn259265442.
+
+\bibitem{viertl_einfuhrung_1997}
+Reinhard Karl~Wolfgang Viertl,
+\newblock {\em Einführung in die {Stochastik}: mit {Elementen} der
+  {Bayes}-{Statistik} und {Ansätzen} für die {Analyse} unscharfer {Daten}},
+\newblock Springer-{Lehrbuch} {Mathematik}. Springer, Wien, 2., überarb. aufl
+  edition, 1997,
+\newblock OCLC: 845015593.
+
+\bibitem{kottegoda_applied_2008}
+N.~T. Kottegoda, Renzo Rosso, and N.~T. Kottegoda,
+\newblock {\em Applied statistics for civil and environmental engineers},
+\newblock Blackwell Pub, Oxford, UK ; [Malden, MA], 2nd ed edition, 2008.
+
+\bibitem{goel_methodical_nodate-1}
+Sudhanshu Goel, Ripul Ghosh, Satish Kumar, and Aparna Akula,
+\newblock ``A {Methodical} {Review} of {Condition} {Monitoring} {Techniques}
+  for {Electrical} {Equipment},''
+\newblock p.~8.
+
+\bibitem{noauthor_notitle_nodate-2}
+,'' .
+
+\bibitem{pai_scanning_2001}
+Dinesh~K. Pai, Kees Van~Den Doel, Doug~L. James, Jochen Lang, John~E. Lloyd,
+  Joshua~L. Richmond, and Som~H. Yau,
+\newblock ``Scanning {Physical} {Interaction} {Behavior} of {3D} {Objects},''
+\newblock in {\em In {Computer} {Graphics} ({ACM} {SIGGRAPH} 01 {Conference}
+  {Proceedings}}, 2001, pp. 87--96.
+
+\bibitem{holters_department_2011}
+Martin Holters and Udo Zölzer,
+\newblock ``Department of {Signal} {Processing} and {Communications} {Helmut}
+  {Schmidt} {University} {Hamburg}, {Germany},''
+\newblock p.~5, 2011.
+
+\bibitem{noauthor_notitle_nodate-3}
+,'' .
+
+\bibitem{noauthor_digital_nodate-1}
+``Digital {Waveguide} {Networks} for {Room} {Response} {Modeling} and
+  {Synthesis},'' .
+
+\bibitem{antonacci_real_2004}
+Fabio Antonacci, Marco Foco, Augusto Sarti, and Stefano Tubaro,
+\newblock ``Real {Time} {Modeling} of {Acoustic} {Propagation} in {Complex}
+  {Environments},''
+\newblock p.~6, 2004.
+
+\bibitem{noauthor_low-cost_nodate}
+``{LOW}-{COST} {GEOMETRY}-{BASED} {ACOUSTIC} {RENDERING},'' .
+
+\bibitem{noauthor_intelligent_nodate}
+``Intelligent {Multitrack} {Dynamic} {Range} {Compression},'' .
+
+\bibitem{noauthor_deep_nodate}
+``Deep {Neural} {Networks} for {Dynamic} {Range} {Compression} in {Mastering}
+  {Applications},'' .
+
+\bibitem{noauthor_ten_nodate}
+``{TEN} {YEARS} {OF} {AUTOMATIC} {MIXING},'' .
+
+\bibitem{noauthor_evaluation_nodate}
+``Evaluation of {Dynamics} {Processors}’ {Effects} {Using} {Signal}
+  {Statistics},'' .
+
+\bibitem{noauthor_statistical_nodate}
+``A {STATISTICAL} {APPROACH} {TO} {AUTOMATED} {OFFLINE} {DYNAMIC} {PROCESSING}
+  {IN} {THE} {AUDIO} {MASTERING} {PROCESS},'' .
+
+\bibitem{noauthor_evaluation_nodate-1}
+``An {Evaluation} of {Audio} {Feature} {Extraction} {Toolboxes},'' .
+
+\bibitem{smith_physical_2011}
+Julius~Orion Smith,
+\newblock {\em Physical audio signal processing: for virtual musical
+  instruments and audio effects},
+\newblock W3K Publishing, Lexington, 2011,
+\newblock OCLC: 774174525.
+
+\bibitem{bilbao_numerical_2009-1}
+Stefan~D. Bilbao,
+\newblock {\em Numerical sound synthesis: finite difference schemes and
+  simulation in musical acoustics},
+\newblock Wiley, Chichester, 2009,
+\newblock OCLC: ocn319497904.
+
+\bibitem{zolzer_dafx:_2011}
+Udo Zölzer, Ed.,
+\newblock {\em {DAFX}: digital audio effects},
+\newblock Wiley, Chichester, second edition edition, 2011,
+\newblock OCLC: 729989097.
+
+\bibitem{noauthor_notitle_nodate-4}
+
+
+\bibitem{noauthor_linux_nodate}
+``linux installation instructions for standalone,'' .
+
+\bibitem{noauthor_notitle_nodate-5}
+,'' .
+
+\bibitem{noauthor_jupyterlab_nodate}
+``{JupyterLab} {Alpha} {Preview},'' .
+
+\bibitem{noauthor_title_nodate}
+``Title,'' .
+
+\bibitem{massberg_investigation_2009}
+Michael Massberg,
+\newblock ``Investigation in {Dynamic} {Range} {Compression},'' 2009.
+
+\bibitem{smith_physical_2010-1}
+Julius~O. Smith,
+\newblock {\em {PHYSICAL} {AUDIO} {SIGNAL} {PROCESSING} {FOR} {VIRTUAL}
+  {MUSICAL} {INSTRUMENTS} {AND} {AUDIO} {EFFECTS}},
+\newblock 2010.
+
+\bibitem{smith_mathematics_2007-1}
+Julius~O. Smith,
+\newblock {\em Mathematics of the {Discrete} {Fourier} {Transform} ({DFT})},
+\newblock 2007.
+
+\bibitem{frey_signal-_2009-1}
+Martin~Thomas Frey, Bossert,
+\newblock {\em Signal- und {Systemtheorie}: mit 26 {Tabellen}, 64 {Aufgaben}
+  mit {Lösungen} und 84 {Beispielen}},
+\newblock Vieweg+Teubner Verlag / GWV Fachverlage GmbH, Wiesbaden, Wiesbaden,
+  2009.
+
+\bibitem{schroeder_natural_1961-1}
+Manfred~R. Schroeder,
+\newblock ``Natural {Sounding} {Artificial} {Reverberation},''
+\newblock in {\em Audio {Engineering} {Society} {Convention} 13}, Oct. 1961.
+
+\bibitem{noauthor_flohberger_report.pdf_nodate-1}
+{\em flohberger\_report.pdf}.
+
+\bibitem{scholkmann_efficient_2012-1}
+Felix Scholkmann, Jens Boss, and Martin Wolf,
+\newblock ``An {Efficient} {Algorithm} for {Automatic} {Peak} {Detection} in
+  {Noisy} {Periodic} and {Quasi}-{Periodic} {Signals},''
+\newblock {\em Algorithms}, vol. 5, no. 4, pp. 588--603, Nov. 2012.
+
+\bibitem{cook_real_2002-1}
+Perry~R. Cook,
+\newblock {\em Real sound synthesis for interactive applications},
+\newblock A K Peters, Natick, Mass, 2002.
+
+\bibitem{noauthor_physically_2009-1}
+{\em Physically {Based} {Sound} {Synthesis} for {Interactive} {Applications} -
+  {Cahill}.pdf},
+\newblock 2009.
+
+\bibitem{khoury_3d_nodate-1}
+Amar Chaudhary Adrian Freed~Sami Khoury and David Wessel,
+\newblock ``A {3D} {Graphical} {User} {Interface} for {Resonance} {Modeling},''
+\newblock .
+
+\bibitem{noauthor_notitle_nodate-6}
+
+
+\bibitem{farnell_designing_2010-3}
+Andy Farnell,
+\newblock {\em Designing sound},
+\newblock MIT Press, Cambridge, Mass, 2010.
+
+\bibitem{chaudhary_3-d_1998-1}
+Amar Chaudhary, Adrian Freed, Sami Khoury, and David Wessel,
+\newblock ``A 3-{D} graphical user interface for resonance modeling,''
+\newblock in {\em Proceedings of the {International} {Computer} {Music}
+  {Conference}, {Ann} {Arbor}}, 1998.
+
+\bibitem{doel_sounds_1996}
+van~den Doel, K.~Pai Dinesh, and {Kees},
+\newblock {\em The {Sounds} of {Physical} {Shapes}},
+\newblock 1996.
+
+\bibitem{smith_introduction_2007}
+Julius~O. Smith,
+\newblock ``Introduction to {Digital} {Filters} with {Audio} {Applications},''
+  2007.
+
+\bibitem{farnell_designing_2010-4}
+Andy Farnell,
+\newblock {\em Designing sound},
+\newblock MIT Press, Cambridge, Mass, 2010,
+\newblock OCLC: ocn494275436.
+
+\bibitem{miller_puckette_theory_2006}
+{Miller Puckette},
+\newblock ``The {Theory} and {Technique} of {Electronic} {Music},'' 2006.
+
+\bibitem{noauthor_smc-2017_nodate}
+``{SMC}-2017 — {Espoo}, {Finland},'' .
+
+\bibitem{noauthor_aes_nodate}
+``{AES} {Berlin} 2017 » 142nd {Convention} {Call} for {Papers} and
+  {Engineering} {Briefs},'' .
+
+\bibitem{noauthor_submit_nodate}
+``Submit a {Paper} to the {AES} {Journal},'' .
+
+\bibitem{noauthor_dafx17_nodate}
+``{DAFx17} {\textbar} {Edinburgh},'' .
+
+\bibitem{noauthor_celexon_nodate}
+``celexon {\textbar} {Mobil} {Expert}, {Rückprojektion},'' .
+
+\bibitem{noauthor_rolloleinwand_nodate}
+``Rolloleinwand {Rückprojektion} 240 x 200 {Leinwände} {Rolloleinwände}
+  {Rückpro} {Rolloleinwände},'' .
+
+\bibitem{noauthor_projektionsleinwande_nodate}
+``Projektionsleinwände für {Projektoren} - {Thomann} Österreich,'' .
+
+\bibitem{noauthor_projektionsfolie_nodate}
+``Projektionsfolie {Neve} {\textbar} {Tüchler} Österreich,'' .
+
+\bibitem{noauthor_ruckprojektionsfolie_nodate}
+``Rückprojektionsfolie {OPTILUX} - {Rückprojektionsfolien} -
+  {Projektionsfolien} - {Screens} - {Produkte} \& {Shop} - {Gerriets},'' .
+
+\bibitem{caetano_improved_2011}
+Marcelo Caetano and Xavier Rodet,
+\newblock ``Improved estimation of the amplitude envelope of time-domain
+  signals using true envelope cepstral smoothing,''
+\newblock in {\em 2011 {IEEE} {International} {Conference} on {Acoustics},
+  {Speech} and {Signal} {Processing} ({ICASSP})}. 2011, pp. 4244--4247, IEEE.
+
+\bibitem{geoffroy_peeters_large_2004}
+{Geoffroy Peeters},
+\newblock ``A {Large} {Set} of {Audio} {Features} for {Sound} {Description},''
+  2004.
+
+\bibitem{joseph_timoney_implementing_2004}
+{Joseph Timoney}, {Thomas Lysaght}, {Marc Schoenwiesner}, and {Lorcan Mac
+  Manus},
+\newblock ``Implementing {Loudness} {Models} in {MATLAB},'' 2004.
+
+\bibitem{ebu_ebu_2014}
+{EBU},
+\newblock ``{EBU} {R128}, {LOUDNESS} {NORMALISATION} {AND} {PERMITTED}
+  {MAXIMUM} {LEVEL} {OF} {AUDIO} {SIGNALS},'' 2014.
+
+\bibitem{ebu_loudness_2016}
+{EBU},
+\newblock ``Loudness {Range}: {A} measure to {Supplement} {EBU} {R} 128
+  {Loudness} {Normalization},'' 2016.
+
+\bibitem{ebu_ebu_2016}
+{EBU},
+\newblock ``{EBU} {TECH} 3342,'' 2016.
+
+\bibitem{noauthor_loudness_nodate}
+``Loudness {Explained} {\textbar} {TC} {Electronic},'' .
+
+\bibitem{tc-electronic_loudness_2016}
+{tc-electronic},
+\newblock ``Loudness {Explained} {\textbar} {TC} {Electronic},'' 2016.
+
+\bibitem{gorlow_model-based_2013}
+Stanislaw Gorlow and Joshua Reiss,
+\newblock ``Model-{Based} {Inversion} of {Dynamic} {Range} {Compression},''
+  2013.
+
+\bibitem{gorlow_restoring_2014}
+Stanislaw Gorlow, Joshua~D. Reiss, and Elodie Duru,
+\newblock ``Restoring the dynamics of clipped audio material by inversion of
+  dynamic range compression,''
+\newblock in {\em 2014 {IEEE} {International} {Symposium} on {Broadband}
+  {Multimedia} {Systems} and {Broadcasting}}. 2014, pp. 1--5, IEEE.
+
+\bibitem{zolzer_dafx:_2002}
+Udo Zölzer and Xavier Amatriain, Eds.,
+\newblock {\em {DAFX}: digital audio effects},
+\newblock Wiley, Chichester ; New York, N.Y, 2002,
+\newblock OCLC: ocm49549813.
+
+\bibitem{noauthor_dafx_book.pdf_nodate}
+``dafx\_book.pdf,'' .
+
+\bibitem{itu_algorithms_2011}
+{ITU},
+\newblock ``Algorithms to measure audio programme loudness and true-peak audio
+  level,''
+\newblock 2011.
+
+\bibitem{julius_o._smith_introduction_2007}
+{Julius O. Smith},
+\newblock ``Introduction to {Digital} {Filters} with {Audio} {Applications},''
+  2007.
+
+\bibitem{vickers_automatic_2001-1}
+Earl Vickers,
+\newblock ``Automatic long-term loudness and dynamics matching,''
+\newblock in {\em Audio {Engineering} {Society} {Convention} 111}. 2001, Audio
+  Engineering Society.
+
+\bibitem{maddams_autonomous_2012}
+Jacob~A. Maddams, Saoirse Finn, and Joshua~D. Reiss,
+\newblock ``An autonomous method for multi-track dynamic range compression,''
+\newblock in {\em Proceedings of the 15th {International} {Conference} on
+  {Digital} {Audio} {Effects} ({DAFx}-12)}, 2012.
+
+\bibitem{lund_control_2006}
+Thomas Lund,
+\newblock ``Control of {Loudness} in {Digital} {TV},''
+\newblock in {\em Proc. of the {NAB}-2006 {Convention}}, 2006.
+
+\bibitem{series_algorithms_2011}
+B.~S. Series,
+\newblock ``Algorithms to measure audio programme loudness and true-peak audio
+  level,''
+\newblock 2011.
+
+\bibitem{behler_automatic_2010}
+Gottfried Behler, Martin Guski, and M.~Vorlander,
+\newblock ``Automatic loudness control,''
+\newblock in {\em Proceedings of the 20th international congress on acoustics},
+  2010.
+
+\bibitem{giannoulis_parameter_2013}
+Dimitrios Giannoulis, Michael Massberg, and Joshua~D. Reiss,
+\newblock ``Parameter automation in a dynamic range compressor,''
+\newblock {\em Journal of the Audio Engineering Society}, vol. 61, no. 10, pp.
+  716--726, 2013.
+
+\bibitem{mansbridge_implementation_2012}
+Stuart Mansbridge, Saoirse Finn, and Joshua~D. Reiss,
+\newblock ``Implementation and evaluation of autonomous multi-track fader
+  control,''
+\newblock in {\em Audio {Engineering} {Society} {Convention} 132}. 2012, Audio
+  Engineering Society.
+
+\bibitem{mansbridge_autonomous_2012}
+Stuart Mansbridge, Saorise Finn, and Joshua~D. Reiss,
+\newblock ``An autonomous system for multitrack stereo pan positioning,''
+\newblock in {\em Audio {Engineering} {Society} {Convention} 133}. 2012, Audio
+  Engineering Society.
+
+\bibitem{perez-gonzalez_automatic_2009}
+Enrique Perez-Gonzalez and Joshua Reiss,
+\newblock ``Automatic equalization of multichannel audio using cross-adaptive
+  methods,''
+\newblock in {\em Audio {Engineering} {Society} {Convention} 127}. 2009, Audio
+  Engineering Society.
+
+\bibitem{gonzalez_automatic_2007}
+E.~Perez Gonzalez and Joshua Reiss,
+\newblock ``Automatic mixing: live downmixing stereo panner,''
+\newblock in {\em Proceedings of the 7th {International} {Conference} on
+  {Digital} {Audio} {Effects} ({DAFx}’07)}, 2007, pp. 63--68.
+
+\bibitem{reiss_intelligent_2011}
+Joshua~D. Reiss,
+\newblock ``Intelligent systems for mixing multichannel audio,''
+\newblock in {\em 2011 17th {International} {Conference} on {Digital} {Signal}
+  {Processing} ({DSP})}. 2011, pp. 1--6, IEEE.
+
+\bibitem{giannoulis_digital_2012-1}
+Dimitrios Giannoulis, Michael Massberg, and Joshua~D. Reiss,
+\newblock ``Digital dynamic range compressor design—a tutorial and
+  analysis,''
+\newblock {\em Journal of the Audio Engineering Society}, vol. 60, no. 6, pp.
+  399--408, 2012.
+
+\bibitem{center_for_history_and_new_media_zotero_nodate}
+{Center for History and New Media},
+\newblock ``Zotero {Quick} {Start} {Guide},'' .
+
+\bibitem{mediaktion_vilem_2012}
+{mediaktion},
+\newblock ``Vilem {Flusser} am {GDI} 1991,'' Dec. 2012.
+
+\bibitem{gorlow_model-based_2013-1}
+S.~Gorlow and J.~D. Reiss,
+\newblock ``Model-{Based} {Inversion} of {Dynamic} {Range} {Compression},''
+\newblock {\em IEEE Transactions on Audio, Speech, and Language Processing},
+  vol. 21, no. 7, pp. 1434--1444, July 2013.
+
+\bibitem{lee_dynamic_2009}
+Keun-dong Lee, Sujung Kim, and Seong-Dae Kim,
+\newblock ``Dynamic range compression based on statistical analysis,''
+\newblock in {\em Image {Processing} ({ICIP}), 2009 16th {IEEE} {International}
+  {Conference} on}. 2009, pp. 3157--3160, IEEE.
+
+\bibitem{schmidt_multichannel_1996}
+Jon~C. Schmidt and Janet~C. Rutledge,
+\newblock ``Multichannel dynamic range compression for music signals,''
+\newblock in {\em Acoustics, {Speech}, and {Signal} {Processing}, 1996.
+  {ICASSP}-96. {Conference} {Proceedings}., 1996 {IEEE} {International}
+  {Conference} on}. 1996, vol.~2, pp. 1013--1016, IEEE.
+
+\bibitem{pan_fast_2012}
+Shengdong Pan, Xiangjing An, and Hangen He,
+\newblock ``Fast edge-preserving envelope for dynamic range compression,''
+\newblock in {\em Computer {Science} and {Network} {Technology} ({ICCSNT}),
+  2012 2nd {International} {Conference} on}. 2012, pp. 1902--1906, IEEE.
+
+\bibitem{tiwari_sliding-band_2014}
+Niyati Tiwari and Prem~Chandra Pandey,
+\newblock ``A sliding-band dynamic range compression for use in hearing aids,''
+\newblock in {\em Communications ({NCC}), 2014 {Twentieth} {National}
+  {Conference} on}. 2014, pp. 1--6, IEEE.
+
+\bibitem{gorlow_restoring_2014-1}
+Stanislaw Gorlow, Joshua~D. Reiss, and Elodie Duru,
+\newblock ``Restoring the dynamics of clipped audio material by inversion of
+  dynamic range compression,''
+\newblock in {\em Broadband {Multimedia} {Systems} and {Broadcasting} ({BMSB}),
+  2014 {IEEE} {International} {Symposium} on}. 2014, pp. 1--5, IEEE.
+
+\bibitem{gorlow_peak--average_2015}
+Stanislaw Gorlow and Zsolt Kollár,
+\newblock ``Peak-to-average power ratio reduction for {OFDM} based on dynamic
+  range compression,''
+\newblock in {\em Broadband {Multimedia} {Systems} and {Broadcasting} ({BMSB}),
+  2015 {IEEE} {International} {Symposium} on}. 2015, pp. 1--6, IEEE.
+
+\bibitem{giannoulis_digital_2012-2}
+Dimitrios Giannoulis, Michael Massberg, and Joshua~D. Reiss,
+\newblock ``Digital dynamic range compressor design—a tutorial and
+  analysis,''
+\newblock {\em Journal of the Audio Engineering Society}, vol. 60, no. 6, pp.
+  399--408, 2012.
+
+\bibitem{vickers_automatic_2001-2}
+Earl Vickers,
+\newblock ``Automatic long-term loudness and dynamics matching,''
+\newblock in {\em Audio {Engineering} {Society} {Convention} 111}. 2001, Audio
+  Engineering Society.
+
+\bibitem{blesser_audio_nodate}
+BARRY~A. BLESSER,
+\newblock ``Audio {Dynamic} {Range} {Compression} {For} {Minimum} {Perceived}
+  {Distortion},'' .
+
+\bibitem{cassidy_dynamic_2004}
+Ryan~J. Cassidy,
+\newblock ``Dynamic range compression of audio signals consistent with recent
+  time-varying loudness models,''
+\newblock in {\em Acoustics, {Speech}, and {Signal} {Processing}, 2004.
+  {Proceedings}.({ICASSP}'04). {IEEE} {International} {Conference} on}. 2004,
+  vol.~4, pp. iv--213, IEEE.
+
+\bibitem{stoltzfus_performance_2017}
+Larisa Stoltzfus, Alan Gray, Christophe Dubach, and Stefan Bilbao,
+\newblock ``Performance portability for room acoustics simulations,''
+\newblock in {\em Proceedings of the 20th {International} {Conference} on
+  {Digital} {Audio} {Effects}}. 2017, pp. 367--374, University of Edinburgh.
+
+\bibitem{keinert_enhanced_2014}
+Benjamin Keinert,
+\newblock ``enhanced sphere tracing,''
+\newblock 2014.
+
+\end{thebibliography}
