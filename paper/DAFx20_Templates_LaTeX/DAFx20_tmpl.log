@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.1.21)  12 FEB 2020 03:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.1.21)  13 FEB 2020 18:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -932,33 +932,119 @@ Package: listings 2019/09/10 1.8c (Carsten Heinz)
 Package: subcaption 2019/09/01 v1.3a Sub-captions (AR)
 \c@subfigure=\count168
 \c@subtable=\count169
+)
+(/usr/local/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrar
+yshapes.code.tex
+File: tikzlibraryshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrar
+yshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/share/texmf/tex/generic/pgf/libraries/shapes/pgflibraryshapes.geome
+tric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))
+(/usr/local/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrar
+yshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/share/texmf/tex/generic/pgf/libraries/shapes/pgflibraryshapes.misc.
+code.tex
+File: pgflibraryshapes.misc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))
+(/usr/local/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrar
+yshapes.symbols.code.tex
+File: tikzlibraryshapes.symbols.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/share/texmf/tex/generic/pgf/libraries/shapes/pgflibraryshapes.symbo
+ls.code.tex
+File: pgflibraryshapes.symbols.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))
+(/usr/local/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrar
+yshapes.arrows.code.tex
+File: tikzlibraryshapes.arrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/share/texmf/tex/generic/pgf/libraries/shapes/pgflibraryshapes.arrow
+s.code.tex
+File: pgflibraryshapes.arrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))
+(/usr/local/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrar
+yshapes.callouts.code.tex
+(/usr/local/share/texmf/tex/generic/pgf/libraries/shapes/pgflibraryshapes.callo
+uts.code.tex))
+(/usr/local/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrar
+yshapes.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/share/texmf/tex/generic/pgf/libraries/shapes/pgflibraryshapes.multi
+part.code.tex
+File: pgflibraryshapes.multipart.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfnodepartlowerbox=\box43
+\pgfnodeparttwobox=\box44
+\pgfnodepartthreebox=\box45
+\pgfnodepartfourbox=\box46
+\pgfnodeparttwentybox=\box47
+\pgfnodepartnineteenbox=\box48
+\pgfnodeparteighteenbox=\box49
+\pgfnodepartseventeenbox=\box50
+\pgfnodepartsixteenbox=\box51
+\pgfnodepartfifteenbox=\box52
+\pgfnodepartfourteenbox=\box53
+\pgfnodepartthirteenbox=\box54
+\pgfnodeparttwelvebox=\box55
+\pgfnodepartelevenbox=\box56
+\pgfnodeparttenbox=\box57
+\pgfnodepartninebox=\box58
+\pgfnodeparteightbox=\box59
+\pgfnodepartsevenbox=\box60
+\pgfnodepartsixbox=\box61
+\pgfnodepartfivebox=\box62
+)))
+(/usr/local/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrar
+yarrows.code.tex
+File: tikzlibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/share/texmf/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+File: pgflibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\arrowsize=\dimen199
+))
+(/usr/local/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrar
+ytrees.code.tex
+File: tikzlibrarytrees.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/local/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrar
+ybackgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@layerbox@background=\box63
+\pgf@layerboxsaved@background=\box64
 ) (./DAFx20_tmpl.aux)
 \openout1 = `DAFx20_tmpl.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 252.
-LaTeX Font Info:    ... okay on input line 252.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 252.
-LaTeX Font Info:    ... okay on input line 252.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 252.
-LaTeX Font Info:    ... okay on input line 252.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 252.
-LaTeX Font Info:    ... okay on input line 252.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 252.
-LaTeX Font Info:    ... okay on input line 252.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 252.
-LaTeX Font Info:    ... okay on input line 252.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 252.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 293.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 2
-52.
+93.
 
 (/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 252.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 252.
-LaTeX Font Info:    ... okay on input line 252.
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 25
-2.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 293.
+LaTeX Font Info:    ... okay on input line 293.
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 29
+3.
 
 (/usr/share/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -971,13 +1057,13 @@ Package caption Info: End \AtBeginDocument code.
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count170
-\scratchdimen=\dimen199
-\scratchbox=\box43
+\scratchdimen=\dimen256
+\scratchbox=\box65
 \nofMPsegments=\count171
 \nofMParguments=\count172
 \everyMPshowfont=\toks46
 \MPscratchCnt=\count173
-\MPscratchDim=\dimen256
+\MPscratchDim=\dimen257
 \MPnumerator=\count174
 \makeMPintoPDFobject=\count175
 \everyMPtoPDFconversion=\toks47
@@ -998,8 +1084,8 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box44
-Package hyperref Info: Link coloring OFF on input line 252.
+\AtBeginShipoutBox=\box66
+Package hyperref Info: Link coloring OFF on input line 293.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1009,9 +1095,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count176
 )
-LaTeX Info: Redefining \ref on input line 252.
-LaTeX Info: Redefining \pageref on input line 252.
-LaTeX Info: Redefining \nameref on input line 252.
+LaTeX Info: Redefining \ref on input line 293.
+LaTeX Info: Redefining \pageref on input line 293.
+LaTeX Info: Redefining \nameref on input line 293.
 
 (./DAFx20_tmpl.out) (./DAFx20_tmpl.out)
 \@outlinefile=\write4
@@ -1023,74 +1109,81 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.16}).
 
 \c@lstlisting=\count177
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 265.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 265
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 306.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 306
 .
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 265
+LaTeX Font Info:    Trying to load font information for U+msb on input line 306
 .
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 26
-5.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 30
+6.
 
 (/usr/share/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-Overfull \hbox (12.00002pt too wide) in paragraph at lines 265--265
+Overfull \hbox (12.00002pt too wide) in paragraph at lines 306--306
  [][] 
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
-65.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
+06.
 (/usr/share/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 266.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 307.
 
-Overfull \hbox (3.99236pt too wide) in paragraph at lines 268--270
+Overfull \hbox (3.99236pt too wide) in paragraph at lines 309--311
 []\T1/ptm/m/n/9 Several al-go-rithms and ap-proaches for Room Im-pulse Re-spons
 e
  []
 
-<img/sphereTracingViz.png, id=86, 433.62pt x 289.08pt>
+<img/sphereTracingViz.png, id=62, 433.62pt x 289.08pt>
 File: img/sphereTracingViz.png Graphic file (type png)
 <use img/sphereTracingViz.png>
-Package pdftex.def Info: img/sphereTracingViz.png  used on input line 290.
+Package pdftex.def Info: img/sphereTracingViz.png  used on input line 331.
 (pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
  <./img/sphereTracingViz.png>]
-<img/sdf2dbox.png, id=124, 433.62pt x 289.08pt>
+<img/sdf2dbox.png, id=100, 433.62pt x 289.08pt>
 File: img/sdf2dbox.png Graphic file (type png)
 <use img/sdf2dbox.png>
-Package pdftex.def Info: img/sdf2dbox.png  used on input line 339.
+Package pdftex.def Info: img/sdf2dbox.png  used on input line 380.
 (pdftex.def)             Requested size: 260.17401pt x 173.44933pt.
-<img/diffusorNorm.png, id=127, 1027.84pt x 1027.84pt>
+
+
+LaTeX Warning: Reference `eq1' on page 2 undefined on input line 381.
+
+
+LaTeX Warning: Reference `eq1' on page 2 undefined on input line 381.
+
+<img/diffusorNorm.png, id=101, 1027.84pt x 1027.84pt>
 File: img/diffusorNorm.png Graphic file (type png)
 <use img/diffusorNorm.png>
-Package pdftex.def Info: img/diffusorNorm.png  used on input line 349.
+Package pdftex.def Info: img/diffusorNorm.png  used on input line 390.
 (pdftex.def)             Requested size: 89.62419pt x 89.61583pt.
-<img/diffusorSmooth.png, id=128, 1027.84pt x 1027.84pt>
+<img/diffusorSmooth.png, id=102, 1027.84pt x 1027.84pt>
 File: img/diffusorSmooth.png Graphic file (type png)
 <use img/diffusorSmooth.png>
-Package pdftex.def Info: img/diffusorSmooth.png  used on input line 355.
+Package pdftex.def Info: img/diffusorSmooth.png  used on input line 396.
 (pdftex.def)             Requested size: 89.62419pt x 89.61583pt.
 
-Overfull \hbox (8.28796pt too wide) in paragraph at lines 388--389
+Overfull \hbox (8.28796pt too wide) in paragraph at lines 429--430
 \T1/ptm/m/n/9 Only rather sim-plis-tic shapes where needed for this proof-of-co
 ncept.
  []
 
 
-Overfull \hbox (9.40942pt too wide) detected at line 392
+Overfull \hbox (9.40942pt too wide) detected at line 433
 []\OML/cmm/m/it/9 f\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 p[]; p[]; p[]\OT1/cmr/m/n/9 
 ) = []
  []
@@ -1101,61 +1194,72 @@ File: lstlang1.sty 2019/09/10 1.8c listings language file
 (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
 )
-Overfull \hbox (8.12555pt too wide) in paragraph at lines 412--414
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 443.
+
+Overfull \hbox (8.12555pt too wide) in paragraph at lines 453--455
 \T1/ptm/m/n/9 ad-van-tages. Since the clas-si-cal sphere trac-ing al-go-rithm w
 as adapted,
  []
 
 [2 <./img/sdf2dbox.png> <./img/diffusorNorm.png> <./img/diffusorSmooth.png>]
-<fft_plot2.pdf, id=170, 229.85875pt x 170.6375pt>
-File: fft_plot2.pdf Graphic file (type pdf)
-<use fft_plot2.pdf>
-Package pdftex.def Info: fft_plot2.pdf  used on input line 455.
-(pdftex.def)             Requested size: 183.88722pt x 136.51016pt.
-<TwoColumnSine2.pdf, id=171, 606.265pt x 278.03876pt>
-File: TwoColumnSine2.pdf Graphic file (type pdf)
-<use TwoColumnSine2.pdf>
-Package pdftex.def Info: TwoColumnSine2.pdf  used on input line 461.
-(pdftex.def)             Requested size: 361.34999pt x 165.72148pt.
-
-(./img/ir_sc3_rigid_0.tex) (./DAFx20_tmpl.bbl [3 <./fft_plot2.pdf>])
-Underfull \hbox (badness 10000) in paragraph at lines 562--563
-
+Overfull \hbox (30.807pt too wide) in paragraph at lines 480--483
+\T1/pcr/m/n/9 rd \T1/ptm/m/n/9 is gen-er-ated from the com-pute shader's \T1/pc
+r/m/n/9 gl_GlobalInvocationID\T1/ptm/m/n/9 .
  []
 
-[4 <./TwoColumnSine2.pdf>] [5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 599.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 599.
+File: img/diffusorNorm.png Graphic file (type png)
+<use img/diffusorNorm.png>
+Package pdftex.def Info: img/diffusorNorm.png  used on input line 510.
+(pdftex.def)             Requested size: 49.79535pt x 49.79529pt.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 556
+.
+(/usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [3] (./img/normDist.tex)
+(./img/ir_sc3_rigid_0.tex) (./DAFx20_tmpl.bbl [4]) [5
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 764.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 764.
  (./DAFx20_tmpl.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 599.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 599.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 764.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 764.
 Package rerunfilecheck Info: File `DAFx20_tmpl.out' has not changed.
-(rerunfilecheck)             Checksum: 69BC74C0270E590C90A395780D1B17CF;1170.
+(rerunfilecheck)             Checksum: 96C185C3F1B723BC3A43DB399DEB54D2;751.
+
+
+LaTeX Warning: There were undefined references.
+
  )
 (\end occurred when \ifx on line 124 was incomplete) 
 Here is how much of TeX's memory you used:
- 32098 strings out of 492167
- 732126 string characters out of 6131558
- 1087971 words of memory out of 5000000
- 35843 multiletter control sequences out of 15000+600000
- 42524 words of font info for 62 fonts, out of 8000000 for 9000
+ 34746 strings out of 492167
+ 806734 string characters out of 6131558
+ 1199502 words of memory out of 5000000
+ 38405 multiletter control sequences out of 15000+600000
+ 43232 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 78i,17n,136p,1211b,2122s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 78i,19n,136p,1211b,2294s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/font
 s/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cmex
-tra/cmex9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><
-/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb
-></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/sh
-are/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/
-type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.
-pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on DAFx20_tmpl.pdf (5 pages, 397906 bytes).
+tra/cmex9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><
+/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/ams
+fonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbo
+ls/msbm10.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/s
+hare/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/t
+ype1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.
+pfb>
+Output written on DAFx20_tmpl.pdf (5 pages, 385968 bytes).
 PDF statistics:
- 276 PDF objects out of 1000 (max. 8388607)
- 232 compressed objects within 3 object streams
- 60 named destinations out of 1000 (max. 500000)
- 187 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 295 PDF objects out of 1000 (max. 8388607)
+ 246 compressed objects within 3 object streams
+ 86 named destinations out of 1000 (max. 500000)
+ 129 words of extra memory for PDF output out of 10000 (max. 10000000)
 
