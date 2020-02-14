@@ -19,6 +19,7 @@
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \citation{brinkmann_round_2019}
 \citation{hart_sphere_1996}
+\citation{alpkocak_computing_2010}
 \citation{brinkmann_round_2019}
 \citation{cao_interactive_2016}
 \citation{alpkocak_computing_2010}
@@ -30,9 +31,13 @@
 \newlabel{sec:intro}{{1}{1}{Introduction}{section.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.1} Previous Work}{1}{subsection.1.1}\protected@file@percent }
 \newlabel{ssec:prev}{{1.1}{1}{Previous Work}{subsection.1.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces a two dimensional SDF. $F(x,y) = \sqrt  {x^2+y^2} - 1$\relax }}{1}{figure.caption.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces {\it  Visualization of the sphere tracing algorithm in 2D. A ray is sent from the source (left) to the right until it hits a surface, always moving the maximum distance as the SDF informs the tracing algorithm about the distance to nearest surface.}\relax }}{1}{figure.caption.2}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{sphereViz}{{1}{1}{{\it Visualization of the sphere tracing algorithm in 2D. A ray is sent from the source (left) to the right until it hits a surface, always moving the maximum distance as the SDF informs the tracing algorithm about the distance to nearest surface.}\relax }{figure.caption.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2} Motivation}{1}{subsection.1.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.1} Sphere tracing}{1}{subsubsection.1.2.1}\protected@file@percent }
+\citation{brinkmann_round_2019}
+\citation{brinkmann_round_2019}
 \citation{brinkmann_round_2019}
 \citation{hart_sphere_1996}
 \citation{gu_room_2014}
@@ -45,39 +50,47 @@
 \citation{brandao_ray_nodate}
 \citation{dalenback_room_1996}
 \citation{alpkocak_computing_2010}
-\citation{brinkmann_round_2019}
-\citation{campbell_roomsim_nodate}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces {\it  rounding the box given in Equation \ref  {eq1} by subtraction of $0.7$.}\relax }}{2}{figure.caption.5}\protected@file@percent }
+\newlabel{sdf_2d_box}{{2}{2}{{\it rounding the box given in Equation \ref {eq1} by subtraction of $0.7$.}\relax }{figure.caption.5}{}}
+\newlabel{fig:diffNorm}{{3a}{2}{\it Diffusor shape\relax }{figure.caption.6}{}}
+\newlabel{sub@fig:diffNorm}{{a}{2}{\it Diffusor shape\relax }{figure.caption.6}{}}
+\newlabel{fig:sub2}{{3b}{2}{\it After subtraction: rounded and closed.\relax }{figure.caption.6}{}}
+\newlabel{sub@fig:sub2}{{b}{2}{\it After subtraction: rounded and closed.\relax }{figure.caption.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces \it  The diffusor from scene 1 in \cite  {brinkmann_round_2019} was reconstructed exactly(a). A subtraction of $0.01$ from the distance function causes the holes to close(b).\relax }}{2}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:diffSmooth}{{3}{2}{\it The diffusor from scene 1 in \cite {brinkmann_round_2019} was reconstructed exactly(a). A subtraction of $0.01$ from the distance function causes the holes to close(b).\relax }{figure.caption.6}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.2} Implementation}{2}{subsubsection.1.2.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2} Generation of SDFs}{2}{section.2}\protected@file@percent }
+\newlabel{lst:boxSdf}{{1}{2}{\it GLSL code for creating a box SDF}{lstlisting.1}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {1}\it  GLSL code for creating a box SDF}{2}{lstlisting.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {3} Sphere Tracing}{2}{section.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4} Generation of impulse response}{2}{section.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5} Results}{2}{section.5}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces {\it  Sinusoid in time and frequency domain. Short captions are centred, long captions (more than 1 line) are justified.}\relax }}{2}{figure.caption.5}\protected@file@percent }
-\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fft_plot}{{2}{2}{{\it Sinusoid in time and frequency domain. Short captions are centred, long captions (more than 1 line) are justified.}\relax }{figure.caption.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces {\it  A figure spanning two columns, as mentioned in Sec. . }\relax }}{3}{figure.caption.6}\protected@file@percent }
-\newlabel{ftt_plot2}{{3}{3}{{\it A figure spanning two columns, as mentioned in Sec. . }\relax }{figure.caption.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces A PGF histogram from \texttt  {matplotlib}.\relax }}{3}{figure.caption.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1} Tables}{3}{subsection.5.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces \itshape  Basic trigonometric values.\relax }}{3}{table.caption.8}\protected@file@percent }
-\newlabel{tab:example}{{1}{3}{\itshape Basic trigonometric values.\relax }{table.caption.8}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2} Equations}{3}{subsection.5.2}\protected@file@percent }
-\newlabel{eq1}{{5}{3}{Equations}{equation.5.5}{}}
-\newlabel{eq2}{{6}{3}{Equations}{equation.5.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3} Page Numbers}{3}{subsection.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4} References}{3}{subsection.5.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.1} Reference Format}{3}{subsubsection.5.4.1}\protected@file@percent }
+\citation{hart_sphere_1996}
+\newlabel{lst:sphereTrace}{{2}{3}{\it GLSL pseudo code for sphere tracing}{lstlisting.2}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2}\it  GLSL pseudo code for sphere tracing}{3}{lstlisting.2}\protected@file@percent }
+\newlabel{lst:mainloop}{{3}{3}{\it GLSL pseudo code for sampling the space and writing to the RIR}{lstlisting.3}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3}\it  GLSL pseudo code for sampling the space and writing to the RIR.}{3}{lstlisting.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces {\it  A lot of the code, especially the map function, $F(p_{xyz})$, which contains the SDF can be shared between a fragment shader used for visualization and a compute shader responsible for RIR calculation.}\relax }}{3}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:bd_shaders}{{4}{3}{{\it A lot of the code, especially the map function, $F(p_{xyz})$, which contains the SDF can be shared between a fragment shader used for visualization and a compute shader responsible for RIR calculation.}\relax }{figure.caption.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4} Generation of impulse response}{3}{section.4}\protected@file@percent }
+\citation{brinkmann_round_2019}
+\citation{campbell_roomsim_nodate}
 \citation{*}
 \bibstyle{IEEEbib}
 \bibdata{RaymarchReverb2}
 \bibcite{brinkmann_round_2019}{1}
 \bibcite{hart_sphere_1996}{2}
-\bibcite{cao_interactive_2016}{3}
-\bibcite{alpkocak_computing_2010}{4}
+\bibcite{alpkocak_computing_2010}{3}
+\bibcite{cao_interactive_2016}{4}
 \bibcite{lechner_hrtlacektdraymarchtoolkit_2020}{5}
 \bibcite{gu_room_2014}{6}
 \bibcite{xiangyang_accuracy_2003}{7}
 \bibcite{brandao_ray_nodate}{8}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces A PGF histogram from \texttt  {matplotlib}.\relax }}{4}{figure.caption.8}\protected@file@percent }
+\newlabel{eq:assump}{{11}{4}{Generation of impulse response}{equation.4.11}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5} Results}{4}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6} Conclusions}{4}{section.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces A PGF histogram from \texttt  {matplotlib}.\relax }}{4}{figure.caption.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7} Acknowledgments}{4}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8} References}{4}{section.8}\protected@file@percent }
 \bibcite{dalenback_room_1996}{9}
 \bibcite{campbell_roomsim_nodate}{10}
 \bibcite{stoltzfus_performance_2017}{11}
@@ -85,9 +98,3 @@
 \bibcite{schroder_physically_nodate}{13}
 \bibcite{noauthor_vrworks_nodate}{14}
 \bibcite{kulowski_algorithmic_1985}{15}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces {\it  Basic trigonometric values, spanning two columns.}\relax }}{4}{table.caption.9}\protected@file@percent }
-\newlabel{tab:example2}{{2}{4}{{\it Basic trigonometric values, spanning two columns.}\relax }{table.caption.9}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6} Conclusions}{4}{section.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7} Acknowledgments}{4}{section.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8} References}{4}{section.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {9} Appendix: Margin Check}{4}{section.9}\protected@file@percent }

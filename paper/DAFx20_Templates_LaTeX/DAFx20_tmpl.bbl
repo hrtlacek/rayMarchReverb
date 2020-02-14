@@ -13,17 +13,17 @@ John~C. Hart,
   of implicit surfaces,''
 \newblock {\em The Visual Computer}, vol. 12, no. 10, pp. 527--545, Dec. 1996.
 
-\bibitem{cao_interactive_2016}
-Chunxiao Cao, Zhong Ren, Carl Schissler, Dinesh Manocha, and Kun Zhou,
-\newblock ``Interactive sound propagation with bidirectional path tracing,''
-\newblock {\em ACM Transactions on Graphics}, vol. 35, no. 6, pp. 1--11, Nov.
-  2016.
-
 \bibitem{alpkocak_computing_2010}
 Adil Alpkocak and Malik Sis,
 \newblock ``Computing {Impulse} {Response} of {Room} {Acoustics} {Using} the
   {Ray}-{Tracing} {Method} in {Time} {Domain},''
 \newblock {\em Archives of Acoustics}, vol. 35, no. 4, pp. 505--519, Dec. 2010.
+
+\bibitem{cao_interactive_2016}
+Chunxiao Cao, Zhong Ren, Carl Schissler, Dinesh Manocha, and Kun Zhou,
+\newblock ``Interactive sound propagation with bidirectional path tracing,''
+\newblock {\em ACM Transactions on Graphics}, vol. 35, no. 6, pp. 1--11, Nov.
+  2016.
 
 \bibitem{lechner_hrtlacektdraymarchtoolkit_2020}
 Patrik Lechner,
