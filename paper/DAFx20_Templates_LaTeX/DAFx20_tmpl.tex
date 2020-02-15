@@ -378,7 +378,7 @@ As described above, ray tracing in general is in use. Sphere tracing has a numbe
 
 \begin{figure}[ht]
 \centerline{\includegraphics[scale=0.6]{img/sdf2dbox.png}}
-\caption{\label{sdf_2d_box}{\it rounding the box given in Equation \ref{eq1} by subtraction of $0.7$.}}
+\caption{\label{sdf_2d_box}{\it rounding the box given in Equation \ref{eq:eq1} by subtraction of $0.7$.}}
 \end{figure}  
 
 
@@ -430,6 +430,7 @@ Only rather simplistic shapes where needed for this proof-of-concept. Mostly box
 
 \begin{equation}
   f(p_x, p_y, p_z) = \sqrt{c_0(p_x - R_x)^2 + c_0(p_y - R_y)^2 + c_0(p_z - R_z)^2}
+  \label{eq:eq1}
 \end{equation}
 
 where $c_0$ is just clipping at 0:
@@ -581,13 +582,13 @@ So instead of adding $\delta(n-\tau(m))$ into the IR, simply $G(n-\tau(m),K)$ is
 
 
 
-\begin{figure}
-    \begin{center}
-      \input{img/normDist}
-        % \input{img/mytikz.tex}
-    \end{center}
-    \caption{A PGF histogram from \texttt{matplotlib}.}
-\end{figure}
+% \begin{figure}
+%     \begin{center}
+%       \input{img/normDist}
+%         % \input{img/mytikz.tex}
+%     \end{center}
+%     \caption{A PGF histogram from \texttt{matplotlib}.}
+% \end{figure}
 
 
 % Advantage of compute shader.
@@ -609,10 +610,45 @@ So instead of adding $\delta(n-\tau(m))$ into the IR, simply $G(n-\tau(m),K)$ is
 %
 
 \section{Results}
-\begin{enumerate}
-\item compare to \cite{brinkmann_round_2019}
-\item compare to \cite{campbell_roomsim_nodate}
-\end{enumerate}
+All of the following results have been computed with 10 reflection passes, and $1024^2$ rays. The execution time on a strong consumer grade machine (Intel i7 CPU, NVIDIA Geforce 1080ti). The computation time for simple scenes such as scene 1, rigid in \cite{brinkmann_round_2019} was at $<\frac{1}{60}$ seconds including the computation of a simple visualization in real time. 
+The most complex scenes(geometrically and in regards to the amount of reflections) that where tested, the shoebox scene and scene 1 with added diffusor, where computed in less than $<\frac{1}{50}$ seconds.
+The results are compared to a different simulation using the image source method \cite{lehmann_fast_2020} and \cite{brinkmann_round_2019} who generated a dataset featuring recordings in in an anechoic chamber with simple shapes. Note that for the comparison with \cite{brinkmann_round_2019} in figure \ref{fig:multRefl} ignores the frequency response of the speaker and microphone that was used in the original recording. As can be seen in the plot, the original recording features visible amount of difference to an ideal impulse even with the direct signal. 
+
+\begin{figure}
+    \begin{center}
+      \input{img/brink}
+    \end{center}
+    
+    \caption{\label{fig:multRefl} \it RIR computed using the proposed method and measured by \cite{brinkmann_round_2019}, scene 3, multiple reflection at opposed MDF plates.}
+\end{figure}
+
+\begin{figure}
+    \begin{center}
+      \input{img/brinkDiff}
+    \end{center}
+    
+    \caption{\label{fig:diffuser} \it RIR computed using the proposed method and measured by \cite{brinkmann_round_2019}, scene 1, a single reflection with a diffuser.}
+\end{figure}
+
+
+The shoebox scene features a small room with dimensions 3 x 4 x 2.5 meters. Note that \cite{lehmann_fast_2020} used a sampling rate of 16kHz and has been upsampled to 44.1 kHz for comparison reasons. This probably led to the pre-ringing artifacts present in Figure \ref{fig:shoe}.
+
+\begin{figure}
+    \begin{center}
+      \input{img/shoebox}
+    \end{center}
+    \caption{\label{fig:shoe} \it Impulse response of shoebox room. Computed using the proposed method and \cite{lehmann_fast_2020}. }
+    
+\end{figure}
+
+
+% \begin{enumerate}
+
+
+
+% Eric A. Lehmann (2020). Fast simulation of acoustic room impulse responses (image-source method) (https://www.mathworks.com/matlabcentral/fileexchange/25965-fast-simulation-of-acoustic-room-impulse-responses-image-source-method), MATLAB Central File Exchange. Retrieved February 14, 2020.
+
+% \end{enumerate}
 
 
 % \begin{figure}[ht]
@@ -632,13 +668,13 @@ So instead of adding $\delta(n-\tau(m))$ into the IR, simply $G(n-\tau(m),K)$ is
 % \caption{\label{fft_plot}{\it Sinusoid in time and frequency domain. Short captions are centred, long captions (more than 1 line) are justified.}}
 % \end{figure}
 
-\begin{figure}
-    \begin{center}
-      \input{img/ir_sc3_rigid_0}
-        % \input{img/mytikz.tex}
-    \end{center}
-    \caption{A PGF histogram from \texttt{matplotlib}.}
-\end{figure}
+% \begin{figure}
+%     \begin{center}
+%       \input{img/ir_sc3_rigid_0}
+%         % \input{img/mytikz.tex}
+%     \end{center}
+%     \caption{A PGF histogram from \texttt{matplotlib}.}
+% \end{figure}
 
 
 
@@ -706,14 +742,18 @@ So instead of adding $\delta(n-\tau(m))$ into the IR, simply $G(n-\tau(m),K)$ is
 
 
 \section{Conclusions}
-This template can be found on the conference website.
-For changing the number of author affiliations (1 to 4), uncomment the corresponding regions in the template \texttt{tex} file.
-Please, submit full-length papers (max.~8 pages both oral and poster presentations).
-Submission is fully electronic and automated through the Conference Web Submission System.
-DO NOT send us papers directly by e-mail.
+
+This work could show that RIR estimation via SDFs in a compute shader in real time compatible time is possible to a certain accuracy. It remains to be tested how far this method can reach. While it still is computationally costly to do these calculations in general. 
+
+% This template can be found on the conference website.
+% For changing the number of author affiliations (1 to 4), uncomment the corresponding regions in the template \texttt{tex} file.
+% Please, submit full-length papers (max.~8 pages both oral and poster presentations).
+% Submission is fully electronic and automated through the Conference Web Submission System.
+% DO NOT send us papers directly by e-mail.
 
 \section{Acknowledgments}
-Many thanks to the great number of anonymous reviewers!
+Thanks to inigo quilez, 
+% Many thanks to the great number of anonymous reviewers!
 
 %\newpage
 \nocite{*}

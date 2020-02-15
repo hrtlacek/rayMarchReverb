@@ -426,10 +426,12 @@ INPUT /usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm5.tfm
-INPUT img/normDist.tex
-INPUT img/normDist.tex
-INPUT img/ir_sc3_rigid_0.tex
-INPUT img/ir_sc3_rigid_0.tex
+INPUT img/brink.tex
+INPUT img/brink.tex
+INPUT img/brinkDiff.tex
+INPUT img/brinkDiff.tex
+INPUT img/shoebox.tex
+INPUT img/shoebox.tex
 INPUT DAFx20_tmpl.bbl
 INPUT DAFx20_tmpl.bbl
 INPUT DAFx20_tmpl.aux

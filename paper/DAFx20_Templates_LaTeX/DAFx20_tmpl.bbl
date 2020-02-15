@@ -56,12 +56,10 @@ Bengt-Inge~L. Dalenb{\"a}ck,
 \newblock {\em The Journal of the Acoustical Society of America}, vol. 100, no.
   2, pp. 899--909, Aug. 1996.
 
-\bibitem{campbell_roomsim_nodate}
-Douglas~R Campbell, Kalle~J Palom{\"a}ki, and Guy~J Brown,
-\newblock ``Roomsim, a {MATLAB} {Simulation} of
-  {\textquotedblleft}{Shoebox}{\textquotedblright} {Room} {Acoustics} for use
-  in {Teaching} and {Research},''
-\newblock p.~4.
+\bibitem{lehmann_fast_2020}
+Eric Lehmann,
+\newblock ``Fast simulation of acoustic room impulse responses (image-source
+  method),'' 2020.
 
 \bibitem{stoltzfus_performance_2017}
 Larisa Stoltzfus, Alan Gray, Christophe Dubach, and Stefan Bilbao,
@@ -79,6 +77,13 @@ Dirk Schr{\"o}der,
 \newblock ``Physically {Based} {Real}-{Time} {Auralization} of {Interactive}
   {Virtual} {Environments},''
 \newblock p. 231.
+
+\bibitem{campbell_roomsim_nodate}
+Douglas~R Campbell, Kalle~J Palom{\"a}ki, and Guy~J Brown,
+\newblock ``Roomsim, a {MATLAB} {Simulation} of
+  {\textquotedblleft}{Shoebox}{\textquotedblright} {Room} {Acoustics} for use
+  in {Teaching} and {Research},''
+\newblock p.~4.
 
 \bibitem{noauthor_vrworks_nodate}
 ``{VRWorks} {Audio} {SDK} {Overview}.pdf,'' .
