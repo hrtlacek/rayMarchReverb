@@ -5,50 +5,50 @@ The style file: IEEEbib.bst
 Database file #1: RaymarchReverb2.bib
 Warning--empty journal in brandao_ray_nodate
 Warning--empty year in brandao_ray_nodate
-Warning--empty journal in campbell_roomsim_nodate
-Warning--empty year in campbell_roomsim_nodate
 Warning--empty booktitle in keinert_enhanced_2014
 Warning--empty journal in schroder_physically_nodate
 Warning--empty year in schroder_physically_nodate
-You've used 15 entries,
+Warning--empty journal in campbell_roomsim_nodate
+Warning--empty year in campbell_roomsim_nodate
+You've used 16 entries,
             1838 wiz_defined-function locations,
-            536 strings with 6129 characters,
-and the built_in function-call counts, 3535 in all, are:
-= -- 313
-> -- 137
+            539 strings with 6231 characters,
+and the built_in function-call counts, 3661 in all, are:
+= -- 323
+> -- 141
 < -- 5
-+ -- 53
-- -- 38
-* -- 293
-:= -- 531
-add.period$ -- 16
-call.type$ -- 15
-change.case$ -- 15
++ -- 55
+- -- 39
+* -- 296
+:= -- 550
+add.period$ -- 17
+call.type$ -- 16
+change.case$ -- 16
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 156
-empty$ -- 352
-format.name$ -- 38
-if$ -- 791
+cite$ -- 23
+duplicate$ -- 161
+empty$ -- 370
+format.name$ -- 39
+if$ -- 821
 int.to.chr$ -- 0
-int.to.str$ -- 15
+int.to.str$ -- 16
 missing$ -- 13
-newline$ -- 75
-num.names$ -- 14
-pop$ -- 57
+newline$ -- 79
+num.names$ -- 15
+pop$ -- 64
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 75
+skip$ -- 79
 stack$ -- 0
 substring$ -- 246
-swap$ -- 45
+swap$ -- 46
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 7
-while$ -- 37
-width$ -- 17
-write$ -- 153
+while$ -- 38
+width$ -- 18
+write$ -- 162
 (There were 7 warnings)
