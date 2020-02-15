@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.1.21)  13 FEB 2020 18:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.1.21)  14 FEB 2020 19:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1220,11 +1220,11 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 (./img/ir_sc3_rigid_0.tex) (./DAFx20_tmpl.bbl [4]) [5
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 764.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 764.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 763.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 763.
  (./DAFx20_tmpl.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 764.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 764.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 763.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 763.
 Package rerunfilecheck Info: File `DAFx20_tmpl.out' has not changed.
 (rerunfilecheck)             Checksum: 96C185C3F1B723BC3A43DB399DEB54D2;751.
 
@@ -1256,7 +1256,7 @@ ls/msbm10.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/s
 hare/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.
 pfb>
-Output written on DAFx20_tmpl.pdf (5 pages, 385968 bytes).
+Output written on DAFx20_tmpl.pdf (5 pages, 386023 bytes).
 PDF statistics:
  295 PDF objects out of 1000 (max. 8388607)
  246 compressed objects within 3 object streams
