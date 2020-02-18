@@ -7,11 +7,22 @@ Fabian Brinkmann, Lukas Asp{\"o}ck, David Ackermann, Steffen Lepa, Michael
 \newblock {\em The Journal of the Acoustical Society of America}, vol. 145, no.
   4, pp. 2746--2760, Apr. 2019.
 
+\bibitem{lehmann_fast_2020}
+Eric Lehmann,
+\newblock ``Fast simulation of acoustic room impulse responses (image-source
+  method),'' 2020.
+
 \bibitem{hart_sphere_1996}
 John~C. Hart,
 \newblock ``Sphere tracing: a geometric method for the antialiased ray tracing
   of implicit surfaces,''
 \newblock {\em The Visual Computer}, vol. 12, no. 10, pp. 527--545, Dec. 1996.
+
+\bibitem{roth_ray_1982}
+Scott~D Roth,
+\newblock ``Ray casting for modeling solids,''
+\newblock {\em Computer Graphics and Image Processing}, vol. 18, no. 2, pp.
+  109--144, Feb. 1982.
 
 \bibitem{alpkocak_computing_2010}
 Adil Alpkocak and Malik Sis,
@@ -19,21 +30,45 @@ Adil Alpkocak and Malik Sis,
   {Ray}-{Tracing} {Method} in {Time} {Domain},''
 \newblock {\em Archives of Acoustics}, vol. 35, no. 4, pp. 505--519, Dec. 2010.
 
-\bibitem{cao_interactive_2016}
-Chunxiao Cao, Zhong Ren, Carl Schissler, Dinesh Manocha, and Kun Zhou,
-\newblock ``Interactive sound propagation with bidirectional path tracing,''
-\newblock {\em ACM Transactions on Graphics}, vol. 35, no. 6, pp. 1--11, Nov.
-  2016.
+\bibitem{noauthor_vrworks_nodate}
+``{VRWorks} {Audio} {SDK} {Overview}.pdf,'' .
+
+\bibitem{balint_accelerating_2018}
+Csaba B{\'a}lint and G{\'a}bor Valasek,
+\newblock ``Accelerating {Sphere} {Tracing},''
+\newblock 2018.
+
+\bibitem{quilez_inigo_nodate}
+Inigo Quilez,
+\newblock ``Inigo {Quilez} :: fractals, computer graphics, mathematics,
+  shaders, demoscene and more,'' .
+
+\bibitem{keinert_enhanced_2014}
+Benjamin Keinert,
+\newblock ``enhanced sphere tracing,''
+\newblock 2014.
 
 \bibitem{lechner_hrtlacektdraymarchtoolkit_2020}
 Patrik Lechner,
 \newblock ``hrtlacek/{TDraymarchToolkit} v1.1,'' Feb. 2020.
+
+\bibitem{stoltzfus_performance_2017}
+Larisa Stoltzfus, Alan Gray, Christophe Dubach, and Stefan Bilbao,
+\newblock ``Performance portability for room acoustics simulations,''
+\newblock in {\em Proceedings of the 20th {International} {Conference} on
+  {Digital} {Audio} {Effects}}. 2017, pp. 367--374, University of Edinburgh.
 
 \bibitem{gu_room_2014}
 C.~Gu, M.~Zhu, H.~Lu, and B.~Beckers,
 \newblock ``Room impulse response simulation based on equal-area ray tracing,''
 \newblock in {\em 2014 {International} {Conference} on {Audio}, {Language} and
   {Image} {Processing}}, July 2014, pp. 832--836.
+
+\bibitem{cao_interactive_2016}
+Chunxiao Cao, Zhong Ren, Carl Schissler, Dinesh Manocha, and Kun Zhou,
+\newblock ``Interactive sound propagation with bidirectional path tracing,''
+\newblock {\em ACM Transactions on Graphics}, vol. 35, no. 6, pp. 1--11, Nov.
+  2016.
 
 \bibitem{xiangyang_accuracy_2003}
 Zeng Xiangyang, Chen Ke'an, and Sun Jincai,
@@ -56,21 +91,15 @@ Bengt-Inge~L. Dalenb{\"a}ck,
 \newblock {\em The Journal of the Acoustical Society of America}, vol. 100, no.
   2, pp. 899--909, Aug. 1996.
 
-\bibitem{lehmann_fast_2020}
-Eric Lehmann,
-\newblock ``Fast simulation of acoustic room impulse responses (image-source
-  method),'' 2020.
+\bibitem{aubury_binomial_1996}
+Matthew Aubury,
+\newblock ``Binomial {Filters},''
+\newblock {\em Journal of VLSI Signal Processing}, vol. 12, pp. 35--50, 1996.
 
-\bibitem{stoltzfus_performance_2017}
-Larisa Stoltzfus, Alan Gray, Christophe Dubach, and Stefan Bilbao,
-\newblock ``Performance portability for room acoustics simulations,''
-\newblock in {\em Proceedings of the 20th {International} {Conference} on
-  {Digital} {Audio} {Effects}}. 2017, pp. 367--374, University of Edinburgh.
-
-\bibitem{keinert_enhanced_2014}
-Benjamin Keinert,
-\newblock ``enhanced sphere tracing,''
-\newblock 2014.
+\bibitem{derpanis_overview_nodate}
+Konstantinos~G Derpanis,
+\newblock ``Overview of {Binomial} {Filters},''
+\newblock p.~3.
 
 \bibitem{schroder_physically_nodate}
 Dirk Schr{\"o}der,
@@ -85,12 +114,18 @@ Douglas~R Campbell, Kalle~J Palom{\"a}ki, and Guy~J Brown,
   in {Teaching} and {Research},''
 \newblock p.~4.
 
-\bibitem{noauthor_vrworks_nodate}
-``{VRWorks} {Audio} {SDK} {Overview}.pdf,'' .
-
 \bibitem{kulowski_algorithmic_1985}
 Andrzej Kulowski,
 \newblock ``Algorithmic representation of the ray tracing technique,''
 \newblock {\em Applied Acoustics}, vol. 18, no. 6, pp. 449--469, 1985.
+
+\bibitem{tomczak_gpu_nodate}
+Lukasz~Jaroslaw Tomczak,
+\newblock ``{GPU} {Ray} {Marching} of {Distance} {Fields},''
+\newblock p.~79.
+
+\bibitem{quilez_shadertoy_nodate}
+Inigo Quilez and Pol Jeremias,
+\newblock ``Shadertoy {BETA},'' .
 
 \end{thebibliography}

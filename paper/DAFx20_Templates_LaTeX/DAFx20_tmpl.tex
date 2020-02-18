@@ -306,81 +306,54 @@ frame = single,
 
 \begin{abstract}
 
-Several algorithms and approaches for Room Impulse Response (RIR) estimation exist. To the best of the authors knowledge, there is no documentation of accuracy, speed or even the feasibility of using signed distance functions (SDFs) in combination with sphere tracing for this task. Here a proof of concept with a focus or real time performance is presented, that lacks many features such as frequency dependent absorption and scattering coefficients, arbitrary source and receiver directives etc. The results are shown and compared to real room impulse responses recorded by \cite{brinkmann_round_2019}. The implementation happens mostly inside a compute shader, an example application is provided in the framework \texttt{TouchDesigner}. 
-The application as well as all generated data and \texttt{Jupyter Notebooks} can be found on this project's github repository at \href{https://github.com/hrtlacek/rayMarchReverb}{https://github.com/hrtlacek/rayMarchReverb}.
+Several algorithms and approaches for Room Impulse Response (RIR) estimation exist. To the best of the authors knowledge, there is no documentation of accuracy, speed or even the feasibility of using signed distance functions (SDFs) in combination with sphere tracing for this task. Here, a proof of concept with a focus on real-time performance is presented, that lacks many features such as frequency dependent absorption and scattering coefficients, arbitrary source and receiver directives etc. The results are shown and compared to real room impulse responses recorded by \cite{brinkmann_round_2019} and to a different simulation algorithm \cite{lehmann_fast_2020}. The implementation happens mostly inside a compute shader, an example application is provided in the framework \texttt{TouchDesigner}.\ 
+
+The application as well as all generated data and \texttt{Jupyter Notebooks} can be found on this project's github repository\
+
+ \href{https://github.com/hrtlacek/rayMarchReverb}{github.com/hrtlacek/rayMarchReverb}.
 \end{abstract}
 
 \section{Introduction}
 \label{sec:intro}
-Sphere tracing \cite{hart_sphere_1996} is extensively in the so called "demo scene" to render impressive 3D video demos via shaders in real time for decades. 
-As a version of ray tracing that relies on the geometry being defined as so called signed distance functions (SDFs), it does not directly support the import of standard 3D Polygonal geometry. One of the advantages lies in the algorithm's potential improved speed in comparison to fixed-step ray tracing. SDFs describe implicit surfaces, via a function $f : \mathbb{R}^3 \rightarrow \mathbb{R}$. A function returns a negative value if the locus of the point is inside the geometry, a positive value if outside and 0 if on the surface. If defined carefully, the distance to the nearest surface is always known as the full geometry of the scene describes an ideally lipschitz continuous distance field in $\mathbb{R}^3$. 
-%
-% \begin{figure}
-%     \begin{center}
-%       \input{img/sdf2d}
-%         % \input{img/mytikz.tex}
-%     \end{center}
-%     \caption{a two dimensional SDF. $F(x,y) = \sqrt{x^2+y^2} - 1$} describes the unit circle.
-% \end{figure}
-
-Since the distance to the nearest surface is always known, the step size of a ray tracing algorithm can be dynamically adjusted, resulting in fewer iterations along a ray, see Figure \ref{sphereViz}..
-
-
+Sphere tracing as defined by \cite{hart_sphere_1996} is used extensively in the so called "demo scene" to render 3D video demos via shaders in real time for decades. 
+Sphere tracing is a version of the ray casting algorithm \cite{roth_ray_1982}. It relies on the geometry being defined as so called signed distance functions (SDFs), and does not directly support the import of standard 3D Polygonal geometry or meshes. One of the advantages lies in the algorithm's potential improved speed in comparison to fixed-step ray casting. SDFs are used to describe implicit surfaces, typically via a function $f : \mathbb{R}^3 \rightarrow \mathbb{R}$(although in principle, arbitrary dimensions are possible, $f : \mathbb{R}^n \rightarrow \mathbb{R}$, see Section \ref{sec:concl}). This function should be designed to return a negative value if the locus of the point is inside the geometry, a positive value if outside and 0 if on the surface to define the desired geometry. Additionally it is advantageous to design this function in a way so it is lipschitz continuous. If $f$ is defined carefully, the distance to the nearest surface is returned by this function and therefore always known during stepping along a view-ray. 
+Since the distance to the nearest surface is always known, the step size of a ray tracing algorithm can be dynamically adjusted, see Figure \ref{sphereViz}, resulting in fewer iterations along a ray, and therefore in significant speedups. 
 
 \begin{figure}[ht]
 \centerline{\includegraphics[scale=0.5]{img/sphereTracingViz.png}}
 \caption{\label{sphereViz}{\it Visualization of the sphere tracing algorithm in 2D. A ray is sent from the source (left) to the right until it hits a surface, always moving the maximum distance as the SDF informs the tracing algorithm about the distance to nearest surface.}}
 \end{figure}
-%
-
-% \begin{figure}
-%     \begin{center}
-%         \input{img/sphereTracingViz.pgf}
-%     \end{center}
-%     \caption{A PGF histogram from \texttt{matplotlib}.}
-% \end{figure}
-
-
-% This enables the technique of sphere tracing, which has been used extensively in the so called demo scene to render impressive 3D video demos in real time for decades. 
-
-
-% \begin{figure}[ht]
-% \centerline{\includegraphics[scale=0.8]{fft_plot2}}
-% \caption{\label{fft_plot}{\it Sinusoid in time and frequency domain. Short captions are centred, long captions (more than 1 line) are justified.}}
-% \end{figure}
-
 
 \subsection{Previous Work}
 \label{ssec:prev}
 A lot of previous work exists both in the field of Ray/sphere tracing and RIR estimation.
-As shown in \cite{alpkocak_computing_2010} and \cite{brinkmann_round_2019} there are numerous approaches for estimating RIRs. 
-NVIDIA is working in the field of real time ray traced audio simulation
-NVIDIA VRWorks™ Audio (introduced with the Pascal GPU architecture) 
+As shown in \cite{alpkocak_computing_2010} and \cite{brinkmann_round_2019} there are numerous approaches for estimating RIRs. Besides Ray-based methods such as the "Image Source Method", Ray-tracing and hybrid approaches, wave-based methods such as Finite Differences are becoming increasingly interesting due to advancements in computation power and research. Still, wave-based methods seem to be too slow for real-time applications. With the Pascal Architecture, NVIDIA introduced real-time ray tracing done on the GPU with NVIDIA VRWorks™ Audio \cite{noauthor_vrworks_nodate}.
 
-\cite{cao_interactive_2016} bidirectional ray tracing.
+% NVIDIA is working in the field of real time ray traced audio simulation
+% NVIDIA VRWorks™ Audio (introduced with the Pascal GPU architecture) 
 
-\subsubsection*{RIR Estimation}
-\cite{alpkocak_computing_2010} gives an overview of methods in use for RIR estimation.
 
-image source method, wave based, ray tracing.
+
+% \subsubsection*{RIR Estimation}
+% \cite{alpkocak_computing_2010} gives an overview of methods in use for RIR estimation.
 
 
 \subsubsection*{Sphere Tracing}
-
+Sphere tracing itself was first described by \cite{hart_sphere_1996}. Many authors since then described improvements in speed e.g. \cite{balint_accelerating_2018} or the addition of features such as \cite{quilez_inigo_nodate}, \cite{keinert_enhanced_2014} or the activity of the \href{www.shadertoy.com}{shadertoy.com}-community.
 Defining SDFs is an active field of research and there are several projects that aim at easier construction of SDFs and integration in 3D frameworks such as \href{https://github.com/Flafla2/Generic-Raymarch-Unity}{https://github.com/Flafla2/Generic-Raymarch-Unity} and \cite{lechner_hrtlacektdraymarchtoolkit_2020}.
 
 
 
 \subsection{Motivation}
+\label{subs:mot}
 The reasons why sphere tracing in a compute shader for RIR estimation has not been documented until now probably lie in the relatively new introduction of compute shaders as well as in the difficulty of creating SDFs(in comparison to using existing 3D /CAD models and import them to polygon based ray tracers).
 \subsubsection{Sphere tracing}
 As described above, ray tracing in general is in use. Sphere tracing has a number of advantages over ray tracing polygonal surfaces. It is "procedural" by default, since all geometry is defined by implicit surface equations. More over sphere tracing approximates cone tracing for reducing aliasing artifacts in the pixel domain\cite{hart_sphere_1996}, which in the audio domain, is considered to have advantages but is very time confusing in a non-SDF setup\cite{alpkocak_computing_2010}. The deformation and rounding of geometry is possible in a very efficient way, which might offer an opportunity to approximate low-frequency response due to diffraction artifacts. Since geometry is not defined via vertizes and edges, there is no such thing as increasing the complexity of a shape in this way. Rounding a geometrical shape is a mere subtraction since it just shifts the rendering to another iso-surface, which is getting increasingly smooth as shown in \ref{sdf_2d_box}. Depending on the construction of the geometry, this way, holes and cavities (such as in a diffusor) can also be made disappear for a low-frequency pass as shown in figure \ref{fig:diffSmooth}.
 
 \begin{figure}[ht]
 \centerline{\includegraphics[scale=0.6]{img/sdf2dbox.png}}
-\caption{\label{sdf_2d_box}{\it rounding the box given in Equation \ref{eq:eq1} by subtraction of $0.7$.}}
+\caption{\label{sdf_2d_box}{\it rounding the box given in Equation \ref{eq:eq1} by subtraction of $0.7$. Visible iso-lines (gray) are generated by the distance function. The subtraction shifts the surface to a different, more round, iso-line.}}
 \end{figure}  
-
 
 
 \begin{figure}[ht]
@@ -401,28 +374,8 @@ As described above, ray tracing in general is in use. Sphere tracing has a numbe
 \label{fig:diffSmooth}
 \end{figure}
 
-
-
-% \begin{figure}[ht]
-% \begin{subfigure}
-% \centerline{\includegraphics[scale=0.2]{img/diffusorNorm.png}}
-% \caption{\label{diffusorSmoothing}{\it The diffusor from scene 1 in \cite{brinkmann_round_2019} was reconstructed exactly. A subtraction of $0.01$ from the distance function causes the holes to close.}}
-% \end{subfigure}%
-% \begin{subfigure}
-% \centerline{\includegraphics[scale=0.2]{img/diffusorSmooth.png}}
-% \caption{\label{diffusorSmoothing}{\it The diffusor from scene 1 in \cite{brinkmann_round_2019} was reconstructed exactly. A subtraction of $0.01$ from the distance function causes the holes to close.}}
-% \end{subfigure}
-
-% \end{figure}  
-
-
-
-
-procedural by default
-deforming geometry
 \subsubsection{Implementation}
-It is possible to implement the chosen algorithm on the CPU and the GPU. A number of frameworks could be chosen for GPU accelerated computation such as OpenCL or NVIDIA CUDA. The choice of a shader has the advantage of being more operating system independent and hardware independent. Compute shaders (in contrast to fragment shaders) make it possible to write to arbitrary output locations which is necessary for generating the actual impulse response from the measurement of timings. Since they are available since OpenGL 4.3 (August 2012) / OpenGL ES 3.1 they are both aged enough to have received broad support in other frameworks and relatively new in respect to first publications about sphere tracing. Another reason for the choice of compute shaders is their simplicity. In comparison to CUDA and OpenCL, shaders are easier to write and the GLSL(Graphics Library Shading Language) is more widespread. Achieving the whole computation, from the definition of the geometry, to the ray tracing up until the actual impulse response computation in a single shader makes this attempt highly portable and expandable.
-
+It is possible to implement the chosen algorithm on the CPU and the GPU. A number of frameworks could be chosen for GPU accelerated computation such as OpenCL or NVIDIA CUDA. For example \cite{stoltzfus_performance_2017} gives an overview of GPU development environments suitable for RIR estimation. The choice of a shader has the advantage of being more operating system independent and hardware independent as for example the use of CUDA ties to NVIDIA GPUs. Compute shaders (in contrast to fragment shaders) make it possible to write to arbitrary output locations which is necessary for generating the actual impulse response from the measurement of timings. Since they are available since OpenGL 4.3 (August 2012) / OpenGL ES 3.1 they are both aged enough to have received broad support in other frameworks and relatively new in respect to first publications about sphere tracing. Another reason for the choice of compute shaders is their simplicity. In comparison to CUDA and OpenCL, shaders are easier to write and the use of the Graphics Library Shading Language (GLSL) is widespread. Achieving the whole computation, from the definition of the geometry, to the ray tracing up until the actual impulse response computation in a single shader makes this attempt highly portable and expandable.
 
 \section{Generation of SDFs}
 
@@ -452,7 +405,7 @@ float box(vec3 pos, vec3 R){
 
 \section{Sphere Tracing}
 For simplicity, deterministic equal-angle Ray Tracing is used in contrast to Monte Carlo or Equal Area Ray tracing (EART) \cite{gu_room_2014}. Unidirectional ray tracing has been used, also for simplicity reasons, although \cite{cao_interactive_2016} has shown that bidirectional ray tracing offers advantages. Since the classical sphere tracing algorithm was adapted, it was found to be simplest to consider the "camera" to be the receiver/microphone as it would receive light. It sends out rays that might hit the sound source, which acts as a receiver of rays. The sound source is chosen to be a sphere. Choosing a correct volume for the receiver is critical and using a constant size can introduce systematic errors \cite{xiangyang_accuracy_2003}, \cite{alpkocak_computing_2010}. A number of models are available to compute the receiver Volume, $V_r$. Typically factors such as room volume, number of rays and the distance from source are used for this computation. 
-As in \cite{brandao_ray_nodate}, \cite{alpkocak_computing_2010}, and \cite{dalenback_room_1996} the receiver was allowed to grow in volume. While \cite{brandao_ray_nodate} and \cite{dalenback_room_1996} use time to as a factor to let the receiver grow, in this attempt the reflection count, $k$ is used. Initially when a ray is sent, $k=1$ and when it hits a surface, this counter is increased by one so the source grows by this factor. Instead of using time, the model provided in \cite{alpkocak_computing_2010} is used and augmented with the $k$ term:
+As in \cite{brandao_ray_nodate}, \cite{alpkocak_computing_2010}, and \cite{dalenback_room_1996} the receiver was allowed to grow in volume. While \cite{brandao_ray_nodate} and \cite{dalenback_room_1996} use time as a factor to let the receiver grow, in this attempt the reflection count, $k$ is used. Initially when a ray is sent, $k=1$ and when it hits a surface, this counter is increased by one so the source grows by this factor for this particular ray. So instead of using time, the model provided in \cite{alpkocak_computing_2010} is used and augmented with the $k$ term:
 \begin{equation}
 V_r = k \omega d_{SR}\sqrt{\frac{4}{N}}
 \end{equation}
@@ -460,12 +413,14 @@ with
 \begin{equation}
 \omega = log_{10}{V_{room}}
 \end{equation}
-where $d_{SR}$ is the source-receiver distance, $N$ is the number of initial rays and $V_{room}$ is the volume of the room.
-The actual sphere tracing follows the original formulation in \cite{hart_sphere_1996}:
+where $d_{SR}$ is the source-receiver distance, $N$ is the number of initial rays and $V_{room}$ is the volume of the room.\
 
-\begin{equation}
-t_{i+1} = t_i + F(t_i)
-\end{equation}
+The actual sphere tracing largely follows the original formulation in \cite{hart_sphere_1996} and is implemented as:
+
+% \begin{equation}
+% t_{i+1} = t_i + F(t_i)
+% \end{equation}
+% With $t_{i}$  being the current distance travelled along the ray being used in combination with the evaluation of the distance function $F()$ 
 Here, this is implemented in the following way:
 \begin{lstlisting}[language=C, caption={\it GLSL pseudo code for sphere tracing},captionpos=b,label=lst:sphereTrace]
 for (i=0;i++;i<imax){
@@ -510,14 +465,12 @@ Here, \texttt{castRay()} refers to a function that looks similar to the sphere t
 \node (comp) at (2,-1) [rectangle,draw] {$compute\ shader$};
 \draw node [block, below of=frag, node distance = 1.5cm](rend){\includegraphics[width=.1\textwidth]{img/diffusorNorm.png}};
 \draw node [block, below of=comp, node distance = 1.5cm](H){$H(n)$};
-% \node (rend) [rectangle,draw, below=frag] {$compute\ shader$};
+
 \draw[->] (lib) -- node {} (frag);
 \draw[->] (lib) -- node {} (comp);
 \draw[->] (frag) -- node {}(rend);
 \draw[->] (comp) -- node {}(H);
 
-% \draw[->,thick] (lib) to (comp);
-% \draw[->,thick] (lib) to (comp);
 
 
 \end{tikzpicture}
@@ -532,8 +485,8 @@ Here, \texttt{castRay()} refers to a function that looks similar to the sphere t
 \end{enumerate}
 
 
-\section{Generation of impulse response}
-The room is assumed to a linear time invariant system(LTI). Due to the proof-of-concept nature of this proposal, a highly simplified model for RIR computation is used. Sphere tracing delivers distances and number of reflections for $M$ rays in this implementation. Each ray follows a number of reflections $K(m)$. Each reflection pass adds up to a total travel distance of the ray, $d(m)$. The sound source is assumed to send out a discrete impulse, the kronecker delta function, $\delta(n)$. As non-integer delays are ignored in this implementation, the shader will just write to the rounded integer delay location $\tau_s$ in the impulse response, $H(n)$,that corresponds to the distance:
+\section{impulse response Generation}
+The room is assumed to be a linear time invariant (LTI) system. Due to the proof-of-concept nature of this proposal, a highly simplified model for RIR computation is used. Sphere tracing delivers distances and number of reflections for $M$ rays in this implementation. Each ray follows a number of reflections $K(m)$. Each reflection pass adds up to a total travel distance of the ray, $d(m)$. The sound source is assumed to send out a discrete impulse, the kronecker delta function, $\delta(n)$. As non-integer delays are ignored in this implementation, the shader will just write to the rounded integer delay location $\tau_s$ in the impulse response, $H(n)$,that corresponds to the distance:
 \begin{equation}
 H(n) = \sum_{m=0}^M \delta(n-\tau_s(m))\cdot \alpha(m)\cdot -1^{K(m)}
 \end{equation}
@@ -546,18 +499,17 @@ For simplicity's sake, here only one global coefficient $\alpha_G$ is implemente
 \alpha(m) = \alpha_G^{K(m)}
 \end{equation}
 
-Additionally, a proof-of-concept for frequency dependent loss for each reflection is introduced into the model. As a computationally efficient heuristic, a simple one-zero filter $G(z)$ is applied at each reflection:
+Additionally, a proof-of-concept for frequency dependent loss for each reflection is introduced into the model. As a computationally efficient heuristic, binomial filter is used \cite{aubury_binomial_1996}, \cite{derpanis_overview_nodate}. A simple one-zero filter $G(z)$ is applied at each reflection:
 
 \begin{equation}
 G(z,K) = (1+z^{-1})^K \cdot \frac{1}{2}^K
 \end{equation}
-The advantage of using such a simple filter is that a $K$-stage cascade's impulse response can be computed easily without applying the filter repeatedly. By doing the discrete time inverse fourier transform of the transfer function $Gz$ the $N$-length impulse response is obtained:
+The advantage of using such a simple filter is that a $K$-stage cascade's impulse response can be computed easily without applying the filter repeatedly. By doing the discrete time inverse fourier transform of the transfer function $G(z)$ the $N$-length impulse response is obtained:
 
 \begin{equation}
   G(n,K) = \mathfrak{F}^{-1}\{ G(z) \} = (\frac{1}{2})^K \frac{1}{N}  \sum_{\omega = 0}^\pi (1+e^{-j\omega})^{K} e^{j\omega n} 
 \end{equation}
-
-Numerically, it can easily be shown that
+A binomial filter's impulse response converges to a gaussian bell curve which can be approximated as:
 
 \begin{equation}
 G(n,K) \approx  \frac{1}{\sigma \cdot \sqrt{2 \pi}} \cdot e ^{-\frac{1}{2} (\frac{n-\mu}{\sigma})^2}
@@ -568,16 +520,116 @@ G(n,K) \approx  \frac{1}{\sigma \cdot \sqrt{2 \pi}} \cdot e ^{-\frac{1}{2} (\fra
 with 
 
 \begin{equation}
-\sigma \approx \sqrt{K 0.231 + 0.562}
+\sigma = \sqrt{K 0.231 + 0.562}
 \end{equation}
-
+and 
 \begin{equation}
-\mu \approx \frac{K}{2} + \frac{1}{2}
+\mu = \frac{K}{2} + \frac{1}{2}
 \end{equation}
 
 The right hand side of Equation \ref{eq:assump} is simply the normal distribution, which is computationally efficient to calculate for any $K$.
 
-So instead of adding $\delta(n-\tau(m))$ into the IR, simply $G(n-\tau(m),K)$ is used. Similar to many other implementations, a high-pass filter is applied to the resulting RIR.
+So instead of adding $\delta(n-\tau(m))$ into the IR, simply $G(n-\tau(m),K)$ is used. 
+Similar to many other implementations, a high-pass filter is applied to the resulting RIR to compensate for low-frequency components resulting mainly from the spacial extendedness of the sound receiver shape.
+
+
+
+\begin{figure*}[ht]
+    \center
+    \begin{subfigure}[t]{0.45\textwidth}
+      \centering
+      \input{img/specBrink}
+    \caption{\label{fig:fig:multReflSpecOrig} \it Original recording, scene 1, multiple reflections from \cite{brinkmann_round_2019}. }
+    \end{subfigure}% 
+    \begin{subfigure}[t]{0.45\textwidth}
+      \centering
+      \input{img/simBrink}
+      \caption{\label{fig:multReflSpecSim} \it Simulated using the proposed method. }
+    \end{subfigure}
+    \caption{\it Comparison of spectra of a real impulse response (a) and the proposed method (b).}
+    \label{fig:multReflSpecCompare}
+\end{figure*}
+
+
+\section{Results}
+
+\begin{figure*}[ht]
+    \center
+    \begin{subfigure}[t]{0.45\textwidth}
+      \centering
+      \input{img/shoebox_orig}
+    \caption{\label{fig:shoe} \it Spec by matlab. }
+    \end{subfigure}% 
+    \begin{subfigure}[t]{0.45\textwidth}
+      \centering
+      \input{img/shoebox_sim}
+      \caption{\label{fig:shoe} \it Simulated. }
+    \end{subfigure}
+    \caption{\it Impulse response of shoebox room. Computed using the proposed method and \cite{lehmann_fast_2020}.}
+    \label{fig:test}
+\end{figure*}
+
+
+All of the following results have been computed with 10 reflection passes, and $1024^2$ rays. The computations were made on a strong consumer-grade machine (Intel i7 CPU, NVIDIA Geforce 1080ti). The computation time for simple scenes such as scene 1, rigid in \cite{brinkmann_round_2019} was at $<\frac{1}{60}$ seconds including the computation of a simple visualization in real time. The most complex scenes(geometrically and in regards to the amount of reflections) that where tested, the shoebox scene and scene 1 with added diffusor, where computed in less than $<\frac{1}{50}$ seconds. As expected, the method therefore outperforms CPU based methods in computation time.  \
+
+The results are compared to a different simulation using the image source method \cite{lehmann_fast_2020} and \cite{brinkmann_round_2019} who generated a dataset featuring recordings in in an anechoic chamber with simple shapes. Note that for the comparison with \cite{brinkmann_round_2019} in figure \ref{fig:multRefl} ignores the frequency response of the speaker and microphone that was used in the original recording. As can be seen in the plot, the original recording features visible amount of difference to an ideal impulse even with the direct signal. 
+
+Since this implementation lacks of features such as material-specific reflection coefficients and passes for multiple octave bands, it is not possible to accurately compare previous work with the proposed method by simply using the same materials. It can be shown that by adjusting reflection coefficients, the method can be matched up with existing work.
+
+\begin{figure}
+
+    \begin{center}
+      \input{img/brink}
+    \end{center}
+    
+    \caption{\label{fig:multRefl} \it RIR computed using the proposed method and measured by \cite{brinkmann_round_2019}, scene 3, multiple reflection at opposed MDF plates.}
+\end{figure}
+
+\begin{figure}
+    \begin{center}
+      \input{img/brinkDiff}
+    \end{center}
+    
+    \caption{\label{fig:diffuser} \it RIR computed using the proposed method and measured by \cite{brinkmann_round_2019}, scene 1, a single reflection with a diffuser.}
+\end{figure}
+
+
+The shoebox scene features a small room with dimensions 3 x 4 x 2.5 meters. Note that \cite{lehmann_fast_2020} used a sampling rate of 16kHz and has been upsampled to 44.1 kHz for comparison reasons. This probably led to the pre-ringing artifacts present in Figure \ref{fig:shoe}.
+
+\begin{figure}
+    \begin{center}
+      \input{img/shoebox}
+    \end{center}
+    \caption{\label{fig:shoe} \it Impulse response of shoebox room. Computed using the proposed method and \cite{lehmann_fast_2020}. }
+    
+\end{figure}
+
+\section{Conclusions and future work}
+\label{sec:concl}
+
+This work could show that RIR estimation via SDFs in a compute shader in real-time compatible manner is possible. It remains to be tested how far this method can reach. While it still is computationally costly to do these calculations in general, the use of SDFs can offer some significant advantages such as their procedural nature, their efficiency and simplicity. A number of improvements both in speed and are possible in the proposed technique, such as material dependent attenuation and scattering for example. Also, a number of speed improvements and optimizations could be implemented such as the removal of if statements in the SDF function. Furthermore a more detailed comparison and more mature and rigorous mathematical analysis of the process seems promising as well as an analysis of the sphere-tracing-specific artifacts and their effects in the audio domain. As mentioned in Section \ref{subs:mot}, sphere-tracing seems to offer a stunning simplicity for example when it comes to smoothing geometry. Simply the fact that it is a rather different approach than classical ray casting of polygons seems to promise opportunities for optimization. 
+
+An SDF's closeness to classical mathematical structures (in contrast to sets of triangles, vertices, edges etc.) might lead to easier analysis or simpler comparison of different algorithms. Their popularity in the graphics community leads to constant development and the shier activity in the field seems to promise greater ease of use in the future. \
+
+Certain rather experimental ideas also are easy to realize in this technique. Due to the aforementioned connection between geometry formulation in sphere tracing and mathematical formulas, this algorithm is often used to render fractals. In this context this would mean that it is rather easy to calculate the RIR of a menger sponge or a Julia Set. Moreover, many geometries/SDFs can be formulated in a dimension independent way, resulting in a straight forward way to render 4-dimensional geometries, leading to the idea of calculating the RIR of a 4-dimensional room. While these thoughts don't offer any apparent practical application and might "only" lead to aesthetically interesting results, it is possible to find applications in the sonification of high dimensional data.
+
+% Please, submit full-length papers (max.~8 pages both oral and poster presentations).
+% Submission is fully electronic and automated through the Conference Web Submission System.
+% DO NOT send us papers directly by e-mail.
+
+\section{Acknowledgments}
+This work was supported in part by the university of Applied sciences St.Poelten.
+% Thanks to inigo quilez, the shadertoy community.
+% Many thanks to the great number of anonymous reviewers!
+
+%\newpage
+\nocite{*}
+\bibliographystyle{IEEEbib}
+\bibliography{RaymarchReverb2}
+
+
+\end{document}
+
 
 
 
@@ -609,38 +661,42 @@ So instead of adding $\delta(n-\tau(m))$ into the IR, simply $G(n-\tau(m),K)$ is
 % example of a figure spanning two columns.
 %
 
-\section{Results}
-All of the following results have been computed with 10 reflection passes, and $1024^2$ rays. The execution time on a strong consumer grade machine (Intel i7 CPU, NVIDIA Geforce 1080ti). The computation time for simple scenes such as scene 1, rigid in \cite{brinkmann_round_2019} was at $<\frac{1}{60}$ seconds including the computation of a simple visualization in real time. 
-The most complex scenes(geometrically and in regards to the amount of reflections) that where tested, the shoebox scene and scene 1 with added diffusor, where computed in less than $<\frac{1}{50}$ seconds.
-The results are compared to a different simulation using the image source method \cite{lehmann_fast_2020} and \cite{brinkmann_round_2019} who generated a dataset featuring recordings in in an anechoic chamber with simple shapes. Note that for the comparison with \cite{brinkmann_round_2019} in figure \ref{fig:multRefl} ignores the frequency response of the speaker and microphone that was used in the original recording. As can be seen in the plot, the original recording features visible amount of difference to an ideal impulse even with the direct signal. 
 
-\begin{figure}
-    \begin{center}
-      \input{img/brink}
-    \end{center}
+% \begin{figure}
+%     \begin{center}
+%       \input{img/spec1}
+%     \end{center}
+%     \caption{\label{fig:shoe} \it Spec by this approach. Impulse response of shoebox room. Computed using the proposed method and \cite{lehmann_fast_2020}. }
     
-    \caption{\label{fig:multRefl} \it RIR computed using the proposed method and measured by \cite{brinkmann_round_2019}, scene 3, multiple reflection at opposed MDF plates.}
-\end{figure}
+% \end{figure}
 
-\begin{figure}
-    \begin{center}
-      \input{img/brinkDiff}
-    \end{center}
+
+
+% \begin{figure}
+%     \begin{center}
+%       \input{img/orig}
+%     \end{center}
+%     \caption{\label{fig:shoe} \it Spec by matlab. Impulse response of shoebox room. Computed using the proposed method and \cite{lehmann_fast_2020}. }
     
-    \caption{\label{fig:diffuser} \it RIR computed using the proposed method and measured by \cite{brinkmann_round_2019}, scene 1, a single reflection with a diffuser.}
-\end{figure}
+% \end{figure}
 
 
-The shoebox scene features a small room with dimensions 3 x 4 x 2.5 meters. Note that \cite{lehmann_fast_2020} used a sampling rate of 16kHz and has been upsampled to 44.1 kHz for comparison reasons. This probably led to the pre-ringing artifacts present in Figure \ref{fig:shoe}.
-
-\begin{figure}
-    \begin{center}
-      \input{img/shoebox}
-    \end{center}
-    \caption{\label{fig:shoe} \it Impulse response of shoebox room. Computed using the proposed method and \cite{lehmann_fast_2020}. }
+% \begin{figure}
+%     \begin{center}
+%       \input{img/specBrink}
+%     \end{center}
+%     \caption{\label{fig:shoe} \it Original \cite{brinkmann_round_2019}. }
     
-\end{figure}
+% \end{figure}
 
+
+% \begin{figure}
+%     \begin{center}
+%       \input{img/simBrink}
+%     \end{center}
+%     \caption{\label{fig:shoe} \it Simulated. }
+    
+% \end{figure}
 
 % \begin{enumerate}
 
@@ -685,22 +741,22 @@ The shoebox scene features a small room with dimensions 3 x 4 x 2.5 meters. Note
 
 % \begin{table}[ht]
 %   \caption{\itshape Basic trigonometric values.}
-% 	\centering
-% 	\begin{tabular}{|c|c|}
-% 		\hline
-% 		$\mathrm{angle}\,(\theta, \mathrm{rad})$ & $\sin \theta$ \\\hline
-% 		$\frac{\pi}{2}$ & $1$ \\
-% 		$\pi$ & $0$ \\
-% 		$\frac{3\pi}{2}$ & $-1$ \\
-% 		$2\pi$ & $0$ \\\hline
-% 	\end{tabular}
-% 	%
-% 	\label{tab:example}
+%   \centering
+%   \begin{tabular}{|c|c|}
+%     \hline
+%     $\mathrm{angle}\,(\theta, \mathrm{rad})$ & $\sin \theta$ \\\hline
+%     $\frac{\pi}{2}$ & $1$ \\
+%     $\pi$ & $0$ \\
+%     $\frac{3\pi}{2}$ & $-1$ \\
+%     $2\pi$ & $0$ \\\hline
+%   \end{tabular}
+%   %
+%   \label{tab:example}
 % \end{table}
 
 % \begin{table*}[ht]
 %   \caption{{\it Basic trigonometric values, spanning two columns.}}
-% 	\centering
+%   \centering
 %   \begin{tabular}{|c|c|c|c|c|c|c|}\hline
 %     $\mathrm{angle}\, (\theta, \mathrm{rad})$ & $\sin \theta$ & $\cos \theta $ & $(\sin \theta)/2 $ & $(\cos \theta) /2 $ & $(\sin \theta)/3 $ & $(\cos \theta)/3$    \\\hline
 %     $\frac{\pi}{2}$ & $1$ & $0$ & $1/2$ & $0$ & $1/3$ & $0$ \\
@@ -708,7 +764,7 @@ The shoebox scene features a small room with dimensions 3 x 4 x 2.5 meters. Note
 %     $\frac{3\pi}{2}$ & $-1$ & $0$ & $-1/2$ & $0$ & $-1/3$ & $0$ \\
 %     $2\pi$ & $0$ & $1$ & $0$ & $1/2$ & $0$ & $1/3$ \\\hline
 %  \end{tabular}
-% 	%
+%   %
 %   \label{tab:example2}
 % \end{table*}
 
@@ -716,88 +772,13 @@ The shoebox scene features a small room with dimensions 3 x 4 x 2.5 meters. Note
 % Equations should be placed on separate lines and numbered:
 
 % \begin{equation}
-% 	X(e^{j\Omega})=\sum_{n=0}^{N-1}x(n)e^{-j\Omega n}
-% 	\label{eq1}
-% 	\end{equation}
-% 	where the sequence $x(n)$ in equation (\ref{eq1}) is a windowed frame:
-% 	\begin{equation}
-% 	x(n)=s(n) w(n)
-% 	\label{eq2}
+%   X(e^{j\Omega})=\sum_{n=0}^{N-1}x(n)e^{-j\Omega n}
+%   \label{eq1}
+%   \end{equation}
+%   where the sequence $x(n)$ in equation (\ref{eq1}) is a windowed frame:
+%   \begin{equation}
+%   x(n)=s(n) w(n)
+%   \label{eq2}
 % \end{equation}
 % %
 % with a window function $w(n)$.
-
-
-% \subsection{Page Numbers}
-% Page numbers will be added to the document in the postprocessing stage, so {\em please leave the numbering as is},
-% that is, the first page will start at page DAFX-1 and the last page, at most, will have to be DAFX-8.
-
-
-% \subsection{References}
-% % The references will be numbered in order of appearance \cite{Mitra:Kaiser:1993:DSP:handbook}, \cite{Haykin:1991:adaptive:filter}, \cite{Moorer:2000:AES:audio:millenium} and \cite{Nackaerts:2001:ICMC}. Please avoid listing references that do not appear in the text (we did the opposite in this template).
-
-
-% \subsubsection{Reference Format}
-% The reference format is the standard IEEE one. We recommend to use BibTeX to create the reference list.
-
-
-\section{Conclusions}
-
-This work could show that RIR estimation via SDFs in a compute shader in real time compatible time is possible to a certain accuracy. It remains to be tested how far this method can reach. While it still is computationally costly to do these calculations in general. 
-
-% This template can be found on the conference website.
-% For changing the number of author affiliations (1 to 4), uncomment the corresponding regions in the template \texttt{tex} file.
-% Please, submit full-length papers (max.~8 pages both oral and poster presentations).
-% Submission is fully electronic and automated through the Conference Web Submission System.
-% DO NOT send us papers directly by e-mail.
-
-\section{Acknowledgments}
-Thanks to inigo quilez, 
-% Many thanks to the great number of anonymous reviewers!
-
-%\newpage
-\nocite{*}
-\bibliographystyle{IEEEbib}
-% \bibliography{DAFx20_tmpl} % requires file DAFx20_tmpl.bib
-\bibliography{RaymarchReverb2}
-
-
-% \section{Appendix: Margin Check}
-% This section shows the column margins for the text. \bigskip\newline
-
-% Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-
-% Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-
-% Ut visi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-
-% Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-
-% Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.
-
-% At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
-
-% Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-% Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-
-% Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-
-% Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-
-% Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-
-% Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.
-
-% At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
-
-% Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
-
-% Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-%%Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-
-%%Ut visi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla ..
-\end{document}

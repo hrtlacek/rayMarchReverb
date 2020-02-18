@@ -1,0 +1,38 @@
+% This file was created by tikzplotlib v0.9.1.
+\begin{tikzpicture}
+
+\begin{axis}[
+colorbar,
+colorbar style={ylabel={}},
+colormap={mymap}{[1pt]
+  rgb(0pt)=(0.0000,0.0000,0.5000);
+  rgb(22pt)=(0.0000,0.0000,1.0000);
+  rgb(25pt)=(0.0000,0.0000,1.0000);
+  rgb(68pt)=(0.0000,0.8600,1.0000);
+  rgb(70pt)=(0.0000,0.9000,0.9677);
+  rgb(75pt)=(0.0806,1.0000,0.8871);
+  rgb(128pt)=(0.9355,1.0000,0.0323);
+  rgb(130pt)=(0.9677,0.9630,0.0000);
+  rgb(132pt)=(1.0000,0.9259,0.0000);
+  rgb(178pt)=(1.0000,0.0741,0.0000);
+  rgb(182pt)=(0.9091,0.0000,0.0000);
+  rgb(200pt)=(0.5000,0.0000,0.0000)
+},
+point meta max=-55.7164,
+point meta min=-100.0000,
+tick align=outside,
+tick pos=left,
+width=0.8	extwidth,
+x grid style={white!69.0196!black},
+xlabel={Time [seconds]},
+xmin=0.0231, xmax=0.0721,
+xtick style={color=black},
+y grid style={white!69.0196!black},
+ylabel={Frequency [Hz]},
+ymin=30.0000, ymax=5000.0000,
+ytick style={color=black}
+]
+\addplot graphics [includegraphics cmd=\pgfimage,xmin=0.0231, xmax=0.0721, ymin=0.0000, ymax=22050.0000] {img/spec1-004.png};
+\end{axis}
+
+\end{tikzpicture}
