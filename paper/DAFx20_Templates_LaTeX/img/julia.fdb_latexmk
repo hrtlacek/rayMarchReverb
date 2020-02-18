@@ -1,0 +1,9 @@
+# Fdb version 3
+["pdflatex"] 1581985381 "julia.tex" "julia.pdf" "julia" 1581985382
+  "/usr/share/texmf-dist/web2c/texmf.cnf" 1572595918 33301 a3134070eacafb10b1f371612ce2650d ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1579573383 8044939 6435dfac299d8888500d36bb36ff989f ""
+  "julia.aux" 1581985348 8 a94a2480d3289e625eea47cd1b285758 ""
+  "julia.tex" 1581985380 16703 3751ffee2a12ff3707f3342b102af515 ""
+  (generated)
+  "julia.log"
+  "julia.pdf"

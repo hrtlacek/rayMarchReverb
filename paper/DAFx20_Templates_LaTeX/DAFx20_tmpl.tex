@@ -611,7 +611,26 @@ This work could show that RIR estimation via SDFs in a compute shader in real-ti
 
 An SDF's closeness to classical mathematical structures (in contrast to sets of triangles, vertices, edges etc.) might lead to easier analysis or simpler comparison of different algorithms. Their popularity in the graphics community leads to constant development and the shier activity in the field seems to promise greater ease of use in the future. \
 
-Certain rather experimental ideas also are easy to realize in this technique. Due to the aforementioned connection between geometry formulation in sphere tracing and mathematical formulas, this algorithm is often used to render fractals. In this context this would mean that it is rather easy to calculate the RIR of a menger sponge or a Julia Set. Moreover, many geometries/SDFs can be formulated in a dimension independent way, resulting in a straight forward way to render 4-dimensional geometries, leading to the idea of calculating the RIR of a 4-dimensional room. While these thoughts don't offer any apparent practical application and might "only" lead to aesthetically interesting results, it is possible to find applications in the sonification of high dimensional data.
+Certain rather experimental ideas also are easy to realize in this technique. Due to the aforementioned connection between geometry formulation in sphere tracing and mathematical formulas, this algorithm is often used to render fractals. In this context this would mean that it is rather easy to calculate the RIR of a menger sponge or a Julia Set(see Figure \ref{fig:julia}). Moreover, many geometries/SDFs can be formulated in a dimension independent way, resulting in a straight forward way to render 4-dimensional geometries, leading to the idea of calculating the RIR of a 4-dimensional room. While these thoughts don't offer any apparent practical application and might "only" lead to aesthetically interesting results, it is possible to find applications in the sonification of high dimensional data.
+
+\begin{figure}[ht]
+    \center
+    \begin{subfigure}[t]{0.4\linewidth}
+      \centering
+      \includegraphics[width=1\linewidth]{img/julia.png}
+    \caption{\label{fig:juliaRend} \it Visualization. }
+    \end{subfigure} \
+
+    \begin{subfigure}[t]{0.4\linewidth}
+      \centering
+      \input{img/julia.tex}
+      \caption{\label{fig:juliaRIR} \it RIR simulated using the proposed method. }
+    \end{subfigure}
+    \caption{\it Visualization and RIR of a 3-dimensional projection of a 4-dimensional function, the Julia Set \cite{quilez_inigo_nodate-1} .}
+    \label{fig:julia}
+\end{figure}
+
+
 
 % Please, submit full-length papers (max.~8 pages both oral and poster presentations).
 % Submission is fully electronic and automated through the Conference Web Submission System.

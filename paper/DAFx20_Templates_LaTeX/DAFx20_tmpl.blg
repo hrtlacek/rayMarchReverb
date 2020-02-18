@@ -15,45 +15,45 @@ Warning--empty journal in campbell_roomsim_nodate
 Warning--empty year in campbell_roomsim_nodate
 Warning--empty journal in tomczak_gpu_nodate
 Warning--empty year in tomczak_gpu_nodate
-You've used 23 entries,
+You've used 24 entries,
             1838 wiz_defined-function locations,
-            567 strings with 6887 characters,
-and the built_in function-call counts, 4872 in all, are:
-= -- 422
-> -- 177
+            568 strings with 6908 characters,
+and the built_in function-call counts, 4990 in all, are:
+= -- 429
+> -- 181
 < -- 7
-+ -- 71
-- -- 48
-* -- 372
-:= -- 730
-add.period$ -- 24
-call.type$ -- 23
-change.case$ -- 23
++ -- 73
+- -- 49
+* -- 375
+:= -- 746
+add.period$ -- 25
+call.type$ -- 24
+change.case$ -- 24
 chr.to.int$ -- 0
-cite$ -- 35
-duplicate$ -- 222
-empty$ -- 510
-format.name$ -- 48
-if$ -- 1095
+cite$ -- 36
+duplicate$ -- 227
+empty$ -- 528
+format.name$ -- 49
+if$ -- 1122
 int.to.chr$ -- 0
-int.to.str$ -- 23
+int.to.str$ -- 24
 missing$ -- 18
-newline$ -- 112
-num.names$ -- 22
-pop$ -- 96
+newline$ -- 116
+num.names$ -- 23
+pop$ -- 101
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 116
+skip$ -- 124
 stack$ -- 0
 substring$ -- 296
-swap$ -- 59
+swap$ -- 60
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 12
-while$ -- 51
-width$ -- 25
-write$ -- 227
+while$ -- 52
+width$ -- 26
+write$ -- 235
 (There were 12 warnings)
