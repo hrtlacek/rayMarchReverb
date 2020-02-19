@@ -433,13 +433,15 @@ for (i=0;i++;i<imax){
 \end{lstlisting} 
 
 In the above simplified code listing, \texttt{ro} is a \texttt{vec3} that defines the ray origin, \texttt{rd} the ray direction and \texttt{epsilon} can be set to adjust the algorithms precision. The \texttt{map()} function in this case not only returns the distance computed via the SDF(\texttt{res.x}) but a \texttt{struct} that can contain material properties (reflection coefficients etc.). Here it was used to distinguish between a sound source and a regular reflective body.
-The space is sampled spherically and \texttt{rd} is generated from the compute shader's \texttt{gl\_GlobalInvocationID}. In this implementation a resolution of 1024 x 1024 is used, resulting in $1024^2$ initial rays and a maximum RIR length of $1024^2$.
+The space is sampled spherically and \texttt{rd} is generated from the compute shader's \
+
+ \texttt{gl\_GlobalInvocationID}. In this implementation a resolution of 1024 x 1024 is used, resulting in $1024^2$ initial rays and a maximum RIR length of $1024^2$.
 From there, the space is sampled using the following very simplified pseudo code:
 \begin{lstlisting}[language=C, caption={\it GLSL pseudo code for sampling the space and writing to the RIR.},captionpos=b, label=lst:mainloop]
 Sdf res = castRay(ro,rd)
 for (int k=0;k<numReflections;k++;){
   if(ComingFromReflectiveBdy){
-    rd = relect(rd,normal);
+    rd = reflect(rd,normal);
   }
   res = castRay(ro,rd);
   t = res.x;
@@ -506,7 +508,7 @@ G(z,K) = (1+z^{-1})^K \cdot \frac{1}{2}^K
 The advantage of using such a simple filter is that a $K$-stage cascade's impulse response can be computed easily without applying the filter repeatedly. By doing the discrete time inverse fourier transform of the transfer function $G(z)$ the $N$-length impulse response is obtained:
 
 \begin{equation}
-  G(n,K) = \mathfrak{F}^{-1}\{ G(z) \} = (\frac{1}{2})^K \frac{1}{N}  \sum_{\omega = 0}^\pi (1+e^{-j\omega})^{K} e^{j\omega n} 
+  g(n,K) = \mathfrak{F}^{-1}\{ G(z) \} = (\frac{1}{2})^K \frac{1}{N}  \sum_{\omega = 0}^\pi (1+e^{-j\omega})^{K} e^{j\omega n} 
 \end{equation}
 A binomial filter's impulse response converges to a gaussian bell curve which can be approximated as:
 
@@ -528,10 +530,14 @@ and
 
 The right hand side of Equation \ref{eq:assump} is simply the normal distribution, which is computationally efficient to calculate for any $K$.
 
-So instead of adding $\delta(n-\tau(m))$ into the RIR, simply $G(n-\tau(m),K)$ is used. 
+So instead of adding $\delta(n-\tau(m))$ into the RIR, simply $g(n-\tau(m),K)$ is used. 
 Similar to many other implementations, a high-pass filter is applied to the resulting RIR to compensate for low-frequency components resulting mainly from the spacial extendedness of the sound receiver shape.
 
-After computation of the RIR, it needs to be written to the shader's output texture. So, an intermediate rectangular representation of N by M pixels is produced. The RIR, $H(n)$ is written to the Texture $T(x,y)$:
+\subsubsection*{Other Frequency dependent Models}
+As a demonstration, besides the faster binomial filter approach, a function for arbitrary filters has been implemented in the case a filter is needed whose Kth order serial cascade impulse response is not known. Also, in case different materials are set up in the scene and different filters need to be applied, the binomial filter strategy breaks, so this approach demonstrates this more realistic scenario. The filter(s) need to be set up as sample-by-sample functions and iterate over an array. The result is inserted just as $g(n)$ above.
+
+\subsubsection*{Output}
+After computation of the RIR, it needs to be written to the shader's output texture. So, an intermediate rectangular representation of N by M pixels is produced. The RIR, $h(n)$ is written to the Texture $T(x,y)$:
 \begin{equation}
   T(x,y) = H(x \bmod N+\frac{y}{M})
 \end{equation}
@@ -580,7 +586,7 @@ All of the following results have been computed with 10 reflection passes, and $
 The results are compared to a different simulation using the image source method \cite{lehmann_fast_2020} and \cite{brinkmann_round_2019} who generated a dataset featuring recordings in in an anechoic chamber with simple shapes. Note that for the comparison with \cite{brinkmann_round_2019} in figure \ref{fig:multRefl} ignores the frequency response of the speaker and microphone that was used in the original recording. As can be seen in the plot, the original recording features visible amount of difference to an ideal impulse even with the direct signal. 
 
 Since this implementation lacks of features such as material-specific reflection coefficients and passes for multiple octave bands, it is not possible to accurately compare previous work with the proposed method by simply using the same materials. It can be shown that by adjusting reflection coefficients, the method can be matched up with existing work.
-
+Given the proof-of-concept nature of this proposal, there is big room for improvement in terms of accuracy. More audio examples than are shown here can bis inspected at the projects github repository.
 \begin{figure}
 
     \begin{center}
@@ -599,7 +605,7 @@ Since this implementation lacks of features such as material-specific reflection
 \end{figure}
 
 
-The shoebox scene features a small room with dimensions 3 x 4 x 2.5 meters. Note that \cite{lehmann_fast_2020} used a sampling rate of 16kHz and has been upsampled to 44.1 kHz for comparison reasons. This probably led to the pre-ringing artifacts present in Figure \ref{fig:shoe}.
+The shoebox scene features a small room with dimensions 3 x 4 x 2.5 meters. Note that \cite{lehmann_fast_2020} used a sampling rate of 16kHz and has been up-sampled to 44.1 kHz for comparison reasons. 
 
 \begin{figure}
     \begin{center}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.1.21)  19 FEB 2020 17:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.1.21)  19 FEB 2020 18:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1205,67 +1205,54 @@ File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 397.
  [2 <./img/sdf2dbox.png> <./img/diffusorNorm.png> <./img/diffusorSmooth.png>]
-Overfull \hbox (30.807pt too wide) in paragraph at lines 435--438
-\T1/pcr/m/n/9 rd \T1/ptm/m/n/9 is gen-er-ated from the com-pute shader's \T1/pc
-r/m/n/9 gl_GlobalInvocationID\T1/ptm/m/n/9 .
- []
-
 File: img/diffusorNorm.png Graphic file (type png)
 <use img/diffusorNorm.png>
-Package pdftex.def Info: img/diffusorNorm.png  used on input line 465.
+Package pdftex.def Info: img/diffusorNorm.png  used on input line 467.
 (pdftex.def)             Requested size: 49.79535pt x 49.79529pt.
-[3]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 509
+ [3]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 511
 .
- (/usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) (./img/specBrink.tex)
-Overfull \hbox (5.96095pt too wide) in paragraph at lines 38--547
- [][] 
- []
-
-(./img/simBrink.tex)
-Overfull \hbox (5.96095pt too wide) in paragraph at lines 38--552
- [][] 
- []
-
-(./img/shoebox_orig.tex)
-Overfull \hbox (5.95554pt too wide) in paragraph at lines 38--566
+(./img/simBrink.tex) (./img/shoebox_orig.tex)
+Overfull \hbox (5.95554pt too wide) in paragraph at lines 38--572
  [][] 
  []
 
 (./img/shoeBox_sim.tex)
-Overfull \hbox (5.95554pt too wide) in paragraph at lines 38--571
+Overfull \hbox (5.95554pt too wide) in paragraph at lines 38--577
  [][] 
  []
 
-
-Overfull \hbox (1.76277pt too wide) in paragraph at lines 582--583
+(./img/brink.tex)
+Overfull \hbox (1.76277pt too wide) in paragraph at lines 588--598
 \T1/ptm/m/n/9 specific re-flec-tion co-ef-fi-cients and passes for mul-ti-ple o
 c-tave bands,
  []
 
-(./img/brink.tex) (./img/brinkDiff.tex) (./img/shoebox.tex) [4] [5 <./img/specB
-rink-005.png> <./img/simBrink-007.png> <./img/shoebox_orig-002.png> <./img/shoe
-Box_sim-002.png>]
+(./img/brinkDiff.tex) (./img/shoebox.tex) [4] [5 <./img/specBrink-011.png> <./i
+mg/simBrink-014.png> <./img/shoebox_orig-002.png> <./img/shoeBox_sim-002.png>]
 <img/julia.png, id=255, 1027.84pt x 1027.84pt>
 File: img/julia.png Graphic file (type png)
 <use img/julia.png>
-Package pdftex.def Info: img/julia.png  used on input line 625.
+Package pdftex.def Info: img/julia.png  used on input line 631.
 (pdftex.def)             Requested size: 95.03075pt x 95.02666pt.
- (./img/julia.tex)
-Overfull \hbox (33.12228pt too wide) in paragraph at lines 1023--632
+
+(./img/julia.tex)
+Overfull \hbox (33.12228pt too wide) in paragraph at lines 1023--638
  [][] 
  []
 
 (./DAFx20_tmpl.bbl [6 <./img/julia.png>]) [7
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 655.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 655.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 661.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 661.
  (./DAFx20_tmpl.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 655.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 655.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 661.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 661.
 Package rerunfilecheck Info: File `DAFx20_tmpl.out' has not changed.
 (rerunfilecheck)             Checksum: 102B2C335AEEEA661B6C645A29B9BB20;764.
 
@@ -1275,13 +1262,13 @@ LaTeX Warning: There were multiply-defined labels.
  )
 (\end occurred when \ifx on line 124 was incomplete) 
 Here is how much of TeX's memory you used:
- 35164 strings out of 492167
- 814793 string characters out of 6131558
- 2732786 words of memory out of 5000000
- 38788 multiletter control sequences out of 15000+600000
+ 35167 strings out of 492167
+ 814862 string characters out of 6131558
+ 2732266 words of memory out of 5000000
+ 38789 multiletter control sequences out of 15000+600000
  41689 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 78i,19n,136p,1346b,3164s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 78i,20n,136p,1346b,3166s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/font
 s/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cmex
 tra/cmex9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><
@@ -1297,10 +1284,10 @@ ls/msbm10.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/s
 hare/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.
 pfb>
-Output written on DAFx20_tmpl.pdf (7 pages, 1270143 bytes).
+Output written on DAFx20_tmpl.pdf (7 pages, 1186152 bytes).
 PDF statistics:
- 366 PDF objects out of 1000 (max. 8388607)
- 294 compressed objects within 3 object streams
- 96 named destinations out of 1000 (max. 500000)
+ 368 PDF objects out of 1000 (max. 8388607)
+ 296 compressed objects within 3 object streams
+ 98 named destinations out of 1000 (max. 500000)
  178 words of extra memory for PDF output out of 10000 (max. 10000000)
 

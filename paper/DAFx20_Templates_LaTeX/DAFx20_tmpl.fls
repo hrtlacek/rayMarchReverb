@@ -422,12 +422,12 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm5.tfm
 INPUT img/specBrink.tex
 INPUT img/specBrink.tex
-INPUT img/specBrink-005.png
-INPUT ./img/specBrink-005.png
+INPUT img/specBrink-011.png
+INPUT ./img/specBrink-011.png
 INPUT img/simBrink.tex
 INPUT img/simBrink.tex
-INPUT img/simBrink-007.png
-INPUT ./img/simBrink-007.png
+INPUT img/simBrink-014.png
+INPUT ./img/simBrink-014.png
 INPUT img/shoebox_orig.tex
 INPUT img/shoebox_orig.tex
 INPUT img/shoebox_orig-002.png
