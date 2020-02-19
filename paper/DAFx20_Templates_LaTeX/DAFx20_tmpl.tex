@@ -159,7 +159,7 @@
 
 % -------------SINGLE-AFFILIATION SINGLE-AUTHOR HEADER STARTS (uncomment below if your paper has a single author)----------------------------------------
 \affiliation{
-\paperauthorA\,\sthanks{Thanks to the predecessors for the templates}}
+\paperauthorA\,}
 {\href{https://www.mdw.ac.at/ike/}{Institute 1} \\ University of Applied Sciences St.Poelten\\ St.Poelten, Austria\\
 {\tt \href{mailto:dafx2020@gmail.com}{ptrk.lechner@gmail.com}}
 }
@@ -306,7 +306,7 @@ frame = single,
 
 \begin{abstract}
 
-Several algorithms and approaches for Room Impulse Response (RIR) estimation exist. To the best of the authors knowledge, there is no documentation of accuracy, speed or even the feasibility of using signed distance functions (SDFs) in combination with sphere tracing for this task. Here, a proof of concept with a focus on real-time performance is presented, that lacks many features such as frequency dependent absorption and scattering coefficients, arbitrary source and receiver directives etc. The results are shown and compared to real room impulse responses recorded by \cite{brinkmann_round_2019} and to a different simulation algorithm \cite{lehmann_fast_2020}. The implementation happens mostly inside a compute shader, an example application is provided in the framework \texttt{TouchDesigner}.\ 
+Several algorithms and approaches for Room Impulse Response (RIR) estimation exist. To the best of the authors knowledge, there is no documentation of accuracy, speed or even the feasibility of using signed distance functions (SDFs) in combination with sphere tracing for this task. Here, a proof-of-concept with a focus on real-time performance is presented, that lacks many features such as frequency dependent absorption and scattering coefficients, arbitrary source and receiver directives etc. The results are shown and compared to real room impulse responses recorded by \cite{brinkmann_round_2019} and to a different simulation algorithm \cite{lehmann_fast_2020}. Also, the rather special merits of such an approach, such as 4D reverberation and simple rounding of geometry, are shortly discussed and presented. The implementation happens mostly inside a compute shader, an example application is provided in the framework \texttt{TouchDesigner}.\ 
 
 The application as well as all generated data and \texttt{Jupyter Notebooks} can be found on this project's github repository\
 
@@ -316,8 +316,8 @@ The application as well as all generated data and \texttt{Jupyter Notebooks} can
 \section{Introduction}
 \label{sec:intro}
 Sphere tracing as defined by \cite{hart_sphere_1996} is used extensively in the so called "demo scene" to render 3D video demos via shaders in real time for decades. 
-Sphere tracing is a version of the ray casting algorithm \cite{roth_ray_1982}. It relies on the geometry being defined as so called signed distance functions (SDFs), and does not directly support the import of standard 3D Polygonal geometry or meshes. One of the advantages lies in the algorithm's potential improved speed in comparison to fixed-step ray casting. SDFs are used to describe implicit surfaces, typically via a function $f : \mathbb{R}^3 \rightarrow \mathbb{R}$(although in principle, arbitrary dimensions are possible, $f : \mathbb{R}^n \rightarrow \mathbb{R}$, see Section \ref{sec:concl}). This function should be designed to return a negative value if the locus of the point is inside the geometry, a positive value if outside and 0 if on the surface to define the desired geometry. Additionally it is advantageous to design this function in a way so it is lipschitz continuous. If $f$ is defined carefully, the distance to the nearest surface is returned by this function and therefore always known during stepping along a view-ray. 
-Since the distance to the nearest surface is always known, the step size of a ray tracing algorithm can be dynamically adjusted, see Figure \ref{sphereViz}, resulting in fewer iterations along a ray, and therefore in significant speedups. 
+Sphere tracing is a version of the ray casting algorithm \cite{roth_ray_1982}. It relies on the geometry being defined as so called signed distance functions (SDFs), and does not directly support the import of standard 3D Polygonal geometry or meshes. One of the advantages lies in the algorithm's potentially improved speed in comparison to fixed-step ray casting. SDFs are used to describe implicit surfaces, typically via a function $f : \mathbb{R}^3 \rightarrow \mathbb{R}$(although in principle, arbitrary dimensions are possible, $f : \mathbb{R}^n \rightarrow \mathbb{R}$, see Section \ref{sec:concl}). In order to define the desired geometry, this $f$ should be designed to return a negative value if the locus of the point is inside the geometry, a positive value if outside and 0 if on the surface. Additionally it is considered advantageous to design this function in a way so it is lipschitz continuous. If $f$ is defined carefully, the distance to the nearest surface is returned by this function and therefore always known during stepping along a view-ray. 
+From this follows that, the step size of a ray casting algorithm can be dynamically adjusted, see Figure \ref{sphereViz}, resulting in fewer iterations along a ray, and therefore in significant speedups. This dynamic adjustment of the step size to unbound spheres around the current step the core idea of sphere tracing and the reason for its name\cite{hart_sphere_1996}.
 
 \begin{figure}[ht]
 \centerline{\includegraphics[scale=0.5]{img/sphereTracingViz.png}}
@@ -340,7 +340,7 @@ As shown in \cite{alpkocak_computing_2010} and \cite{brinkmann_round_2019} there
 
 \subsubsection*{Sphere Tracing}
 Sphere tracing itself was first described by \cite{hart_sphere_1996}. Many authors since then described improvements in speed e.g. \cite{balint_accelerating_2018} or the addition of features such as \cite{quilez_inigo_nodate}, \cite{keinert_enhanced_2014} or the activity of the \href{www.shadertoy.com}{shadertoy.com}-community.
-Defining SDFs is an active field of research and there are several projects that aim at easier construction of SDFs and integration in 3D frameworks such as \href{https://github.com/Flafla2/Generic-Raymarch-Unity}{https://github.com/Flafla2/Generic-Raymarch-Unity} and \cite{lechner_hrtlacektdraymarchtoolkit_2020}.
+Defining SDFs is an active field of research and there are several projects that aim at easier construction of SDFs and integration in 3D frameworks such as \href{https://github.com/Flafla2/Generic-Raymarch-Unity}{https://github.com/Flafla2/Generic-Raymarch-Unity} and \cite{lechner_hrtlacektdraymarchtoolkit_2020} but also some commercial software has implemented raymarching and SDFs per default such as \texttt{Houdini} or \texttt{Notch}.
 
 
 
@@ -348,7 +348,7 @@ Defining SDFs is an active field of research and there are several projects that
 \label{subs:mot}
 The reasons why sphere tracing in a compute shader for RIR estimation has not been documented until now probably lie in the relatively new introduction of compute shaders as well as in the difficulty of creating SDFs(in comparison to using existing 3D /CAD models and import them to polygon based ray tracers).
 \subsubsection{Sphere tracing}
-As described above, ray tracing in general is in use. Sphere tracing has a number of advantages over ray tracing polygonal surfaces. It is "procedural" by default, since all geometry is defined by implicit surface equations. More over sphere tracing approximates cone tracing for reducing aliasing artifacts in the pixel domain\cite{hart_sphere_1996}, which in the audio domain, is considered to have advantages but is very time confusing in a non-SDF setup\cite{alpkocak_computing_2010}. The deformation and rounding of geometry is possible in a very efficient way, which might offer an opportunity to approximate low-frequency response due to diffraction artifacts. Since geometry is not defined via vertizes and edges, there is no such thing as increasing the complexity of a shape in this way. Rounding a geometrical shape is a mere subtraction since it just shifts the rendering to another iso-surface, which is getting increasingly smooth as shown in \ref{sdf_2d_box}. Depending on the construction of the geometry, this way, holes and cavities (such as in a diffusor) can also be made disappear for a low-frequency pass as shown in figure \ref{fig:diffSmooth}.
+As described above, ray tracing is one common method of approaching the problem of RIR estimation. Sphere tracing has a number of advantages over ray tracing meshes or polygonal surfaces: It is "procedural" by default, since all geometry is defined by implicit surface equations. Sphere tracing approximates cone tracing for reducing aliasing artifacts in the pixel domain\cite{hart_sphere_1996}. In the audio domain, beam tracing is considered to have advantages but is very time consuming in a non-SDF setup\cite{alpkocak_computing_2010}. The deformation and rounding of geometry is possible in a very efficient way, which might offer an opportunity to approximate low-frequency response due to diffraction artifacts. Since geometry is not defined via vertizes and edges, there is no such thing as increasing the complexity of a shape in this way. Rounding a geometrical shape is a mere subtraction since it just shifts the rendering to another iso-surface, which is getting increasingly smooth as shown in \ref{sdf_2d_box}. Depending on the construction of the geometry, this way, holes and cavities (such as in a diffusor) can also be made disappear for a low-frequency pass as shown in figure \ref{fig:diffSmooth}.
 
 \begin{figure}[ht]
 \centerline{\includegraphics[scale=0.6]{img/sdf2dbox.png}}
@@ -405,9 +405,9 @@ float box(vec3 pos, vec3 R){
 
 \section{Sphere Tracing}
 For simplicity, deterministic equal-angle Ray Tracing is used in contrast to Monte Carlo or Equal Area Ray tracing (EART) \cite{gu_room_2014}. Unidirectional ray tracing has been used, also for simplicity reasons, although \cite{cao_interactive_2016} has shown that bidirectional ray tracing offers advantages. Since the classical sphere tracing algorithm was adapted, it was found to be simplest to consider the "camera" to be the receiver/microphone as it would receive light. It sends out rays that might hit the sound source, which acts as a receiver of rays. The sound source is chosen to be a sphere. Choosing a correct volume for the receiver is critical and using a constant size can introduce systematic errors \cite{xiangyang_accuracy_2003}, \cite{alpkocak_computing_2010}. A number of models are available to compute the receiver Volume, $V_r$. Typically factors such as room volume, number of rays and the distance from source are used for this computation. 
-As in \cite{brandao_ray_nodate}, \cite{alpkocak_computing_2010}, and \cite{dalenback_room_1996} the receiver was allowed to grow in volume. While \cite{brandao_ray_nodate} and \cite{dalenback_room_1996} use time as a factor to let the receiver grow, in this attempt the reflection count, $k$ is used. Initially when a ray is sent, $k=1$ and when it hits a surface, this counter is increased by one so the source grows by this factor for this particular ray. So instead of using time, the model provided in \cite{alpkocak_computing_2010} is used and augmented with the $k$ term:
+As in \cite{brandao_ray_nodate}, \cite{alpkocak_computing_2010}, and \cite{dalenback_room_1996} the receiver was allowed to grow in volume. While \cite{brandao_ray_nodate} and \cite{dalenback_room_1996} use time as a factor to let the receiver grow, in this attempt the reflection count, $k$ is used. Initially when a ray is sent, $k=0$ and when it hits a surface, this counter is increased by one so the source grows by this factor for this particular ray. So instead of using time, the model provided in \cite{alpkocak_computing_2010} is used and augmented with the $k$ term:
 \begin{equation}
-V_r = k \omega d_{SR}\sqrt{\frac{4}{N}}
+V_r = (k+1) \omega d_{SR}\sqrt{\frac{4}{N}}
 \end{equation}
 with 
 \begin{equation}
@@ -421,7 +421,6 @@ The actual sphere tracing largely follows the original formulation in \cite{hart
 % t_{i+1} = t_i + F(t_i)
 % \end{equation}
 % With $t_{i}$  being the current distance travelled along the ray being used in combination with the evaluation of the distance function $F()$ 
-Here, this is implemented in the following way:
 \begin{lstlisting}[language=C, caption={\it GLSL pseudo code for sphere tracing},captionpos=b,label=lst:sphereTrace]
 for (i=0;i++;i<imax){
   vec3 pos = ro + t*rd;
@@ -434,7 +433,7 @@ for (i=0;i++;i<imax){
 \end{lstlisting} 
 
 In the above simplified code listing, \texttt{ro} is a \texttt{vec3} that defines the ray origin, \texttt{rd} the ray direction and \texttt{epsilon} can be set to adjust the algorithms precision. The \texttt{map()} function in this case not only returns the distance computed via the SDF(\texttt{res.x}) but a \texttt{struct} that can contain material properties (reflection coefficients etc.). Here it was used to distinguish between a sound source and a regular reflective body.
-The space is sampled spherically and \texttt{rd} is generated from the compute shader's \texttt{gl\_GlobalInvocationID}.
+The space is sampled spherically and \texttt{rd} is generated from the compute shader's \texttt{gl\_GlobalInvocationID}. In this implementation a resolution of 1024 x 1024 is used, resulting in $1024^2$ initial rays and a maximum RIR length of $1024^2$.
 From there, the space is sampled using the following very simplified pseudo code:
 \begin{lstlisting}[language=C, caption={\it GLSL pseudo code for sampling the space and writing to the RIR.},captionpos=b, label=lst:mainloop]
 Sdf res = castRay(ro,rd)
@@ -453,7 +452,7 @@ for (int k=0;k<numReflections;k++;){
 
 \end{lstlisting}
 
-Here, \texttt{castRay()} refers to a function that looks similar to the sphere tracing function above and \texttt{readWrite()} refers to a function that takes the total distance a ray has travelled from source to receiver including all reflections and the number of reflections. From the distance it computes the location where to write to in the impulse response and the attenuation. It then reads the current value at this location and adds the corresponding value, making use of a compute shader's capability to read and write it's output and write to arbitrary output locations. The necessity to write to arbitrary output locations is the main reason for choosing a compute shader over a fragment shader. But it is possible to define most of the functionality to in one file that is included to a compute shader to calculate the RIR and to a fragment shader for visualization. This is particularly handy during construction of geometry.
+In Listing \ref{lst:mainloop}, \texttt{castRay()} refers to a function that looks similar to the sphere tracing function in Listing \ref{lst:sphereTrace} and \texttt{readWrite()} refers to a function that takes the total distance a ray has travelled from source to receiver including all reflections and the number of reflections. From the distance it computes the location where to write to in the impulse response and the attenuation. It then reads the current value at this location and adds the corresponding value, making use of a compute shader's capability to read and write it's output and write to arbitrary output locations. The necessity to write to arbitrary output locations is the main reason for choosing a compute shader over a fragment shader. But it is possible to define most of the functionality in one file that is referenced via an \texttt{include} statement into a compute shader to calculate the RIR and into a fragment shader for visualization. This is particularly handy during construction of geometry but also makes it possible to calculate the RIR of existing sphere traced scenes easy for reverberation in V/A performance or other 3D video content.
 
 
 \begin{figure}[ht]
@@ -479,10 +478,10 @@ Here, \texttt{castRay()} refers to a function that looks similar to the sphere t
 
 
 
-\begin{enumerate}
-\item reflection
-\item low frequency pass
-\end{enumerate}
+% \begin{enumerate}
+% \item reflection
+% \item low frequency pass
+% \end{enumerate}
 
 
 \section{impulse response Generation}
@@ -499,7 +498,7 @@ For simplicity's sake, here only one global coefficient $\alpha_G$ is implemente
 \alpha(m) = \alpha_G^{K(m)}
 \end{equation}
 
-Additionally, a proof-of-concept for frequency dependent loss for each reflection is introduced into the model. As a computationally efficient heuristic, binomial filter is used \cite{aubury_binomial_1996}, \cite{derpanis_overview_nodate}. A simple one-zero filter $G(z)$ is applied at each reflection:
+Additionally, a proof-of-concept for frequency dependent loss for each reflection is introduced into the model. As a computationally efficient heuristic, a binomial filter is used \cite{aubury_binomial_1996}, \cite{derpanis_overview_nodate}. A simple one-zero filter $G(z)$ is applied at each reflection:
 
 \begin{equation}
 G(z,K) = (1+z^{-1})^K \cdot \frac{1}{2}^K
@@ -529,9 +528,15 @@ and
 
 The right hand side of Equation \ref{eq:assump} is simply the normal distribution, which is computationally efficient to calculate for any $K$.
 
-So instead of adding $\delta(n-\tau(m))$ into the IR, simply $G(n-\tau(m),K)$ is used. 
+So instead of adding $\delta(n-\tau(m))$ into the RIR, simply $G(n-\tau(m),K)$ is used. 
 Similar to many other implementations, a high-pass filter is applied to the resulting RIR to compensate for low-frequency components resulting mainly from the spacial extendedness of the sound receiver shape.
 
+After computation of the RIR, it needs to be written to the shader's output texture. So, an intermediate rectangular representation of N by M pixels is produced. The RIR, $H(n)$ is written to the Texture $T(x,y)$:
+\begin{equation}
+  T(x,y) = H(x \bmod N+\frac{y}{M})
+\end{equation}
+
+Depending on the use-case (saving the RIR to a file, possible auralisation or convolution on the GPU) this data then needs to be fetched from the GPU and the process of needs to be reverted to obtain a one-dimensional signal again.
 
 
 \begin{figure*}[ht]
@@ -607,7 +612,7 @@ The shoebox scene features a small room with dimensions 3 x 4 x 2.5 meters. Note
 \section{Conclusions and future work}
 \label{sec:concl}
 
-This work could show that RIR estimation via SDFs in a compute shader in real-time compatible manner is possible. It remains to be tested how far this method can reach. While it still is computationally costly to do these calculations in general, the use of SDFs can offer some significant advantages such as their procedural nature, their efficiency and simplicity. A number of improvements both in speed and are possible in the proposed technique, such as material dependent attenuation and scattering for example. Also, a number of speed improvements and optimizations could be implemented such as the removal of if statements in the SDF function. Furthermore a more detailed comparison and more mature and rigorous mathematical analysis of the process seems promising as well as an analysis of the sphere-tracing-specific artifacts and their effects in the audio domain. As mentioned in Section \ref{subs:mot}, sphere-tracing seems to offer a stunning simplicity for example when it comes to smoothing geometry. Simply the fact that it is a rather different approach than classical ray casting of polygons seems to promise opportunities for optimization. 
+This work could show that RIR estimation via SDFs in a compute shader in real-time compatible manner is possible. It remains to be tested how far this method can reach. While it still is computationally costly to do these calculations in general, the use of SDFs can offer some significant advantages such as their procedural nature, their efficiency and simplicity. A number of improvements both in speed and accuracy are possible in the proposed technique, such as material dependent attenuation and scattering for example. Also, a number of speed improvements and optimizations could be implemented such as the removal of if statements in the SDF function. Furthermore a more detailed comparison and more mature and rigorous mathematical analysis of the process seems promising as well as an analysis of the sphere-tracing-specific artifacts and their effects in the audio domain. As mentioned in Section \ref{subs:mot}, sphere-tracing seems to offer a surprising simplicity and elegance for example when it comes to smoothing geometry. Simply the fact that it is a rather different approach than classical ray casting of polygons seems to promise opportunities for further research. 
 
 An SDF's closeness to classical mathematical structures (in contrast to sets of triangles, vertices, edges etc.) might lead to easier analysis or simpler comparison of different algorithms. Their popularity in the graphics community leads to constant development and the shier activity in the field seems to promise greater ease of use in the future. \
 
@@ -626,7 +631,7 @@ Certain rather experimental ideas also are easy to realize in this technique. Du
       \input{img/julia.tex}
       \caption{\label{fig:juliaRIR} \it RIR simulated using the proposed method. }
     \end{subfigure}
-    \caption{\it Visualization and RIR of a 3-dimensional projection of a 4-dimensional function, the Julia Set \cite{quilez_inigo_nodate-1} .}
+    \caption{\it Visualization (a) and RIR (b) of a 3-dimensional projection of a 4-dimensional function, the Julia Set \cite{quilez_inigo_nodate-1} .}
     \label{fig:julia}
 \end{figure}
 
