@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex DAFx20_tmpl"] 1581986465 "DAFx20_tmpl.aux" "DAFx20_tmpl.bbl" "DAFx20_tmpl" 1581986508
+["bibtex DAFx20_tmpl"] 1582000421 "DAFx20_tmpl.aux" "DAFx20_tmpl.bbl" "DAFx20_tmpl" 1582129630
   "./IEEEbib.bst" 1441786704 18924 f1278aa2fdef151030810b1996aa3609 ""
-  "DAFx20_tmpl.aux" 1581986508 12384 025ee251a505648e3fd4528a3c3bab5f "pdflatex"
+  "DAFx20_tmpl.aux" 1582129630 12436 ddc7fbdf437ec2a0f36312830161cb99 "pdflatex"
   "RaymarchReverb2.bib" 1581985665 15782 f2c01262dc8a7e866ce7dcc94b215ee6 ""
   (generated)
-  "DAFx20_tmpl.bbl"
   "DAFx20_tmpl.blg"
-["pdflatex"] 1581986493 "DAFx20_tmpl.tex" "DAFx20_tmpl.pdf" "DAFx20_tmpl" 1581986508
+  "DAFx20_tmpl.bbl"
+["pdflatex"] 1582129613 "DAFx20_tmpl.tex" "DAFx20_tmpl.pdf" "DAFx20_tmpl" 1582129630
   "/usr/local/share/texmf/tex/generic/pgf/basiclayer/pgfcore.code.tex" 1581095990 992 fb3cda354707a54fda62787a411c7c22 ""
   "/usr/local/share/texmf/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex" 1581095990 43820 bc6cf5aa959817914ace33f5c6232161 ""
   "/usr/local/share/texmf/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex" 1581095990 19324 c9a64402f22bd8d81821141a357af653 ""
@@ -149,7 +149,6 @@
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm0900.tfm" 1572595918 3584 d3d8ac8b25ca19c0a40b86a5db1e8ccc ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm" 1572595918 3584 adb004a0c8e7c46ee66cad73671f37b4 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1572595918 1004 54797486969f23fa377b128694d548df ""
-  "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1572595918 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm" 1572595918 996 a18840b13b499c08ac2de96a99eda4bc ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm" 1572595918 1040 b84415f97d114011685943ade933dc71 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm5.tfm" 1572595918 1040 a9d2074f3fa062d4d9046b92e2334d8c ""
@@ -161,13 +160,10 @@
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1572595918 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1572595918 940 228d6584342e91276bf566bcf9716b83 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1572595918 1512 f21f83efb36853c0b70002322c1ab3ad ""
-  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm" 1572595918 1520 eccf95517727cb11801f4f1aee3a21b4 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm" 1572595918 1524 d89e2d087a9828407a196f428428ef4a ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmr6.tfm" 1572595918 1300 b62933e007d01cfd073f79b963c01526 ""
-  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmr8.tfm" 1572595918 1292 21c1c5bfeaebccffdb478fd231a0997d ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmr9.tfm" 1572595918 1292 6b21b9c2c7bebb38aa2273f7ca0fb3af ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1572595918 1116 933a60c408fc0a863a92debe84b2d294 ""
-  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1572595918 1120 8b7d695260f3cff42e636090a8002094 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm" 1572595918 1116 25a7bf822c58caf309a702ef79f4afbb ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1572595918 37912 77d683123f92148345f3fc36a38d9ab1 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb" 1572595918 37166 8ab3487cbe3ab49ebce74c29ea2418db ""
@@ -264,10 +260,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1572595918 33301 a3134070eacafb10b1f371612ce2650d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1579573432 334148 1b9d30ff8c861d6082e3e9bfccd8d7eb ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1579573383 8044939 6435dfac299d8888500d36bb36ff989f ""
-  "DAFx20_tmpl.aux" 1581986508 12384 025ee251a505648e3fd4528a3c3bab5f "pdflatex"
-  "DAFx20_tmpl.bbl" 1581986465 4862 c3e5a833e6128070b1b42c7f471f0240 "bibtex DAFx20_tmpl"
-  "DAFx20_tmpl.out" 1581986508 764 102b2c335aeeea661b6c645a29b9bb20 "pdflatex"
-  "DAFx20_tmpl.tex" 1581986492 42478 dc5a7f858a92000a2b10412b3e5cd8ef ""
+  "DAFx20_tmpl.aux" 1582129630 12436 ddc7fbdf437ec2a0f36312830161cb99 "pdflatex"
+  "DAFx20_tmpl.bbl" 1582000421 4862 c3e5a833e6128070b1b42c7f471f0240 "bibtex DAFx20_tmpl"
+  "DAFx20_tmpl.out" 1582129630 764 102b2c335aeeea661b6c645a29b9bb20 "pdflatex"
+  "DAFx20_tmpl.tex" 1582098263 43793 46bc861346db0b2f94f056d64d225228 ""
   "dafx_20.sty" 1575516869 15869 17daccdb5fbc4aa2819be23780b72f74 ""
   "img/brink.tex" 1581984679 163242 3f8efb74dd3926fec636e54176586712 ""
   "img/brinkDiff.tex" 1581984693 66298 f3e0840ef0599c5abf855b9b8abe7157 ""
@@ -288,6 +284,6 @@
   "img/sphereTracingViz.png" 1581469294 28216 9045d25160c91a3bcbaba9ef5539fc1a ""
   (generated)
   "DAFx20_tmpl.aux"
+  "DAFx20_tmpl.pdf"
   "DAFx20_tmpl.log"
   "DAFx20_tmpl.out"
-  "DAFx20_tmpl.pdf"
