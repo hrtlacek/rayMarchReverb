@@ -1,17 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{brinkmann_round_2019}
-Fabian Brinkmann, Lukas Asp{\"o}ck, David Ackermann, Steffen Lepa, Michael
-  Vorl{\"a}nder, and Stefan Weinzierl,
-\newblock ``A round robin on room acoustical simulation and auralization,''
-\newblock {\em The Journal of the Acoustical Society of America}, vol. 145, no.
-  4, pp. 2746--2760, Apr. 2019.
-
-\bibitem{lehmann_fast_2020}
-Eric Lehmann,
-\newblock ``Fast simulation of acoustic room impulse responses (image-source
-  method),'' 2020.
-
 \bibitem{hart_sphere_1996}
 John~C. Hart,
 \newblock ``Sphere tracing: a geometric method for the antialiased ray tracing
@@ -29,6 +17,13 @@ Adil Alpkocak and Malik Sis,
 \newblock ``Computing {Impulse} {Response} of {Room} {Acoustics} {Using} the
   {Ray}-{Tracing} {Method} in {Time} {Domain},''
 \newblock {\em Archives of Acoustics}, vol. 35, no. 4, pp. 505--519, Dec. 2010.
+
+\bibitem{brinkmann_round_2019}
+Fabian Brinkmann, Lukas Asp{\"o}ck, David Ackermann, Steffen Lepa, Michael
+  Vorl{\"a}nder, and Stefan Weinzierl,
+\newblock ``A round robin on room acoustical simulation and auralization,''
+\newblock {\em The Journal of the Acoustical Society of America}, vol. 145, no.
+  4, pp. 2746--2760, Apr. 2019.
 
 \bibitem{noauthor_vrworks_nodate}
 ``{VRWorks} {Audio} {SDK} {Overview}.pdf,'' .
@@ -100,6 +95,11 @@ Matthew Aubury,
 Konstantinos~G Derpanis,
 \newblock ``Overview of {Binomial} {Filters},''
 \newblock p.~3.
+
+\bibitem{lehmann_fast_2020}
+Eric Lehmann,
+\newblock ``Fast simulation of acoustic room impulse responses (image-source
+  method),'' 2020.
 
 \bibitem{quilez_inigo_nodate-1}
 Inigo Quilez,
