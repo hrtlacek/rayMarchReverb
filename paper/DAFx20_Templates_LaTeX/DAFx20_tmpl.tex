@@ -286,7 +286,7 @@ frame = single,
 % ====================================
 
 
-
+\setlength{\emergencystretch}{3em}
 
 
 
@@ -340,7 +340,9 @@ As shown in \cite{alpkocak_computing_2010} and \cite{brinkmann_round_2019} there
 
 \subsubsection*{Sphere Tracing}
 Sphere tracing itself was first described by \cite{hart_sphere_1996}. Since then, many authors have described improvements in speed e.g. \cite{balint_accelerating_2018} or the addition of features such as \cite{quilez_inigo_nodate}, \cite{keinert_enhanced_2014} or the activity of the \href{www.shadertoy.com}{shadertoy.com}-community.
-Defining SDFs is an active field of research and there are several projects that aim at easier construction of SDFs and integration in 3D frameworks such as \href{https://github.com/Flafla2/Generic-Raymarch-Unity}{https://github.com/Flafla2/Generic-Raymarch-Unity} and \cite{lechner_hrtlacektdraymarchtoolkit_2020} but also some commercial software products have implemented raymarching and SDFs per default such as \texttt{Houdini} or \texttt{Notch}.
+Defining SDFs is an active field of research and there are several projects that aim at easier construction of SDFs and integration in 3D frameworks such as \\
+\href{https://github.com/Flafla2/Generic-Raymarch-Unity}{https://github.com/Flafla2/Generic-Raymarch-Unity} and \cite{lechner_hrtlacektdraymarchtoolkit_2020} but \\ 
+also some commercial software products have implemented raymarching and SDFs per default such as \texttt{Houdini} or \texttt{Notch}.
 
 
 
@@ -437,7 +439,12 @@ The space is sampled spherically and \texttt{rd} is generated from the compute s
 
  \texttt{gl\_GlobalInvocationID}. In this implementation, a resolution of 1024 x 1024 is used, resulting in $1024^2$ initial rays and a maximum RIR length of $1024^2$.
 From there, the space is sampled using the following very simplified pseudo code:
-\begin{lstlisting}[language=C, caption={\it GLSL pseudo code for sampling the space and writing to the RIR.},captionpos=b, label=lst:mainloop]
+
+
+% \begin{minipage}[float,floatplacement=H]
+
+
+\begin{lstlisting}[float,floatplacement=H, language=C, caption={\it GLSL pseudo code for sampling the space and writing to the RIR.},captionpos=b, label=lst:mainloop]
 Sdf res = castRay(ro,rd)
 for (int k=0;k<numReflections;k++;){
   if(ComingFromReflectiveBdy){
@@ -453,6 +460,7 @@ for (int k=0;k<numReflections;k++;){
 }
 
 \end{lstlisting}
+% \end{minipage}
 
 In Listing \ref{lst:mainloop}, \texttt{castRay()} refers to a function that looks similar to the sphere tracing function in Listing \ref{lst:sphereTrace} and \texttt{readWrite()} refers to a function that takes the total distance a ray has travelled from source to receiver including all reflections and the number of reflections. From the distance it computes the location where to write to in the impulse response and the attenuation. It then reads the current value at this location and adds the corresponding value, making use of a compute shader's capability to read and write its output and write to arbitrary output locations. The necessity to write to arbitrary output locations is the main reason for choosing a compute shader over a fragment shader. It is, however, possible to define most of the functionality in one file that is referenced via an \texttt{include} statement into a compute shader to calculate the RIR and into a fragment shader for visualization. This is particularly handy during the construction of geometry but also makes it possible to easily calculate the RIR of existing sphere-traced scenes for reverberation in V/A performance or other 3D video content.
 
