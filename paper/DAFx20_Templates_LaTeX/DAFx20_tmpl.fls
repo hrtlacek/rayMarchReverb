@@ -368,7 +368,15 @@ INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmri8t.tfm
 INPUT /usr/share/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 INPUT /usr/share/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmri8c.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
 INPUT img/sphereTracingViz.png
 INPUT ./img/sphereTracingViz.png
 INPUT ./img/sphereTracingViz.png
@@ -390,6 +398,10 @@ INPUT /usr/share/texmf-dist/fonts/vf/adobe/courier/pcrr8t.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
+INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/ptmr8t.vf
+INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/ptmr8t.vf
+INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/ptmri8t.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/ptmri8c.vf
@@ -400,7 +412,6 @@ INPUT ./img/sdf2dbox.png
 INPUT img/diffusorNorm.png
 INPUT ./img/diffusorNorm.png
 INPUT ./img/diffusorNorm.png
-INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmri8t.tfm
 INPUT img/diffusorSmooth.png
 INPUT ./img/diffusorSmooth.png
@@ -409,8 +420,6 @@ INPUT /usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT /usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
-INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/ptmr8t.vf
-INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/ptmri8t.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
 INPUT img/diffusorNorm.png

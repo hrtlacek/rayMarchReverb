@@ -3,57 +3,57 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: DAFx20_tmpl.aux
 The style file: IEEEbib.bst
 Database file #1: RaymarchReverb2.bib
-Warning--empty booktitle in balint_accelerating_2018
+Repeated entry---line 317 of file RaymarchReverb2.bib
+ : @article{aubury_binomial_1996
+ :                              ,
+I'm skipping whatever remains of this entry
 Warning--empty booktitle in keinert_enhanced_2014
+Warning--empty journal in diener_procedural_2012
 Warning--empty journal in brandao_ray_nodate
 Warning--empty year in brandao_ray_nodate
 Warning--empty journal in derpanis_overview_nodate
-Warning--empty year in derpanis_overview_nodate
-Warning--empty journal in schroder_physically_nodate
-Warning--empty year in schroder_physically_nodate
+Warning--empty school in schroder_physically_nodate
 Warning--empty journal in campbell_roomsim_nodate
 Warning--empty year in campbell_roomsim_nodate
-Warning--empty journal in tomczak_gpu_nodate
-Warning--empty year in tomczak_gpu_nodate
-You've used 24 entries,
+You've used 26 entries,
             1838 wiz_defined-function locations,
-            568 strings with 6908 characters,
-and the built_in function-call counts, 4990 in all, are:
-= -- 429
-> -- 181
-< -- 7
-+ -- 73
-- -- 49
-* -- 375
-:= -- 746
-add.period$ -- 25
-call.type$ -- 24
-change.case$ -- 24
+            594 strings with 8541 characters,
+and the built_in function-call counts, 5175 in all, are:
+= -- 466
+> -- 201
+< -- 3
++ -- 80
+- -- 54
+* -- 393
+:= -- 819
+add.period$ -- 28
+call.type$ -- 26
+change.case$ -- 25
 chr.to.int$ -- 0
-cite$ -- 36
-duplicate$ -- 227
-empty$ -- 528
-format.name$ -- 49
-if$ -- 1122
+cite$ -- 34
+duplicate$ -- 219
+empty$ -- 534
+format.name$ -- 54
+if$ -- 1147
 int.to.chr$ -- 0
-int.to.str$ -- 24
+int.to.str$ -- 26
 missing$ -- 18
-newline$ -- 116
-num.names$ -- 23
-pop$ -- 101
+newline$ -- 132
+num.names$ -- 27
+pop$ -- 100
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 124
+skip$ -- 94
 stack$ -- 0
-substring$ -- 296
-swap$ -- 60
-text.length$ -- 7
+substring$ -- 282
+swap$ -- 45
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 12
-while$ -- 52
-width$ -- 26
-write$ -- 235
-(There were 12 warnings)
+warning$ -- 8
+while$ -- 51
+width$ -- 28
+write$ -- 277
+(There was 1 error message)

@@ -26,32 +26,53 @@ Fabian Brinkmann, Lukas Asp{\"o}ck, David Ackermann, Steffen Lepa, Michael
   4, pp. 2746--2760, Apr. 2019.
 
 \bibitem{noauthor_vrworks_nodate}
-``{VRWorks} {Audio} {SDK} {Overview}.pdf,'' .
+``{VRWorks} {Audio} {SDK} {Overview}.pdf,'' Available at
+  https://developer.nvidia.com/rdp/assets/vrworks-audio-sdk-overview-2.0,
+  accessed Feb. 9,2020.
 
 \bibitem{balint_accelerating_2018}
-Csaba B{\'a}lint and G{\'a}bor Valasek,
-\newblock ``Accelerating {Sphere} {Tracing},''
-\newblock 2018.
+Csaba Bálint and Gábor Valasek,
+\newblock ``{Accelerating Sphere Tracing},''
+\newblock in {\em EG 2018 - Short Papers}, Olga Diamanti and Amir Vaxman, Eds.
+  2018, The Eurographics Association.
 
 \bibitem{quilez_inigo_nodate}
 Inigo Quilez,
 \newblock ``Inigo {Quilez} :: fractals, computer graphics, mathematics,
-  shaders, demoscene and more,'' .
+  shaders, demoscene and more,'' available at
+  https://www.iquilezles.org/www/articles/ rmshadows/rmshadows.htm, accessed
+  Feb. 17th, 2020.
+
+\bibitem{sawhney_monte_2020}
+Rohan Sawhney and Keenan Crane,
+\newblock ``Monte {Carlo} {Geometry} {Processing}: {A} {Grid}-{Free} {Approach}
+  to {PDE}-{Based} {Methods} on {Volumetric} {Domains},''
+\newblock {\em ACM Trans. Graph.}, vol. 39, no. 4, 2020.
 
 \bibitem{keinert_enhanced_2014}
 Benjamin Keinert,
 \newblock ``enhanced sphere tracing,''
-\newblock 2014.
+\newblock 2014,
+\newblock available at https://erleuchtet.org/\~{}cupe/
+  permanent/enhanced\_sphere\_tracing.pdf, accessed Feb. 8th, 2020.
 
 \bibitem{lechner_hrtlacektdraymarchtoolkit_2020}
 Patrik Lechner,
-\newblock ``hrtlacek/{TDraymarchToolkit} v1.1,'' Feb. 2020.
+\newblock ``hrtlacek/{TDraymarchToolkit} v1.1,'' Feb. 2020,
+\newblock DOI: 10.5281/zenodo.3659364.
 
 \bibitem{stoltzfus_performance_2017}
 Larisa Stoltzfus, Alan Gray, Christophe Dubach, and Stefan Bilbao,
 \newblock ``Performance portability for room acoustics simulations,''
 \newblock in {\em Proceedings of the 20th {International} {Conference} on
   {Digital} {Audio} {Effects}}. 2017, pp. 367--374, University of Edinburgh.
+
+\bibitem{diener_procedural_2012}
+Carl~Lorenz Diener,
+\newblock ``Procedural modeling with signed distance functions,''
+\newblock 2012,
+\newblock available at https://aka-san.halcy.de/distance\_fields\_prefinal.pdf,
+  accessed Jul. 28th 2020.
 
 \bibitem{gu_room_2014}
 C.~Gu, M.~Zhu, H.~Lu, and B.~Beckers,
@@ -94,30 +115,39 @@ Matthew Aubury,
 \bibitem{derpanis_overview_nodate}
 Konstantinos~G Derpanis,
 \newblock ``Overview of {Binomial} {Filters},''
-\newblock p.~3.
+\newblock 2005,
+\newblock available at
+  http://www.cse.yorku.ca/\textasciitilde{}kosta/CompVis\_Notes/
+  binomial\_filters.pdf, accessed Feb. 20th, 2020.
 
 \bibitem{lehmann_fast_2020}
 Eric Lehmann,
 \newblock ``Fast simulation of acoustic room impulse responses (image-source
-  method),'' 2020.
+  method),'' 2020,
+\newblock avavilable at
+  https://www.mathworks.com/matlabcentral/fileexchange/25965-fast-simulation-of-acoustic-room-impulse-responses-image-source-method,
+  accessed Feb. 17th 2020.
 
 \bibitem{quilez_inigo_nodate-1}
 Inigo Quilez,
 \newblock ``Inigo {Quilez} :: fractals, computer graphics, mathematics,
-  shaders, demoscene and more,'' .
+  shaders, demoscene and more,'' available at
+  https://www.iquilezles.org/www/articles/ juliasets3d/juliasets3d.htm,
+  accessed Feb. 17th 2020.
 
 \bibitem{schroder_physically_nodate}
-Dirk Schr{\"o}der,
-\newblock ``Physically {Based} {Real}-{Time} {Auralization} of {Interactive}
-  {Virtual} {Environments},''
-\newblock p. 231.
+Dirk Schröder,
+\newblock {\em Physically Based Real-Time Auralization of Interactive Virtual
+  Environments},
+\newblock Ph.D. thesis, 01 2011.
 
 \bibitem{campbell_roomsim_nodate}
 Douglas~R Campbell, Kalle~J Palom{\"a}ki, and Guy~J Brown,
 \newblock ``Roomsim, a {MATLAB} {Simulation} of
   {\textquotedblleft}{Shoebox}{\textquotedblright} {Room} {Acoustics} for use
   in {Teaching} and {Research},''
-\newblock p.~4.
+\newblock available at http://users.spa.aalto.fi/kpalomak/pubs/
+  Campbell\_Palomaki\_Brown.PDF, accessed Feb. 16th 2020.
 
 \bibitem{kulowski_algorithmic_1985}
 Andrzej Kulowski,
@@ -125,12 +155,18 @@ Andrzej Kulowski,
 \newblock {\em Applied Acoustics}, vol. 18, no. 6, pp. 449--469, 1985.
 
 \bibitem{tomczak_gpu_nodate}
-Lukasz~Jaroslaw Tomczak,
-\newblock ``{GPU} {Ray} {Marching} of {Distance} {Fields},''
-\newblock p.~79.
+L.~J. Tomczak,
+\newblock ``{GPU} ray marching of distance fields,''
+\newblock M.S. thesis, Technical University of Denmark, {DTU} Informatics,
+  {E-}mail: reception@imm.dtu.dk, Asmussens Alle, Building 305, {DK-}2800 Kgs.
+  Lyngby, Denmark, 2012,
+\newblock Supervised by Associate Professor Jeppe Revall Frisvad,
+  jrf@imm.dtu.dk, and Associate Professor Jakob Andreas B{\ae}rentzen,
+  jab@imm.dtu.dk, {DTU} Informatics.
 
 \bibitem{quilez_shadertoy_nodate}
 Inigo Quilez and Pol Jeremias,
-\newblock ``Shadertoy {BETA},'' .
+\newblock ``Shadertoy {BETA},'' available at https://www.shadertoy.com/,
+  accessed Feb. 17th 2020.
 
 \end{thebibliography}

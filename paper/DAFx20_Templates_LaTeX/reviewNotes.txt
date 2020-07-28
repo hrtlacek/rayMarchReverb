@@ -1,0 +1,115 @@
+REV 1
+X- It should be made clearer how "subtracting 0.7" rounds the surface in Figure 2. Exactly where this quantity is being subtracted from should be shown algebraically, perhaps in eq (1). If the values 0.7 and 0.01 are not dimensionless quantities their units should be stated and a scale provided for the surfaces in Figure 3. (You include a little such information for the shoebox scene at the end of Section 5.)
+
+- The term "iso surface" should be defined. 
+
+- Some restructuring would help here, as equation (1) is forward referenced. 
+
+X- Figure 2 is not referenced properly from the text.
+It is now.
+
+
+X- The author implies that being able to round the surface to make holes and cavities in a diffuser disappear will create a "low frequency pass". In the example shown in Figure 3, I suspect that a more accurate low frequency model would produce a smooth surface at half the depth of the recesses, rather than across the top of them as shown.
+
+A: I agree. Where holes are closed is very much dependent on how the SDF is formulated. I tried to show that rather different geometry that could potentially be used for modelling low frequency propagation can be achieved by simple subtraction. I suppose that you are right that this is slightly misleading. I still hope that this example shows that this 'rounding' has unexpected results and might still be useable, especially in combination with visual inspection.
+
+
+X- All symbols appearing in equations (1) and (2) should be defined and their significance explained - i.e. px, py, pz and c0.
+
+A: The function $c0(x)$ is explained in the next line, explanation of $p_x,p_y,p_z$ has been added.
+
+X- To improve readability, any web links should be moved into footnotes or into the references section rather than placing them directly in the text (e.g. http://mercury.sexy/hg_sdf/).
+
+
+Section 3
+
+X- Listing 2 should be referred to explicitly.
+
+X- Clarity would be increased by modifying sentences which include undefined abbreviations, jargon or code syntax by writing them in grammatically complete English. E.g.:
+
+X- Avoid "ro is a vec3", etc.
+
+X- "a maximum RIR length of 1024^2 *samples*."
+
+
+X- "using the following very simplified pseudo code:"
+change to
+"using the highly simplified pseudo code in Listing 3."
+
+X- Define V/A.
+
+
+Section 5
+X- Is the intended meaning of the first sentence "with each ray undergoing 10 reflections"?
+
+!- The meaning of "rigid in [4]" is unclear.
+
+X- Avoid using math symbols to replace words in a sentence. E.g. "was at < 1/60 seconds" would be better written as "was under 1/60 second", etc.
+
+"As expected, the method therefore outperforms CPU-based methods in computation time." Evidence in the form of experimental results or a reference should be provided here to demonstrate the grounds for this statement. E.g. explain why the stated computation times demonstrate that the proposed approach to RIR estimation is "real-time compatible" (to quote from Section 6).
+
+The reader should be referred to the relevant figures in this section at the appropriate points in the text (figures 4, 5, 6, 8 and 9 are not explicitly referred to). The key results demonstrated by them should be briefly discussed. I must say that, considering the many simplifications which have been applied, visual agreement in the comparison plots looks good!
+
+Add "dBs" (?) to the colorbars in Figures 5 and 6.
+
+Figure 6 (a) 'Spec by Matlab' is uninformative. Where did the data for this originate? Which plot is the proposed method should be clarified?
+
+The time axis labeling in a couple of figures needs tidying up. E.g. in Figure 7, appropriate unit multipliers should be used to simplify the timescale.
+
+Section 6
+The sentence with "A number of improvements both in speed and accuracy..." seems to go on to give only examples relating to accuracy.
+
+Figure 10(a) - this visualization needs some discussion for the reader to appreciate its significance.
+
+Section 7
+X- References, Many references are incomplete, e.g. 5 - 9, 17 - 21, 23, 24
+
+REV 2
+- A very odd abstract -
+- why are the details of the code and the 
+X- GitHub link included here?
+
+- axes settings on the spectrograms in Figure 6 make the features difficult to parse. 
+- It would also be good to see these (and other figures) explained in greater detail in the surrounding text.
+
+REV 3
+
+The introduction is very confused. There are too many subsections. After a description of the problem, the state of the art (soa) should be reported and after that the novelty of the proposed approach in comparison with the soa.  I suggest also adding a description of the paper structure.
+- A wider explanation of the results is necessary in order to let the reader understand better the results since the figures (5,6,8,9) related to the results are not explained in the paper.
+- reference [19] is the same of [7], so it could be removed.
+- Finally, there are several grammar/typos errors.
+
+REV4
+- hat is difficult to read. Especially since it brings a lot of ideas from graphics. It would be useful to expand a few words at least and give a bit more context as to what we should find in these references.  It becomes a greater problem in Fig.7 and 8 where the figures are produced by a method simply referred to as [4], which itself is a paper reviewing multiple acoustics rendering methods, meaning that the reader doesn’t have enough information to understand what is presented in those figures.
+- Section 1.2.1 briefly discusses the possibility of having different shapes to handle low-frequency diffraction, again an interesting idea but it is not obvious to me how we would infer the shape. But it does raise an important issue, which is that one of the main limitations of geometric methods, is the lack of modeled diffraction. So, it is not clear to me what is the motivation to have these potentially more complex geometric models rendered without diffraction since a simplified geometric mesh is usually regarded as sufficient for the ray-based acoustic simulation.
+
+-However, it is not so intuitive to understand the differences between fig.5 a and b. The x-axis (time) is also a little difficult to read, perhaps using the number of samples would be easier there?
+
+- For figure 6, is the time axis really *10^-2 ? This seems a little short for what we are seeing. For this example, it would probably be easier to look at an Energy Decay Relief curves (EDR), which would show the reverse energy integration per frequencies. Finally, figures 8 and 9 compares the result of the proposed method to other methods but here, the differences are significant and difficult to read.
+- A link was provided to a github repository with code and sound examples, but unfortunately, the repository was not there (or perhaps not public yet), so it wasn’t possible to review this aspect.
+
+REV 5
+1.1
+Ray-tracing and hybrid approaches may lack references. The concise way of writing sentences including numbered references as grammatical entities prevents easy understanding without having read these references (as the author has).
+
+1.2
+The "compute shader" is not introduced, it is assumed that all readers will know what it is.
+
+1.2.1 Sphere Tracing
+in its current form is expressed using too much complexity and may hence prevent scientific discourse by putting off readers. I suggest putting less information in it (only the information relevant to dafx audience) and making that information more accessible.
+
+2.
+!- speaks of a "scene 1 in [4]" without any explanation or context.
+
+3.
+Several reasons for simplicity are given but neither explained nor contextualized. The entire section 3 should possibly be rewritten to be understandable by someone else than the author himself.
+
+X- Equations (10) and (11) may benefit from a reference regarding the convergence to a Gaussian bell function.
+
+5.
+"Passes for multiple octave bands" should be explained.
+
+Figures 5-7 do not carry substantial informative value, they only allow visual comparison of small scale magnitude plots possibly printed/rendered in black and white. X and Y axes between Figure 5 and 6 are inconsistent. In Fugure 6 the axis label ".10^-2" is unclear. Figure 7+8 do not allow a lot of visual comparison due to the two plots being overlaid. A numerical comparison of the two spectra could be a better way to prove that the author's work is up to previous results.
+
+
+There are several typos and grammatical errors. I suggest having the paper proof-read by a native speaker.
