@@ -12,18 +12,18 @@ Scott~D Roth,
 \newblock {\em Computer Graphics and Image Processing}, vol. 18, no. 2, pp.
   109--144, Feb. 1982.
 
-\bibitem{alpkocak_computing_2010}
-Adil Alpkocak and Malik Sis,
-\newblock ``Computing {Impulse} {Response} of {Room} {Acoustics} {Using} the
-  {Ray}-{Tracing} {Method} in {Time} {Domain},''
-\newblock {\em Archives of Acoustics}, vol. 35, no. 4, pp. 505--519, Dec. 2010.
-
 \bibitem{brinkmann_round_2019}
 Fabian Brinkmann, Lukas Asp{\"o}ck, David Ackermann, Steffen Lepa, Michael
   Vorl{\"a}nder, and Stefan Weinzierl,
 \newblock ``A round robin on room acoustical simulation and auralization,''
 \newblock {\em The Journal of the Acoustical Society of America}, vol. 145, no.
   4, pp. 2746--2760, Apr. 2019.
+
+\bibitem{alpkocak_computing_2010}
+Adil Alpkocak and Malik Sis,
+\newblock ``Computing {Impulse} {Response} of {Room} {Acoustics} {Using} the
+  {Ray}-{Tracing} {Method} in {Time} {Domain},''
+\newblock {\em Archives of Acoustics}, vol. 35, no. 4, pp. 505--519, Dec. 2010.
 
 \bibitem{noauthor_vrworks_nodate}
 ``{VRWorks} {Audio} {SDK} {Overview}.pdf,'' Available at
@@ -56,6 +56,16 @@ Benjamin Keinert,
 \newblock available at https://erleuchtet.org/\~{}cupe/
   permanent/enhanced\_sphere\_tracing.pdf, accessed Feb. 8th, 2020.
 
+\bibitem{quilez_shadertoy_nodate}
+Inigo Quilez and Pol Jeremias,
+\newblock ``Shadertoy {BETA},'' available at https://www.shadertoy.com/,
+  accessed Feb. 17th 2020.
+
+\bibitem{SDFunity}
+Adrian Biagioli,
+\newblock ``Distance field raymarcher for unity,'' available at
+  https://github.com/Flafla2/Generic-Raymarch-Unity, accessed Feb. 10th 2020.
+
 \bibitem{lechner_hrtlacektdraymarchtoolkit_2020}
 Patrik Lechner,
 \newblock ``hrtlacek/{TDraymarchToolkit} v1.1,'' Feb. 2020,
@@ -73,6 +83,10 @@ Carl~Lorenz Diener,
 \newblock 2012,
 \newblock available at https://aka-san.halcy.de/distance\_fields\_prefinal.pdf,
   accessed Jul. 28th 2020.
+
+\bibitem{mercury}
+``hg\_sdf, a glsl library for building signed distance functions,'' available
+  at http://mercury.sexy/hg\_sdf/, accessed Feb. 10th 2020.
 
 \bibitem{gu_room_2014}
 C.~Gu, M.~Zhu, H.~Lu, and B.~Beckers,
@@ -163,10 +177,5 @@ L.~J. Tomczak,
 \newblock Supervised by Associate Professor Jeppe Revall Frisvad,
   jrf@imm.dtu.dk, and Associate Professor Jakob Andreas B{\ae}rentzen,
   jab@imm.dtu.dk, {DTU} Informatics.
-
-\bibitem{quilez_shadertoy_nodate}
-Inigo Quilez and Pol Jeremias,
-\newblock ``Shadertoy {BETA},'' available at https://www.shadertoy.com/,
-  accessed Feb. 17th 2020.
 
 \end{thebibliography}

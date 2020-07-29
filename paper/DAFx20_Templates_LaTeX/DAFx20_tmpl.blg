@@ -3,7 +3,7 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: DAFx20_tmpl.aux
 The style file: IEEEbib.bst
 Database file #1: RaymarchReverb2.bib
-Repeated entry---line 317 of file RaymarchReverb2.bib
+Repeated entry---line 329 of file RaymarchReverb2.bib
  : @article{aubury_binomial_1996
  :                              ,
 I'm skipping whatever remains of this entry
@@ -15,45 +15,45 @@ Warning--empty journal in derpanis_overview_nodate
 Warning--empty school in schroder_physically_nodate
 Warning--empty journal in campbell_roomsim_nodate
 Warning--empty year in campbell_roomsim_nodate
-You've used 26 entries,
+You've used 28 entries,
             1838 wiz_defined-function locations,
-            594 strings with 8541 characters,
-and the built_in function-call counts, 5175 in all, are:
-= -- 466
-> -- 201
+            602 strings with 8829 characters,
+and the built_in function-call counts, 5402 in all, are:
+= -- 484
+> -- 206
 < -- 3
-+ -- 80
-- -- 54
-* -- 393
-:= -- 819
-add.period$ -- 28
-call.type$ -- 26
-change.case$ -- 25
++ -- 83
+- -- 55
+* -- 398
+:= -- 845
+add.period$ -- 30
+call.type$ -- 28
+change.case$ -- 27
 chr.to.int$ -- 0
-cite$ -- 34
-duplicate$ -- 219
-empty$ -- 534
-format.name$ -- 54
-if$ -- 1147
+cite$ -- 36
+duplicate$ -- 229
+empty$ -- 570
+format.name$ -- 55
+if$ -- 1204
 int.to.chr$ -- 0
-int.to.str$ -- 26
+int.to.str$ -- 28
 missing$ -- 18
-newline$ -- 132
-num.names$ -- 27
-pop$ -- 100
+newline$ -- 139
+num.names$ -- 28
+pop$ -- 117
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 94
+skip$ -- 103
 stack$ -- 0
 substring$ -- 282
-swap$ -- 45
+swap$ -- 47
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 8
-while$ -- 51
-width$ -- 28
-write$ -- 277
+while$ -- 52
+width$ -- 30
+write$ -- 293
 (There was 1 error message)
