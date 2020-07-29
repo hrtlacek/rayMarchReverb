@@ -1,4 +1,4 @@
-with open("brinkSec.txt") as f:
+with open("juliaSec.txt") as f:
 	lines = f.readlines()
 
 newlines = []
@@ -13,5 +13,5 @@ for l in lines:
 # print(newlines[100000])
 
 
-with open("brinkMS.txt", "x") as f:
+with open("juliaMS.txt", "x") as f:
 	f.writelines(newlines)

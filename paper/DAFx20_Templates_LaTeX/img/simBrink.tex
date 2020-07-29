@@ -24,15 +24,15 @@ tick align=outside,
 tick pos=left,
 width=0.8\textwidth,
 x grid style={white!69.0196!black},
-xlabel={Time [seconds]},
-xmin=0.0057, xmax=0.2254,xtick={0.1, 0.2},
+xlabel={Time [milliseconds]},
+xmin=005.7, xmax=225.4,xtick={100, 200},
 xtick style={color=black},
 y grid style={white!69.0196!black},
 ylabel={Frequency [kHz]},
 ymin=0.0300000, ymax=15.0000000,
 ytick style={color=black}
 ]
-\addplot graphics [includegraphics cmd=\pgfimage,xmin=0.0057, xmax=0.2254, ymin=0.0000, ymax=22.0500000] {img/simBrink-014.png};
+\addplot graphics [includegraphics cmd=\pgfimage,xmin=5.7, xmax=225.4, ymin=0.0000, ymax=22.0500000] {img/simBrink-014.png};
 \end{axis}
 
 \end{tikzpicture}

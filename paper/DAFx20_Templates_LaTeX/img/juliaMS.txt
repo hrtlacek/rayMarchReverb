@@ -1,22 +1,3 @@
-% This file was created by tikzplotlib v0.9.1.
-\begin{tikzpicture}
-
-\begin{axis}[
-tick align=outside,
-tick pos=left,
-width=1.5\textwidth,
-x grid style={white!69.01961!black},
-xlabel={Time [milliseconds]},
-xmajorgrids,
-xmin=-1.13, xmax=23.79,
-xtick style={color=black},
-y grid style={white!69.01961!black},
-ymajorgrids,
-ymin=-1.09460, ymax=0.98666,
-ytick style={color=black}
-]
-\addplot [semithick, black]
-table {%
 0.0 0.00000
 0.02 0.00000
 0.05 0.00000
@@ -1017,7 +998,3 @@ table {%
 22.610000000000003 0.00000
 22.630000000000003 0.00000
 22.65 0.00000
-};
-\end{axis}
-
-\end{tikzpicture}
