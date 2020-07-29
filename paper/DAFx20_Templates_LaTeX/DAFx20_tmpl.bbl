@@ -38,10 +38,9 @@ Csaba Bálint and Gábor Valasek,
 
 \bibitem{quilez_inigo_nodate}
 Inigo Quilez,
-\newblock ``Inigo {Quilez} :: fractals, computer graphics, mathematics,
-  shaders, demoscene and more,'' available at
-  https://www.iquilezles.org/www/articles/ rmshadows/rmshadows.htm, accessed
-  Feb. 17th, 2020.
+\newblock ``Soft shadows in raymarched sdfs,'' 2010,
+\newblock available at https://www.iquilezles.org/www/articles/
+  rmshadows/rmshadows.htm, accessed Feb. 17th, 2020.
 
 \bibitem{sawhney_monte_2020}
 Rohan Sawhney and Keenan Crane,
@@ -144,10 +143,9 @@ Eric Lehmann,
 
 \bibitem{quilez_inigo_nodate-1}
 Inigo Quilez,
-\newblock ``Inigo {Quilez} :: fractals, computer graphics, mathematics,
-  shaders, demoscene and more,'' available at
-  https://www.iquilezles.org/www/articles/ juliasets3d/juliasets3d.htm,
-  accessed Feb. 17th 2020.
+\newblock ``3d julia sets,'' 2001,
+\newblock available at https://www.iquilezles.org/www/articles/
+  juliasets3d/juliasets3d.htm, accessed Feb. 17th 2020.
 
 \bibitem{schroder_physically_nodate}
 Dirk Schröder,
@@ -173,9 +171,6 @@ L.~J. Tomczak,
 \newblock ``{GPU} ray marching of distance fields,''
 \newblock M.S. thesis, Technical University of Denmark, {DTU} Informatics,
   {E-}mail: reception@imm.dtu.dk, Asmussens Alle, Building 305, {DK-}2800 Kgs.
-  Lyngby, Denmark, 2012,
-\newblock Supervised by Associate Professor Jeppe Revall Frisvad,
-  jrf@imm.dtu.dk, and Associate Professor Jakob Andreas B{\ae}rentzen,
-  jab@imm.dtu.dk, {DTU} Informatics.
+  Lyngby, Denmark, 2012.
 
 \end{thebibliography}

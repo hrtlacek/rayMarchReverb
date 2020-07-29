@@ -403,7 +403,7 @@ float box(vec3 pos, vec3 R){
     return length(max(abs(pos) - R,0));
 }
 \end{lstlisting}
-As mentioned above, rounding can be achieved by subtracting distance in meters as all distances in this implementation are chosen to be in meters. As an example, this is demonstrated in Figure \ref{sdf_2d_box}, with the value 0.7meters resulting in $f_r$:
+As mentioned above, rounding can be achieved by subtracting a distance value (in meters in this case since all distances in this implementation are chosen to be in meters). As an example, this is demonstrated in Figure \ref{sdf_2d_box}, with the value 0.7meters resulting in $f_r$:
 \begin{equation}
 f_r(p_x, p_y, p_z) = f(p_x, p_y, p_z)-0.7m
 \end{equation}
@@ -441,9 +441,7 @@ for (i=0;i++;i<imax){
 \end{lstlisting} 
 
 In the above simplified code listing, the variable \texttt{ro} defines the ray origin in space, \texttt{rd} defines the ray direction and \texttt{epsilon} can be set to adjust the algorithm's precision. The \texttt{map()} function in this case not only returns the distance computed via the SDF(\texttt{res.x}) but a \texttt{struct} that can contain material properties (reflection coefficients, etc.). Here it was used to distinguish between a sound source and a regular reflective body.
-The space is sampled spherically and \texttt{rd} is generated from the compute shader's \
-
- \texttt{gl\_GlobalInvocationID}. In this implementation, a resolution of $1024 \times 1024$ is used, resulting in $1024^2$ initial rays and a maximum RIR length of $1024^2$ samples.
+The space is sampled spherically and \texttt{rd} is generated from the compute shader's \texttt{gl\_GlobalInvocationID}. In this implementation, a resolution of $1024 \times 1024$ is used, resulting in $1024^2$ initial rays and a maximum RIR length of $1024^2$ samples.
 From there, the space is sampled using the highly simplified pseudo code in Listing \ref{lst:mainloop}.
 
 
@@ -599,15 +597,7 @@ Depending on the use case (saving the RIR to a file, possible auralization or co
     \label{fig:showSpecs}
 \end{figure*}
 
-An example application is provided in the framework \texttt{TouchDesigner}. The application as well as all generated data and \texttt{Jupyter Notebooks} can be found on this project's github repository \footnote{ \href{https://github.com/hrtlacek/rayMarchReverb}{github.com/hrtlacek/rayMarchReverb}} \\
-All of the following results have been computed using $1024^2$ rays with each ray undergoing 10 reflections. The computations were made on a strong consumer-grade machine (Intel i7 CPU, NVIDIA Geforce 1080ti). The computation time for simple scenes such as "scene 1, rigid" in \cite{brinkmann_round_2019} was less than $\frac{1}{60}$ seconds including the computation of a simple visualization in real time. The most complex scenes (geometrically and in regards to the amount of reflections) that were tested, the shoebox scene and scene 1 with added diffusor, where computed in less than $\frac{1}{50}$ seconds. As expected, the method's inherent parallelism gives fast execution times and interpolation could be used to create audio-rate RIRs for real time usage. \
 
-The results are compared to a different simulation using the image source method \cite{lehmann_fast_2020} and \cite{brinkmann_round_2019} who generated a dataset featuring recordings in in an anechoic chamber with simple shapes. Note that the comparison with \cite{brinkmann_round_2019} in Figure \ref{fig:multRefl} ignores the frequency response of the speaker and microphone that were used in the original recording. As can be seen in the plot, the original recording features visible amount of difference to an ideal impulse even with the direct signal. 
-
-Since this implementation lacks features such as material-specific reflection coefficients and passes for multiple octave bands (computing low and high frequency behavior separately), it is not possible to accurately compare previous work with the proposed method by simply using the same materials. Still Figures \ref{fig:diffuser} - \ref{fig:shoe} might give the reader an impression that the proposed method has deficits but is able to produce results rather similar to the reference RIRs considering the many simplifications. Generally it can be shown that by adjusting reflection coefficients, the method can be matched up with existing work. Figure \ref{fig:multReflSpecCompare} shows the spectrogram of the "multiple reflections scene" in \cite{brinkmann_round_2019} in comparison with the proposed method. The material dependent filtering seems too simple in the proposed method, unable to capture a similar falloff of high and low frequencies. Still echo behavior and echo times seem to match approximately. Figure \ref{fig:multRefl} shows the time domain plot of this scenario, here the echo times are more clearly visible and slight problems are visible.
-Figure \ref{fig:showSpecs} shows the spectra of a simple shoebox room simulation in comparison to \cite{lehmann_fast_2020}. The time domain plot of this comparison can be found in Figure \ref{fig:shoe}.
-Figure \ref{fig:diffuser} shows yet another plot to show this implementations reaction to a more complex scene including a diffusor. 
-Given the proof-of-concept nature of this proposal, there is a lot of room for improvement in terms of accuracy. More audio examples than are shown here can be inspected at the project's github repository.
 \begin{figure}
 
     \begin{center}
@@ -626,7 +616,27 @@ Given the proof-of-concept nature of this proposal, there is a lot of room for i
 \end{figure}
 
 
-The shoebox scene features a small room with dimensions $3 \times 4 \times 2.5$ meters. Note that \cite{lehmann_fast_2020} used a sampling rate of 16kHz and has been up-sampled to 44.1 kHz for comparison reasons. 
+
+This paper presents results and comparisons in 3 different scenarios:
+\begin{itemize}
+\item A scene with two opposing medium-density fibreboard (MDF) plates, causing multiple echoes, "Scene 3, multiple reflections", taken from \cite{brinkmann_round_2019}
+\item A scene with one reflection from a diffusor in an otherwise anechoic chamber, "Scene 1, diffusor", taken from \cite{brinkmann_round_2019}
+\item A shoebox scene, simulated with this work and \cite{lehmann_fast_2020} for reference.
+\end{itemize}
+An example application is provided in the framework \texttt{TouchDesigner}. The application as well as all generated data and \texttt{Jupyter Notebooks} can be found on this project's github repository \footnote{ \href{https://github.com/hrtlacek/rayMarchReverb}{github.com/hrtlacek/rayMarchReverb}} \\
+All of the following results have been computed using $1024^2$ rays with each ray undergoing 10 reflections. The computations were made on a strong consumer-grade machine (Intel i7 CPU, NVIDIA Geforce 1080ti). The computation time for simple scenes such as "scene 1, rigid" in \cite{brinkmann_round_2019} was less than $\frac{1}{60}$ seconds including the computation of a simple visualization in real time. The most complex scenes (geometrically and in regards to the amount of reflections) that were tested, the shoebox scene and "scene 1 diffusor", where computed in less than $\frac{1}{50}$ seconds. As expected, the method's inherent parallelism gives fast execution times and interpolation could be used to create audio-rate RIRs for real time usage. \
+
+% The results are compared to a different simulation using the image source method \cite{lehmann_fast_2020} and \cite{brinkmann_round_2019} who generated a dataset featuring recordings in in an anechoic chamber with simple shapes. 
+% \subsection*{Scene 1, diffusor}
+
+Since this implementation lacks features such as material-specific reflection coefficients and passes for multiple octave bands (computing low and high frequency behavior separately), it is not possible to accurately compare previous work with the proposed method by simply using the same materials. Still Figures \ref{fig:diffuser} - \ref{fig:shoe} might give the reader an impression that the proposed method has deficits but is able to produce results rather similar to the reference RIRs considering the many simplifications. Generally it can be shown that by adjusting reflection coefficients, the method can be matched up to resemble existing work. \\
+The results from "Scene 3, multiple reflections" can be observed in Figure \ref{fig:multRefl} in the time domain and a spectrogram is shown in Fig. \ref{fig:multReflSpecCompare}. Note that the comparison with \cite{brinkmann_round_2019} in Figure \ref{fig:multRefl} ignores the frequency response of the speaker and microphone that were used in the original recording. As can be seen in the plot, the original recording features a visible amount of difference to an ideal impulse even with the direct signal. Fig. \ref{fig:multReflSpecCompare} seems to indicate that the material dependent filtering seems too simple in the proposed method, unable to capture a similar falloff of high and low frequencies. The time domain plot in Figure \ref{fig:multRefl} seems to show that the echo times slightly differ from the reference which might be related to the growth of the receiver volume $V_r$.
+Figure \ref{fig:diffuser} shows another plot to show this implementation's reaction to a more complex scene including a diffusor.  
+Figure \ref{fig:showSpecs} shows the spectra of a simple shoebox room simulation in comparison to \cite{lehmann_fast_2020}. The time domain plot of this comparison can be found in Figure \ref{fig:shoe}. The shoebox scene features a small room with dimensions $3 \times 4 \times 2.5$ meters. Note that \cite{lehmann_fast_2020} used a sampling rate of 16kHz and has been up-sampled to 44.1 kHz for comparison reasons.
+
+Given the proof-of-concept nature of this proposal, there is a lot of room for improvement in terms of accuracy. More audio examples than are shown here can be inspected at the project's github repository.
+
+
 
 \begin{figure}
     \begin{center}
@@ -642,9 +652,6 @@ The shoebox scene features a small room with dimensions $3 \times 4 \times 2.5$ 
 This work was able to show that RIR estimation via SDFs in a compute shader in a real time-compatible manner is possible. It remains to be tested how far this method can reach. While it still is computationally costly to do these calculations in general, the use of SDFs can offer some significant advantages such as their procedural nature, their efficiency and simplicity. A number of improvements both in speed and accuracy are possible in the proposed technique, such as reduction of if-statements, material-dependent attenuation and scattering, for example. Also, a number of speed improvements and optimizations could be implemented such as the removal of if statements in the SDF function. Furthermore, a more detailed comparison and more mature and rigorous mathematical analysis of the process seems promising, as well as an analysis of the sphere tracing-specific artifacts and their effects in the audio domain. As mentioned in Section \ref{subs:mot}, sphere tracing seems to offer a surprising simplicity and elegance, for example when it comes to smoothing geometry. Simply the fact that it is a rather different approach than classical ray casting of polygons seems to promise opportunities for further research. 
 
 An SDF's closeness to classical mathematical structures (in contrast to sets of triangles, vertices, edges, etc.) might lead to easier analysis or simpler comparison of different algorithms. Their popularity in the graphics community leads to constant development and the sheer amount of activity in the field seems to promise greater ease of use in the future. \
-
-Certain rather experimental ideas are easy to realize in this technique as well. Due to the aforementioned connection between geometry formulation in sphere tracing and mathematical formulas, this algorithm is often used to render fractals. In this context, this would mean that it is rather easy to calculate the RIR of a Menger sponge or a Julia Set(see Figure \ref{fig:julia} for a visualization and RIR). Moreover, many geometries/SDFs can be formulated in a dimension-independent way, resulting in a straightforward way to render 4-dimensional geometries, leading to the idea of calculating the RIR of a 4-dimensional room. While these thoughts do not offer any apparent practical application and might "only" lead to aesthetically interesting results, it is possible to find applications in the sonification of high dimensional data.
-
 \begin{figure}[ht]
     \center
     \begin{subfigure}[t]{0.4\linewidth}
@@ -661,6 +668,8 @@ Certain rather experimental ideas are easy to realize in this technique as well.
     \caption{\it Visualization (a) and RIR (b) of a 3-dimensional projection of a 4-dimensional function, the Julia Set \cite{quilez_inigo_nodate-1} .}
     \label{fig:julia}
 \end{figure}
+
+Certain rather experimental ideas are easy to realize in this technique as well. Due to the aforementioned connection between geometry formulation in sphere tracing and mathematical formulas, this algorithm is often used to render fractals. In this context, this would mean that it is rather easy to calculate the RIR of a Menger sponge or a Julia Set (see Figure \ref{fig:julia} for a visualization and RIR). Moreover, many geometries/SDFs can be formulated in a dimension-independent way, resulting in a straightforward way to render 4-dimensional geometries, leading to the idea of calculating the RIR of a 4-dimensional room. While these thoughts do not offer any apparent practical application and might "only" lead to aesthetically interesting results, it is possible to find applications in the sonification of high dimensional data.
 
 
 

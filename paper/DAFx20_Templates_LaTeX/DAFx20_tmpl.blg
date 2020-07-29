@@ -3,7 +3,7 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: DAFx20_tmpl.aux
 The style file: IEEEbib.bst
 Database file #1: RaymarchReverb2.bib
-Repeated entry---line 329 of file RaymarchReverb2.bib
+Repeated entry---line 330 of file RaymarchReverb2.bib
  : @article{aubury_binomial_1996
  :                              ,
 I'm skipping whatever remains of this entry
@@ -17,15 +17,15 @@ Warning--empty journal in campbell_roomsim_nodate
 Warning--empty year in campbell_roomsim_nodate
 You've used 28 entries,
             1838 wiz_defined-function locations,
-            602 strings with 8829 characters,
-and the built_in function-call counts, 5402 in all, are:
-= -- 484
+            603 strings with 8632 characters,
+and the built_in function-call counts, 5411 in all, are:
+= -- 486
 > -- 206
 < -- 3
 + -- 83
 - -- 55
-* -- 398
-:= -- 845
+* -- 399
+:= -- 849
 add.period$ -- 30
 call.type$ -- 28
 change.case$ -- 27
@@ -34,17 +34,17 @@ cite$ -- 36
 duplicate$ -- 229
 empty$ -- 570
 format.name$ -- 55
-if$ -- 1204
+if$ -- 1206
 int.to.chr$ -- 0
 int.to.str$ -- 28
 missing$ -- 18
-newline$ -- 139
+newline$ -- 140
 num.names$ -- 28
-pop$ -- 117
+pop$ -- 116
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 103
+skip$ -- 101
 stack$ -- 0
 substring$ -- 282
 swap$ -- 47
@@ -55,5 +55,5 @@ type$ -- 0
 warning$ -- 8
 while$ -- 52
 width$ -- 30
-write$ -- 293
+write$ -- 295
 (There was 1 error message)

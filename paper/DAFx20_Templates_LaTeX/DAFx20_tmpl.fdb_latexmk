@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex DAFx20_tmpl"] 1596018252 "DAFx20_tmpl.aux" "DAFx20_tmpl.bbl" "DAFx20_tmpl" 1596019172
+["bibtex DAFx20_tmpl"] 1596031819 "DAFx20_tmpl.aux" "DAFx20_tmpl.bbl" "DAFx20_tmpl" 1596032219
   "./IEEEbib.bst" 1441786704 18924 f1278aa2fdef151030810b1996aa3609 ""
-  "DAFx20_tmpl.aux" 1596019172 12957 db1f176d3f1bf619ba9a0326959264d5 "pdflatex"
-  "RaymarchReverb2.bib" 1595945632 19880 0f77c409dd08e9bc01c3fde3abf3b53f ""
+  "DAFx20_tmpl.aux" 1596032219 12957 8ca33c6671749b9d2d4206bde42420f4 "pdflatex"
+  "RaymarchReverb2.bib" 1596029013 19597 c7a5e3edc6feca21a63f86ca1f687c30 ""
   (generated)
   "DAFx20_tmpl.blg"
   "DAFx20_tmpl.bbl"
-["pdflatex"] 1596019157 "DAFx20_tmpl.tex" "DAFx20_tmpl.pdf" "DAFx20_tmpl" 1596019172
+["pdflatex"] 1596032204 "DAFx20_tmpl.tex" "DAFx20_tmpl.pdf" "DAFx20_tmpl" 1596032219
   "/usr/local/share/texmf/tex/generic/pgf/basiclayer/pgfcore.code.tex" 1581095990 992 fb3cda354707a54fda62787a411c7c22 ""
   "/usr/local/share/texmf/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex" 1581095990 43820 bc6cf5aa959817914ace33f5c6232161 ""
   "/usr/local/share/texmf/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex" 1581095990 19324 c9a64402f22bd8d81821141a357af653 ""
@@ -264,10 +264,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1572595918 33301 a3134070eacafb10b1f371612ce2650d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1588697223 370860 c081a053d5bc3ca04655275489015ebf ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1582300549 8044939 5e780983a430cf705c85b3403e0f698d ""
-  "DAFx20_tmpl.aux" 1596019172 12957 db1f176d3f1bf619ba9a0326959264d5 "pdflatex"
-  "DAFx20_tmpl.bbl" 1596018252 7093 841f35cc3632aec0bd7cc77f5b946e37 "bibtex DAFx20_tmpl"
-  "DAFx20_tmpl.out" 1596019172 707 f742135a9b7a64e50bed319f236d32d6 "pdflatex"
-  "DAFx20_tmpl.tex" 1596019154 47612 e6fffc8cc64ab486faba33f335d214f4 ""
+  "DAFx20_tmpl.aux" 1596032219 12957 8ca33c6671749b9d2d4206bde42420f4 "pdflatex"
+  "DAFx20_tmpl.bbl" 1596031819 6813 29519e080009e75b9c9be86f98540115 "bibtex DAFx20_tmpl"
+  "DAFx20_tmpl.out" 1596032219 707 f742135a9b7a64e50bed319f236d32d6 "pdflatex"
+  "DAFx20_tmpl.tex" 1596032203 48222 acb16ca419eb5cd5d7dfb93ba60c2ab1 ""
   "dafx_20.sty" 1585243761 15863 8d31307cc69e5a0e5401bd1f7fb310cf ""
   "img/brink.tex" 1595900183 172483 935d8aa8f4bfcd3b22af6633b951cfc2 ""
   "img/brinkDiff.tex" 1584208438 66298 64f2f7c4ac007935860ca7713c758c1c ""
@@ -287,7 +287,7 @@
   "img/specBrink.tex" 1595941168 1132 25512e0a8fc8841088d4c6a75664181d ""
   "img/sphereTracingViz.png" 1581469294 28216 9045d25160c91a3bcbaba9ef5539fc1a ""
   (generated)
-  "DAFx20_tmpl.log"
   "DAFx20_tmpl.out"
-  "DAFx20_tmpl.aux"
   "DAFx20_tmpl.pdf"
+  "DAFx20_tmpl.aux"
+  "DAFx20_tmpl.log"
