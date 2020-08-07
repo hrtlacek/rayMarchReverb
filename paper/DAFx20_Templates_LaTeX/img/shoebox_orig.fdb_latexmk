@@ -1,0 +1,9 @@
+# Fdb version 3
+["pdflatex"] 1595939858 "shoebox_orig.tex" "shoebox_orig.pdf" "shoebox_orig" 1595939858
+  "/usr/share/texmf-dist/web2c/texmf.cnf" 1572595918 33301 a3134070eacafb10b1f371612ce2650d ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1582300549 8044939 5e780983a430cf705c85b3403e0f698d ""
+  "shoebox_orig.aux" 1595898397 8 a94a2480d3289e625eea47cd1b285758 ""
+  "shoebox_orig.tex" 1595939854 1138 e515c90d9cf3de55f5c3f609f8cc00b4 ""
+  (generated)
+  "shoebox_orig.pdf"
+  "shoebox_orig.log"

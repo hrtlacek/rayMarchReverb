@@ -1,0 +1,20 @@
+\begin{thebibliography}{1}
+
+\bibitem{aubury_binomial_1996}
+Matthew Aubury,
+\newblock ``Binomial {Filters},''
+\newblock {\em Journal of VLSI Signal Processing}, vol. 12, pp. 35--50, 1996.
+
+\bibitem{brinkmann_round_2019}
+Fabian Brinkmann, Lukas Asp{\"o}ck, David Ackermann, Steffen Lepa, Michael
+  Vorl{\"a}nder, and Stefan Weinzierl,
+\newblock ``A round robin on room acoustical simulation and auralization,''
+\newblock {\em The Journal of the Acoustical Society of America}, vol. 145, no.
+  4, pp. 2746--2760, Apr. 2019.
+
+\bibitem{Aspoeck}
+Lukas Aspöck, Fabian Brinkmann, David Ackermann, Stefan Weinzierl, and Michael
+  Vorländer,
+\newblock ``Gras - ground truth for room acoustical simulation,'' 2018.
+
+\end{thebibliography}
