@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.2.21)  29 JUL 2020 19:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.2.21)  3 AUG 2020 20:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1189,7 +1189,7 @@ Overfull \hbox (3.81665pt too wide) in paragraph at lines 39--596
 (./img/shoebox.tex)
 Underfull \vbox (badness 4441) has occurred while \output is active []
 
-<img/julia.png, id=280, 1027.84pt x 1027.84pt>
+<img/julia.png, id=281, 1027.84pt x 1027.84pt>
 File: img/julia.png Graphic file (type png)
 <use img/julia.png>
 Package pdftex.def Info: img/julia.png  used on input line 661.
@@ -1218,11 +1218,11 @@ Package rerunfilecheck Info: File `DAFx20_tmpl.out' has not changed.
 Here is how much of TeX's memory you used:
  35193 strings out of 492167
  815160 string characters out of 6131558
- 2841770 words of memory out of 5000000
+ 2841838 words of memory out of 5000000
  38803 multiletter control sequences out of 15000+600000
  46190 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 78i,19n,136p,1380b,3168s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 78i,19n,136p,1381b,3168s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/font
 s/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cmex
 tra/cmex9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><
@@ -1238,10 +1238,10 @@ ls/msbm10.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/s
 hare/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.
 pfb>
-Output written on DAFx20_tmpl.pdf (7 pages, 1191557 bytes).
+Output written on DAFx20_tmpl.pdf (7 pages, 1191857 bytes).
 PDF statistics:
- 395 PDF objects out of 1000 (max. 8388607)
- 321 compressed objects within 4 object streams
+ 396 PDF objects out of 1000 (max. 8388607)
+ 322 compressed objects within 4 object streams
  105 named destinations out of 1000 (max. 500000)
  170 words of extra memory for PDF output out of 10000 (max. 10000000)
 

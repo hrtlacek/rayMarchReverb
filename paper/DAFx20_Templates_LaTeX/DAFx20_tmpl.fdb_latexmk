@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex DAFx20_tmpl"] 1596044772 "DAFx20_tmpl.aux" "DAFx20_tmpl.bbl" "DAFx20_tmpl" 1596045187
+["bibtex DAFx20_tmpl"] 1596479286 "DAFx20_tmpl.aux" "DAFx20_tmpl.bbl" "DAFx20_tmpl" 1596727232
   "./IEEEbib.bst" 1441786704 18924 f1278aa2fdef151030810b1996aa3609 ""
-  "DAFx20_tmpl.aux" 1596045083 12975 35aa1c09b05d58aeef43da342b81dca1 "pdflatex"
+  "DAFx20_tmpl.aux" 1596479304 13135 a82a32ce26e369eb45dd9d3ab17bca2c "pdflatex"
   "RaymarchReverb2.bib" 1596029013 19597 c7a5e3edc6feca21a63f86ca1f687c30 ""
   (generated)
-  "DAFx20_tmpl.blg"
   "DAFx20_tmpl.bbl"
-["pdflatex"] 1596045066 "DAFx20_tmpl.tex" "DAFx20_tmpl.pdf" "DAFx20_tmpl" 1596045187
+  "DAFx20_tmpl.blg"
+["pdflatex"] 1596479286 "DAFx20_tmpl.tex" "DAFx20_tmpl.pdf" "DAFx20_tmpl" 1596727232
   "/usr/local/share/texmf/tex/generic/pgf/basiclayer/pgfcore.code.tex" 1581095990 992 fb3cda354707a54fda62787a411c7c22 ""
   "/usr/local/share/texmf/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex" 1581095990 43820 bc6cf5aa959817914ace33f5c6232161 ""
   "/usr/local/share/texmf/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex" 1581095990 19324 c9a64402f22bd8d81821141a357af653 ""
@@ -264,10 +264,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1572595918 33301 a3134070eacafb10b1f371612ce2650d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1588697223 370860 c081a053d5bc3ca04655275489015ebf ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1582300549 8044939 5e780983a430cf705c85b3403e0f698d ""
-  "DAFx20_tmpl.aux" 1596045083 12975 35aa1c09b05d58aeef43da342b81dca1 "pdflatex"
-  "DAFx20_tmpl.bbl" 1596044772 6813 29519e080009e75b9c9be86f98540115 "bibtex DAFx20_tmpl"
-  "DAFx20_tmpl.out" 1596045083 707 f742135a9b7a64e50bed319f236d32d6 "pdflatex"
-  "DAFx20_tmpl.tex" 1596045186 48420 33f343906e1b778382dbafeaaa2fa0b8 ""
+  "DAFx20_tmpl.aux" 1596479304 13135 a82a32ce26e369eb45dd9d3ab17bca2c "pdflatex"
+  "DAFx20_tmpl.bbl" 1596479286 6813 29519e080009e75b9c9be86f98540115 "bibtex DAFx20_tmpl"
+  "DAFx20_tmpl.out" 1596479304 707 f742135a9b7a64e50bed319f236d32d6 "pdflatex"
+  "DAFx20_tmpl.tex" 1596479266 48538 f24de8f21f256283f64315c4b39640f5 ""
   "dafx_20.sty" 1585243761 15863 8d31307cc69e5a0e5401bd1f7fb310cf ""
   "img/brink.tex" 1595900183 172483 935d8aa8f4bfcd3b22af6633b951cfc2 ""
   "img/brinkDiff.tex" 1596044182 66802 017b66a6603e16487ea33dcef52b7cff ""
@@ -289,5 +289,5 @@
   (generated)
   "DAFx20_tmpl.out"
   "DAFx20_tmpl.log"
-  "DAFx20_tmpl.pdf"
   "DAFx20_tmpl.aux"
+  "DAFx20_tmpl.pdf"
